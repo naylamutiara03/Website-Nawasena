@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            opensans: ['Open Sans', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body class="bg-black text-white">
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <!-- END Navbar -->
+
+  <!-- Slider Section -->
+  <section class="swiper-container mt-6 h-screen overflow-hidden">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="../assets/thumbnail-web.png" alt="Event 1" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <div class="swiper-slide">
+        <img src="../assets/thumbnail.JPG" alt="Event 2" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <div class="swiper-slide">
+        <img src="../assets/thumbnail2.jpg" alt="Event 3" class="w-full h-full object-cover rounded-lg">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="text-center mt-12 px-4 md:px-20">
+    <h2 class="text-3xl font-bold font-poppins">Event Management That We Offer You</h2>
+    <p class="text-gray-300 mt-2 font-opensans">In addition to handling event management, Nawasena also operates as a support event organizer, specializing in supporting all production and rental equipment.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+      <div class="flex flex-col items-center">
+        <div class="p-6 bg-white rounded-full">
+          <img src="../assets/booth-ex.png" alt="Booth" class="w-12 h-12">
+        </div>
+        <span class="mt-4 font-poppins">Booth Exhibition</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="p-6 bg-white rounded-full">
+          <img src="../assets/icon-custom.png" alt="Production" class="w-12 h-12">
+        </div>
+        <span class="mt-4 font-poppins">Custom Production</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="p-6 bg-white rounded-full">
+          <img src="../assets/icon-rental.png" alt="Rental" class="w-12 h-12">
+        </div>
+        <span class="mt-4 font-poppins">Rental Equipment</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="p-6 bg-white rounded-full">
+          <img src="../assets/icon-support.png" alt="Support" class="w-12 h-12">
+        </div>
+        <span class="mt-4 font-poppins">Support All Product</span>
+      </div>
+    </div>
+  </section>
+  <!-- END Services-->
+
+  <!-- Documentation Section -->
+  <section class="w-full bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-12 mt-20">
+    <div class="w-full max-w-5xl mx-auto p-8 rounded-lg shadow-lg">
+      <h1 class="text-center text-white text-3xl font-bold mb-8 font-poppins">Project Documentation of Nawasena</h1>
+      <div class="flex flex-col items-center">
+        <!-- Navigasi dan Card -->
+        <div class="flex items-center justify-center">
+          <!-- Tombol Navigasi Kiri -->
+          <button id="left-arrow" class="text-white text-2xl mr-4">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <!-- Kartu Dokumentasi -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center">
+            <!-- Card 1 -->
+            <div class="documentation-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+              <img
+                alt="Opening Ceremony of Jakarta Representative Office"
+                class="w-full h-40 object-cover"
+                src="../assets/dokumentasi/dokum-wm1.png"
+              />
+              <div class="p-4 flex flex-col justify-between h-full">
+                <h2 class="text-center text-black text-lg font-semibold font-poppins">Opening Ceremony of Jakarta Representative Office-Nippon Kikai Shoji Co.,LTD</h2>
+                <p class="text-center text-gray-500 mt-2">Jakarta</p>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="documentation-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+              <img
+                alt="PSS Gala Dinner 2023"
+                class="w-full h-40 object-cover"
+                src="../assets/dokumentasi/dokum-wm2.png"
+              />
+              <div class="p-4 flex flex-col justify-between h-full">
+                <h2 class="text-center text-black text-lg font-semibold font-poppins">PSS Gala Dinner 2023</h2>
+                <p class="text-center text-gray-500 mt-2">Jakarta</p>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="documentation-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+              <img
+                alt="Reborn, Transform & Elevate"
+                class="w-full h-40 object-cover"
+                src="../assets/dokumentasi/dokum-wm3.png"
+              />
+              <div class="p-4 flex flex-col justify-between h-full">
+                <h2 class="text-center text-black text-lg font-semibold font-poppins">Reborn, Transform & Elevate</h2>
+                <p class="text-center text-gray-500 mt-2">Jakarta</p>
+              </div>
+            </div>
+          </div>
+          <!-- Tombol Navigasi Kanan -->
+          <button id="right-arrow" class="text-white text-2xl ml-4">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
+        <!-- Pagination -->
+        <div class="flex justify-center mt-6">
+          <div class="pagination-dots flex space-x-2">
+            <div class="h-2 w-8 bg-black rounded-full"></div>
+            <div class="h-2 w-8 bg-gray-300 rounded-full"></div>
+            <div class="h-2 w-8 bg-gray-300 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END Documentation-->
+
+  <!-- Our Client -->
+  <section class="text-center mb-10">
+    <h2 class="text-3xl font-bold mb-5 mt-8">
+      Our Client
+    </h2>
+    <div class="bg-black p-5 rounded-lg">
+      <img class="w-3/4 mx-auto" height="200" src="../assets/our-client.png" width="500"/>
+    </div>
+  </section>
+  <!-- END Our Client-->
+
+  <!-- Our Partner -->
+  <section class="text-center mb-10">
+    <h2 class="text-3xl font-bold mb-5 mt-8">
+      Our Partner
+    </h2>
+    <div class="bg-black p-5 rounded-lg">
+      <img class="w-3/4 mx-auto" height="200" src="../assets/our-partner.png" width="500"/>
+    </div>
+  </section>
+  <!-- END Our Partner -->
+
+  <!-- Our Community -->
+  <section class="text-center mb-10">
+    <h2 class="text-3xl font-bold mb-5 mt-8">
+      Our Community
+    </h2>
+    <div class="bg-black p-5 rounded-lg">
+      <img class="w-3/4 mx-auto" height="200" src="../assets/community.png" width="500"/>
+    </div>
+  </section>
+  <!-- END Our Community -->
+
+  <!-- Our Team -->
+  <section class="bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-16 relative">
+    <!-- Header -->
+    <div class="text-center text-white px-4">
+      <h2 class="text-3xl md:text-4xl font-bold font-poppins">Professional Team</h2>
+      <p class="mt-4 text-sm md:text-base max-w-3xl mx-auto font-opensans">
+        Nawasena has a team of professionals in their respective fields, where every action and decision prioritizes professionalism and client satisfaction.
+      </p>
+    </div>
+  
+    <!-- Wrapper for Content -->
+    <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 items-center justify-center mt-12">
+      <!-- Card 1 -->
+      <div class="bg-transparent rounded-lg p-4 shadow-lg flex flex-col md:flex-row items-center md:items-start">
+        <img
+          alt="Portrait of Mulyo Prabowo"
+          class="rounded-lg mb-4 md:mb-0 md:mr-4 w-32 h-32 md:w-48 md:h-48 object-cover"
+          src="../assets/pak-yoyo.jpg"
+        />
+        <div class="text-center md:text-left">
+          <h3 class="text-lg md:text-xl text-white font-bold font-poppins">Mulyo Prabowo</h3>
+          <p class="text-sm md:text-base text-white font-opensans">Director</p>
+          <p class="text-sm md:text-base text-white mt-2 font-opensans">
+            Seorang direktur yang berdedikasi tinggi, selalu memberikan yang terbaik bagi perusahaan, dan aktif terlibat langsung di lapangan, memberikan pelayanan terbaik untuk semua client nya.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="bg-transparent rounded-lg p-4 shadow-lg flex flex-col md:flex-row items-center md:items-start">
+        <img
+          alt="Portrait of Suratno"
+          class="rounded-lg mb-4 md:mb-0 md:mr-4 w-32 h-32 md:w-48 md:h-48 object-cover"
+          src="../assets/pak-yoyo.jpg"
+        />
+        <div class="text-center md:text-left">
+          <h3 class="text-lg md:text-xl text-white font-bold font-poppins">Suratno</h3>
+          <p class="text-sm md:text-base text-white font-opensans">Head of Operational</p>
+          <p class="text-sm md:text-base text-white mt-2 font-opensans">
+            Seorang kepala operasional yang berpengalaman, selalu memastikan semua operasional berjalan lancar dan efisien, serta memberikan solusi terbaik untuk setiap tantangan yang dihadapi.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- New Card (Centered Below) -->
+    <div class="flex justify-center mt-8">
+      <div class="bg-transparent rounded-lg p-4 shadow-lg flex flex-col md:flex-row items-center md:items-start">
+        <img
+          alt="Portrait of New Team Member"
+          class="rounded-lg mb-4 md:mb-0 md:mr-4 w-32 h-32 md:w-48 md:h-48 object-cover"
+          src="../assets/pak-yoyo.jpg"
+        />
+        <div class="text-center md:text-left">
+          <h3 class="text-lg md:text-xl text-white font-bold font-poppins">Tyas Ramadhianta</h3>
+          <p class="text-sm md:text-base text-white font-opensans">Sales Marketing</p>
+          <p class="text-sm md:text-base text-white mt-2 font-opensans">
+            Deskripsi singkat tentang anggota tim baru, menjelaskan peran dan kontribusinya dalam tim.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END Our Team-->
+
+  <!-- Footer -->
+    <div id="footer"></div>
+  <!-- END Footer -->
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Load Navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuButton && mobileMenu) {
+          menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      })
+      .catch(error => console.error('Error fetching navbar:', error));
+
+    // Load Footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+      })
+      .catch(error => console.error('Error fetching footer:', error));
+
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
+    // Data dokumentasi untuk pergantian konten
+    const documentationData = [
+      {
+        imgSrc: "../assets/dokumentasi/dokum-wm1.png",
+        title: "Opening Ceremony of Jakarta Representative Office-Nippon Kikai Shoji Co.,LTD",
+        location: "Jakarta",
+      },
+      {
+        imgSrc: "../assets/dokumentasi/dokum-wm2.png",
+        title: "PSS Gala Dinner 2023",
+        location: "Jakarta",
+      },
+      {
+        imgSrc: "../assets/dokumentasi/dokum-wm3.png",
+        title: "Reborn, Transform & Elevate",
+        location: "Jakarta",
+      },
+      {
+        imgSrc: "../assets/dokumentasi/dokum-wm4.png",
+        title: "Sehat Bareng Jasindo",
+        location: "Jakarta",
+      },
+      {
+        imgSrc: "../assets/dokumentasi/dokum-wm5.png",
+        title: "Apel Kasatwil",
+        location: "Jakarta",
+      },
+      {
+        imgSrc: "../assets/dokumentasi/dokum-wm6.png",
+        title: "Launching Rans Food",
+        location: "Rans Office",
+      },
+    ];
+
+    let currentIndex = 0;
+
+    // Referensi elemen
+    const leftArrow = document.getElementById("left-arrow");
+    const rightArrow = document.getElementById("right-arrow");
+    const documentationCards = document.querySelectorAll(".documentation-card");
+    const paginationDots = document.querySelectorAll(".pagination-dots div");
+
+    // Fungsi untuk memperbarui konten card dan pagination
+    function updateCards() {
+      documentationCards.forEach((card, index) => {
+        const dataIndex = (currentIndex + index) % documentationData.length;
+        const data = documentationData[dataIndex];
+        card.querySelector("img").src = data.imgSrc;
+        card.querySelector("h2").textContent = data.title;
+        card.querySelector("p").textContent = data.location;
+      });
+
+      // Update pagination dots
+      paginationDots.forEach((dot, index) => {
+        dot.classList.toggle('bg-black', index === currentIndex);
+        dot.classList.toggle('bg-gray-300', index !== currentIndex);
+      });
+    }
+
+    // Event listener untuk tombol panah
+    leftArrow.addEventListener("click", () => { 
+      currentIndex = (currentIndex - 1 + documentationData.length) % documentationData.length;
+      updateCards();
+    });
+
+    rightArrow.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % documentationData.length;
+      updateCards();
+    });
+
+    // Inisialisasi konten awal
+    updateCards();
+  </script>
+
+</body>
+</html>
