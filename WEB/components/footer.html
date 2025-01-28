@@ -7,53 +7,75 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Footer -->
   <footer class="bg-blue-900 py-8">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-white">
       <!-- Logo -->
       <img alt="Nawasena logo" class="mb-4 md:mb-0" height="50" src="../assets/logo.png" width="150" />
-  
-      <!-- Konten Teks dan Ikon -->
+
+      <!-- Quick Links -->
+      <div class="text-center md:text-left mt-8 md:mt-0">
+        <h2 class="text-lg font-bold mb-4">Quick Links</h2>
+        <ul class="space-y-2">
+          <li>
+            <a href="#navbar" class="text-blue-400 hover:text-blue-200 transition-colors duration-300">Back to Top</a>
+          </li>
+          <li>
+            <a href="services.html" class="text-blue-400 hover:text-blue-200 transition-colors duration-300">Services</a>
+          </li>
+          <li>
+            <a href="about.html" class="text-blue-400 hover:text-blue-200 transition-colors duration-300">About Us</a>
+          </li>
+          <li>
+            <a href="contact.html" class="text-blue-400 hover:text-blue-200 transition-colors duration-300">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media Icons -->
       <div class="text-right">
         <div class="flex justify-center md:justify-end space-x-4 mb-4">
-          <!-- Ikon WhatsApp -->
-          <a
-            class="w-14 h-14 flex items-center justify-center rounded-md bg-gray-800 hover:bg-green-500 transition duration-300 transform active:scale-90"
-            href="#"
-            aria-label="WhatsApp"
-          >
+          <!-- WhatsApp Icon -->
+          <a class="w-14 h-14 flex items-center justify-center rounded-md bg-gray-800 hover:bg-green-500 transition duration-300 transform active:scale-90" href="#" aria-label="WhatsApp">
             <i class="fa fa-whatsapp text-white text-lg"></i>
           </a>
-          <!-- Ikon TikTok -->
-          <a
-            class="w-14 h-14 flex items-center justify-center rounded-md bg-gray-800 hover:bg-teal-400 transition duration-300 transform active:scale-90"
-            href="#"
-            aria-label="TikTok"
-          >
-            <i class="fa fa-tiktok text-white text-lg"></i>
+          <!-- Other Social Icons -->
+          <a class="w-14 h-14 flex items-center justify-center rounded-md bg-gray-800 hover:bg-teal-400 transition duration-300 transform active:scale-90" href="#" aria-label="TikTok">
+            <img alt="Icon TikTok" class="h-6 w-6" src="../assets/icon-tiktok.png" />
           </a>
-          <!-- Ikon Instagram -->
-          <a
-            class="w-14 h-14 flex items-center justify-center rounded-md bg-gray-800 hover:bg-pink-500 transition duration-300 transform active:scale-90"
-            href="#"
-            aria-label="Instagram"
-          >
+          <a class="w-14 h-14 flex items-center justify-center rounded-md bg-gray-800 hover:bg-pink-500 transition duration-300 transform active:scale-90" href="#" aria-label="Instagram">
             <i class="fa fa-instagram text-white text-lg"></i>
           </a>
-          <!-- Ikon YouTube -->
-          <a
-            class="w-14 h-14 flex items-center justify-center rounded-md bg-gray-800 hover:bg-red-500 transition duration-300 transform active:scale-90"
-            href="#"
-            aria-label="YouTube"
-          >
-            <i class="fa fa-youtube text-white text-lg"></i>
+          <a class="w-14 h-14 flex items-center justify-center rounded-md bg-gray-800 hover:bg-red-500 transition duration-300 transform active:scale-90" href="#" aria-label="YouTube">
+            <img alt="Icon YouTube" class="h-6 w-6" src="../assets/icon-youtube.png" />
           </a>
         </div>
-  
-        <!-- Teks Footer -->
+
+        <!-- Footer Text -->
         <p class="text-center md:text-right">© 2024 Nawasena | Indonesia</p>
         <p class="text-center md:text-right">Professional Event Management. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
+
+  <!-- Scroll to top script -->
+  <script>
+    // Select all links starting with #
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1); // Get target ID
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          // Smooth scroll to the target element
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    });
+  </script> 
 </body>
 </html>
