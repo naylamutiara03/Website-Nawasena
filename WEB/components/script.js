@@ -1,16 +1,31 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Ambil nama halaman dari URL
-  const currentPage = window.location.pathname.split('/').pop();
+async function loadEvents() {
+  try {
+      const response = await fetch('events.json'); // Ambil data dari events.json
+      const events = await response.json(); // Convert ke JSON
 
-  // Pilih semua tautan di navigasi dan menu dropdown
-  const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
+      // Render data ke masing-masing tahun
+      document.getElementById("portfolio-2024").innerHTML = renderEvents(events, 2024);
+      document.getElementById("portfolio-2023").innerHTML = renderEvents(events, 2023);
+  } catch (error) {
+      console.error("Error loading events:", error);
+  }
+}
 
-  // Tambahkan class 'active-link' jika URL cocok
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && (href === currentPage || href.includes(currentPage))) {
-      link.classList.add('active-link');
-    }
-  });
-});
-  
+// Fungsi untuk membuat kartu event berdasarkan tahun
+function renderEvents(events, year) {
+  return events
+      .filter(event => event.year === year)
+      .map(event => `
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+              <img class="w-full h-48 object-cover" src="${event.image}" alt="${event.name}">
+              <div class="p-4">
+                  <h3 class="text-xl font-semibold">${event.name}</h3>
+                  <p class="text-gray-400">${event.location}</p>
+                  <a class="mt-2 inline-block bg-cyan-500 text-white px-4 py-2 rounded-full hover:bg-cyan-600 transition" href="#">See More</a>
+              </div>
+          </div>
+      `).join('');
+}
+
+// Panggil fungsi saat halaman selesai dimuat
+document.addEventListener("DOMContentLoaded", loadEvents);
