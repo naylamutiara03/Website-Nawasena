@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Home - Nawasena</title>
   <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,8 +29,7 @@
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
   <style>
     .fade-in {
@@ -42,6 +41,22 @@
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: white;
+      /* Ubah warna sesuai kebutuhan */
+      width: 40px;
+      /* Lebar tombol */
+      height: 40px;
+    }
+
+    .active {
+      background-color: #d1d5db;
+      /* Warna latar belakang lebih gelap */
+      color: #000;
+      /* Ubah warna teks jika perlu */
     }
   </style>
 </head>
@@ -64,8 +79,17 @@
         <img src="../assets/thumbnail2.jpg" alt="Event 3" class="w-full h-full object-cover rounded-lg">
       </div>
     </div>
+
+    <!-- Pagination -->
     <div class="swiper-pagination"></div>
   </section>
+
+  <!-- Navigation buttons -->
+  <div class="flex justify-between mt-4">
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  <!-- END Slider -->
 
   <!-- Services Section -->
   <section class="text-center mt-12 px-4 md:px-20 fade-in">
@@ -166,185 +190,315 @@
 
   <!-- Our Client -->
   <section class="container mx-auto py-12 fade-in">
-    <h1 class="text-4xl font-bold text-center mb-8 font-poppins">
-      CLIENTS
+    <h1 class="text-3xl font-bold text-center mb-8 font-poppins">
+      Our Clients
     </h1>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-      <div class="border p-4 flex items-center justify-center">
+      <!-- PAGE 1 -->
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 1" src="../assets/clients/pertamina.jpeg" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 2" class="h-24 w-24" src="../assets/clients/plataran.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 3" src="../assets/clients/ggf.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 4" src="../assets/clients/antam.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 5" src="../assets/clients/yamaha.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 6" src="../assets/clients/j&t.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 7" class="h-24 w-24" src="../assets/clients/kadin.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 8" src="../assets/clients/capsugel.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 9" src="../assets/clients/jotun.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 10" src="../assets/clients/hyundai.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 11" src="../assets/clients/astra.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 12" class="bg-white" src="../assets/clients/country-fiesta.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 13" class="bg-white h-24 w-24" src="../assets/clients/kideco.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
-        <img alt="Client logo 14" class=" bg-white" src="../assets/clients/indika.png" />
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 14" class="bg-white" src="../assets/clients/indika.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 15" class="h-24 w-24" src="../assets/clients/PPATK.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 16" class="h-24 w-24" src="../assets/clients/kemenko.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 17" src="../assets/clients/bpjs.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 18" src="../assets/clients/sidomuncul.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 19" class="bg-white" src="../assets/clients/BP2MI.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 20" class="bg-white" src="../assets/clients/bumn.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 21" class="h-24 w-24" src="../assets/clients/pan.jpeg" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
-        <img alt="Client logo 22" class="w-24 h-24" src="../assets/clients/nasdem.jpeg" />
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 22" class="w-24 h-24 " src="../assets/clients/nasdem.jpeg" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 23" class="bg-white" src="../assets/clients/samudera.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 24" class="w-24 h-24" src="../assets/clients/asean.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <!-- END PAGE 1 -->
+      <!-- PAGE 2 -->
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 25" class="h-20 w-28" src="../assets/clients/btpn.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 26" class="bg-white" src="../assets/clients/bareksa.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 27" class="h-24 w-24" src="../assets/clients/energi.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 28" class="h-24 w-24" src="../assets/clients/BPK.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 29" class="h-24 w-24 bg-white" src="../assets/clients/LPS.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 30" class="h-24 w-24" src="../assets/clients/BPDPKS.jpeg" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 31" class="bg-white" src="../assets/clients/telkomsel.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 32" class="bg-white" src="../assets/clients/loreal.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 33" class="h-24 w-24" src="../assets/clients/bni.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 34" class="h-24 w-24" src="../assets/clients/ferarri.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 35" src="../assets/clients/bri.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 36" class="h-24 w-24" src="../assets/clients/jims-honey.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 37" class="h-24 w-20" src="../assets/clients/dishub.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 38" class="h-24 w-24" src="../assets/clients/ppa.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 39" src="../assets/clients/blibli.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 40" src="../assets/clients/ovo.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 41" src="../assets/clients/mandiri.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 42" class="bg-white" src="../assets/clients/nyx.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 43" class="h-24 w-24 bg-white" src="../assets/clients/sandra-dewi.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 44" class="h-26 w-24" src="../assets/clients/PLN.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 45" class="bg-white" src="../assets/clients/zain.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 46" class="h-24 w-24" src="../assets/clients/ayam-gepuk.png" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 47" class="h-24 w-24" src="../assets/clients/cheris.jpeg" />
       </div>
-      <div class="border p-4 flex items-center justify-center">
+      <div class="client-logo border p-4 flex items-center justify-center">
         <img alt="Client logo 48" class="h-24 w-24" src="../assets/clients/badan-siber.png" />
       </div>
+      <!-- END PAGE 2 -->
+      <!-- PAGE 3 -->
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 49" class="h-26 w-26 bg-white" src="../assets/clients/jaya.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 50" class="h-26 w-26 bg-white" src="../assets/clients/sinarmas.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 51" class="h-24 w-24" src="../assets/clients/rockstar-gym.jpeg" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 52" src="../assets/clients/magnet.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 53" class="bg-white" src="../assets/clients/hotel.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 54" class="bg-white" src="../assets/clients/pp.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 55" src="../assets/clients/nitro.jpeg" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 56" src="../assets/clients/royal.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 57" src="../assets/clients/lego.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 58" src="../assets/clients/politeknik.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 59" class="bg-white" src="../assets/clients/indonesia.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 60" class="bg-white" src="../assets/clients/btn.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 61" src="../assets/clients/cakrawala.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 62" src="../assets/clients/puspomad.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 63" src="../assets/clients/bart.jpg" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 64" src="../assets/clients/airfast.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 65" src="../assets/clients/pemda.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 66" src="../assets/clients/nippon.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 67" src="../assets/clients/pupr.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 68" src="../assets/clients/bank-ina.png" />
+      </div>
+      <div class="client-logo border p-4 flex items-center justify-center">
+        <img alt="Client logo 69" src="../assets/clients/singapore.png" />
+      </div>
+      <!-- END PAGE 3 -->
     </div>
-    <p class="text-center mt-8">
-      more than 50 happy clients
-    </p>
-    <p class="text-center mt-2">
-      1/1
-    </p>
+    <!-- Pagination -->
+    <div class="flex justify-center mt-8">
+      <nav aria-label="Pagination">
+        <ul class="inline-flex items-center space-x-4">
+          <li>
+            <button id="page-1"
+              class="pagination-button px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-200"
+              onclick="changePage(1)">1</button>
+          </li>
+          <li>
+            <button id="page-2"
+              class="pagination-button px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-200"
+              onclick="changePage(2)">2</button>
+          </li>
+          <li>
+            <button id="page-3"
+              class="pagination-button px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-200"
+              onclick="changePage(3)">3</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- END Pagination -->
   </section>
-  <!-- END Our Client-->
+  <!-- END Our Client -->
 
   <!-- Our Partner -->
-  <section class="text-center mb-10 fade-in">
-    <h2 class="text-3xl font-bold mb-5 mt-8">
+  <section class="container mx-auto py-12">
+    <h1 class="text-center text-3xl font-bold mb-8">
       Our Partner
-    </h2>
-    <div class="bg-black p-5 rounded-lg">
-      <img class="w-3/4 mx-auto" height="200" src="../assets/our-partner.png" width="500" />
+    </h1>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <div class="p-4 border border-white flex items-center justify-center">
+        <img alt="Logo of GASINDO" height="150" src="../assets/partner/gasindo.jpg" width="150" />
+      </div>
+      <div class="p-4 border border-white flex items-center justify-center">
+        <img alt="Logo of LEXA" height="150" class="bg-white" src="../assets/partner/lexa.png" width="150" />
+      </div>
+      <div class="p-4 border border-white flex items-center justify-center">
+        <img alt="Logo of Ars" height="150" src="../assets/partner/ars.png" width="150" />
+      </div>
+      <div class="p-4 border border-white flex items-center justify-center">
+        <img alt="Logo of CENTRAL events" height="150" src="../assets/partner/central-event.png" width="150" />
+      </div>
+      <div class="p-4 border border-white flex items-center justify-center">
+        <img alt="Logo of SR Solusi Rental Equipment" height="150" src="../assets/partner/melvi.png" width="150" />
+      </div>
+      <div class="p-4 border border-white flex items-center justify-center">
+        <img alt="Logo of Total Rental" height="150" class="bg-white" src="../assets/partner/total.png" width="150" />
+      </div>
+      <div class="p-4 border border-white flex items-center justify-center">
+        <img alt="Logo of SHUTSHOOT OFFICIAL" height="150" class="bg-white" src="../assets/partner/shuttshot.png"
+          width="150" />
+      </div>
+      <div class="p-4 border border-white flex items-center justify-center">
+        <img alt="Logo of Bintang Jaya" height="150" class="bg-white" src="../assets/partner/wb.png" width="150" />
+      </div>
+      <div class="p-4 border border-white flex items-center justify-center">
+        <img alt="Logo of MAXINDO LED" height="150" class="bg-white" src="../assets/partner/bintang-jaya.png"
+          width="150" />
+      </div>
+      <div class="p-4 border border-white flex items-center justify-center">
+        <img alt="Logo of W3" height="150" src="../assets/partner/maxindo.png" width="150" />
+      </div>
     </div>
   </section>
   <!-- END Our Partner -->
 
   <!-- Our Community -->
-  <section class="text-center mb-10 fade-in">
-    <h2 class="text-3xl font-bold mb-5 mt-8">
-      Our Community
-    </h2>
-    <div class="bg-black p-5 rounded-lg">
-      <img class="w-3/4 mx-auto" height="200" src="../assets/community.png" width="500" />
+  <section class="container mx-auto py-12 text-center">
+    <h1 class="text-3xl font-bold mb-8">Our Community</h1>
+    <div class="flex justify-center">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-fit mx-auto">
+        <div class="p-4 border border-white flex items-center justify-center">
+          <img alt="Logo of GASINDO" height="150" src="../assets/community/rental.png" width="150" />
+        </div>
+        <div class="p-4 border border-white flex items-center justify-center">
+          <img alt="Logo of LEXA" height="150" class="bg-white" src="../assets/community/pekerja.jpg" width="150" />
+        </div>
+        <div class="p-4 border border-white flex items-center justify-center">
+          <img alt="Logo of Ars" height="150" src="../assets/community/rmi.jpg" width="150" />
+        </div>
+        <div class="p-4 border border-white flex items-center justify-center">
+          <img alt="Logo of CENTRAL events" height="150" src="../assets/community/eoc.jpeg" width="150" />
+        </div>
+      </div>
     </div>
   </section>
   <!-- END Our Community -->
+
+
 
   <!-- Our Team -->
   <section class="bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-16 relative fade-in">
@@ -442,7 +596,7 @@
       })
       .catch(error => console.error('Error fetching footer:', error));
 
-    // Initialize Swiper
+    // Initialize Swiper for slider
     const swiper = new Swiper('.swiper-container', {
       loop: true,
       autoplay: {
@@ -452,6 +606,10 @@
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     });
 
@@ -525,8 +683,36 @@
       updateCards();
     });
 
-    // Inisialisasi konten awal
+    // Inisialisasi konten awal (dokumentasi)
     updateCards();
+
+    // CLIENT: Fungsi untuk mengganti halaman pagination
+    // Fungsi untuk mengganti tampilan logo saat tombol pagination diklik
+    function changePage(pageNumber) {
+      const allLogos = document.querySelectorAll('.client-logo'); // Ambil semua logo
+      const logosPerPage = 24; // Jumlah logo per halaman
+      const startIndex = (pageNumber - 1) * logosPerPage;
+      const endIndex = pageNumber * logosPerPage;
+
+      // Sembunyikan semua logo
+      allLogos.forEach(logo => logo.style.display = 'none');
+
+      // Tampilkan logo yang sesuai dengan halaman yang dipilih
+      for (let i = startIndex; i < endIndex && i < allLogos.length; i++) {
+        allLogos[i].style.display = 'flex'; // Pastikan logo ditampilkan dengan flex
+      }
+
+      // Update tombol pagination
+      const buttons = document.querySelectorAll('.pagination-button');
+      buttons.forEach(button => {
+        button.classList.remove('active'); // Hapus kelas active dari semua tombol
+      });
+      buttons[pageNumber - 1].classList.add('active'); // Tambahkan kelas active pada tombol yang sesuai
+    }
+
+    // Menampilkan halaman pertama saat pertama kali load
+    window.onload = () => changePage(1);
+    // END CLIENT
 
     // Scroll Animation
     document.addEventListener("DOMContentLoaded", function () {
