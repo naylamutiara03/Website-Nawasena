@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        opensans: ['Open Sans', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+    <div id="navbar"></div>
+
+    <!-- FORM -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center">
+            <div class="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left fade-in">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4 font-poppins">Schedule Your Appointment Today</h1>
+                <p class="mb-4 text-lg font-open-sans">Contact us to make your event a success. Nawasena is here to help
+                    with dedication.</p>
+                <p class="flex items-center justify-center lg:justify-start gap-2"><i class="fas fa-phone text-lg"></i>
+                    +62 818-825-251</p>
+                <p class="flex items-center justify-center lg:justify-start gap-2"><i
+                        class="fab fa-whatsapp text-lg"></i> +62 818-825-251</p>
+                <p class="flex items-center justify-center lg:justify-start gap-2"><i
+                        class="fas fa-envelope text-lg"></i> official@nawasenapro.com</p>
+                <p class="flex items-center justify-center lg:justify-start gap-2"><i
+                        class="fas fa-map-marker-alt text-lg"></i> Depok, Jawa Barat</p>
+            </div>
+            <div
+                class="lg:w-1/2 bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 p-6 md:p-8 rounded-lg w-full fade-in">
+                <h2 class="text-2xl font-bold mb-4 text-center font-poppins">Contact With Us</h2>
+                <form class="space-y-4">
+                    <input class="w-full p-2 rounded border border-gray-300 text-black" placeholder="Your Name"
+                        type="text" />
+                    <input class="w-full p-2 rounded border border-gray-300  text-black" placeholder="Your Email"
+                        type="email" />
+                    <textarea class="w-full p-2 rounded border border-gray-300 text-black"
+                        placeholder="Message"></textarea>
+                    <div class="flex justify-center">
+                        <button
+                            class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded font-open-sans w-full md:w-auto"
+                            type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- END Form -->
+
+    <!-- Location -->
+    <section class="bg-black py-16 fade-in">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8 font-poppins text-white">
+                Nawasena Location
+            </h2>
+            <div class="flex justify-center">
+                <iframe class="w-full max-w-4xl h-96 rounded-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.19535155668!2d106.7339620753534!3d-6.3687599936213966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ef00406956f7%3A0xd07707b488c50575!2sNawasena%20Production!5e0!3m2!1sen!2sid!4v1738724010586!5m2!1sen!2sid"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <a href="https://www.google.com/maps/place/Nawasena+Production/@-6.36876,106.7339621,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69ef00406956f7:0xd07707b488c50575!8m2!3d-6.36876!4d106.736537!16s%2Fg%2F11ldq0zkjq?entry=ttu&g_ep=EgoyMDI1MDIwMi4wIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D"
+                target="_blank">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-2 rounded-full font-open-sans mt-6">
+                    View on Google Maps
+                </button>
+            </a>
+        </div>
+    </section>
+    <!-- END Location -->
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- END Footer -->
+
+    <script>
+        // Load Navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching navbar:', error));
+
+        // Load Footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching footer:', error));
+
+        // Scroll Animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observerOptions = {
+                root: null, // Use the viewport as the root
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                    }
+                });
+            }, observerOptions);
+
+            fadeInElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+
+</html>

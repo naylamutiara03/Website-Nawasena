@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,10 +25,25 @@
   </script>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 
 <body class="bg-black text-white">
@@ -52,9 +68,10 @@
   </section>
 
   <!-- Services Section -->
-  <section class="text-center mt-12 px-4 md:px-20">
+  <section class="text-center mt-12 px-4 md:px-20 fade-in">
     <h2 class="text-3xl font-bold font-poppins">Event Management That We Offer You</h2>
-    <p class="text-gray-300 mt-2 font-opensans">In addition to handling event management, Nawasena also operates as a support event organizer, specializing in supporting all production and rental equipment.</p>
+    <p class="text-gray-300 mt-2 font-opensans">In addition to handling event management, Nawasena also operates as a
+      support event organizer, specializing in supporting all production and rental equipment.</p>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
       <div class="flex flex-col items-center">
         <div class="p-6 bg-white rounded-full">
@@ -85,7 +102,7 @@
   <!-- END Services-->
 
   <!-- Documentation Section -->
-  <section class="w-full bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-12 mt-20">
+  <section class="w-full bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-12 mt-20 fade-in">
     <div class="w-full max-w-5xl mx-auto p-8 rounded-lg shadow-lg">
       <h1 class="text-center text-white text-3xl font-bold mb-8 font-poppins">Project Documentation of Nawasena</h1>
       <div class="flex flex-col items-center">
@@ -98,36 +115,31 @@
           <!-- Kartu Dokumentasi -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center">
             <!-- Card 1 -->
-            <div class="documentation-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
-              <img
-                alt="Opening Ceremony of Jakarta Representative Office"
-                class="w-full h-40 object-cover"
-                src="../assets/dokumentasi/dokum-wm1.png"
-              />
+            <div
+              class="documentation-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+              <img alt="Opening Ceremony of Jakarta Representative Office" class="w-full h-40 object-cover"
+                src="../assets/dokumentasi/dokum-wm1.png" />
               <div class="p-4 flex flex-col justify-between h-full">
-                <h2 class="text-center text-black text-lg font-semibold font-poppins">Opening Ceremony of Jakarta Representative Office-Nippon Kikai Shoji Co.,LTD</h2>
+                <h2 class="text-center text-black text-lg font-semibold font-poppins">Opening Ceremony of Jakarta
+                  Representative Office-Nippon Kikai Shoji Co.,LTD</h2>
                 <p class="text-center text-gray-500 mt-2">Jakarta</p>
               </div>
             </div>
             <!-- Card 2 -->
-            <div class="documentation-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
-              <img
-                alt="PSS Gala Dinner 2023"
-                class="w-full h-40 object-cover"
-                src="../assets/dokumentasi/dokum-wm2.png"
-              />
+            <div
+              class="documentation-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+              <img alt="PSS Gala Dinner 2023" class="w-full h-40 object-cover"
+                src="../assets/dokumentasi/dokum-wm2.png" />
               <div class="p-4 flex flex-col justify-between h-full">
                 <h2 class="text-center text-black text-lg font-semibold font-poppins">PSS Gala Dinner 2023</h2>
                 <p class="text-center text-gray-500 mt-2">Jakarta</p>
               </div>
             </div>
             <!-- Card 3 -->
-            <div class="documentation-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
-              <img
-                alt="Reborn, Transform & Elevate"
-                class="w-full h-40 object-cover"
-                src="../assets/dokumentasi/dokum-wm3.png"
-              />
+            <div
+              class="documentation-card bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+              <img alt="Reborn, Transform & Elevate" class="w-full h-40 object-cover"
+                src="../assets/dokumentasi/dokum-wm3.png" />
               <div class="p-4 flex flex-col justify-between h-full">
                 <h2 class="text-center text-black text-lg font-semibold font-poppins">Reborn, Transform & Elevate</h2>
                 <p class="text-center text-gray-500 mt-2">Jakarta</p>
@@ -153,243 +165,243 @@
   <!-- END Documentation-->
 
   <!-- Our Client -->
-  <section class="container mx-auto py-12">
+  <section class="container mx-auto py-12 fade-in">
     <h1 class="text-4xl font-bold text-center mb-8 font-poppins">
-     CLIENTS
+      CLIENTS
     </h1>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 1" src="../assets/clients/pertamina.jpeg"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 2" class="h-24 w-24" src="../assets/clients/plataran.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 3" src="../assets/clients/ggf.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 4" src="../assets/clients/antam.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 5" src="../assets/clients/yamaha.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 6" src="../assets/clients/j&t.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 7" class="h-24 w-24" src="../assets/clients/kadin.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 8" src="../assets/clients/capsugel.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 9" src="../assets/clients/jotun.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 10" src="../assets/clients/hyundai.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 11" src="../assets/clients/astra.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 12" class="bg-white" src="../assets/clients/country-fiesta.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 13" class="bg-white h-24 w-24" src="../assets/clients/kideco.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 14" class=" bg-white" src="../assets/clients/indika.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 15" class="h-24 w-24" src="../assets/clients/PPATK.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 16" class="h-24 w-24" src="../assets/clients/kemenko.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 17" src="../assets/clients/bpjs.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 18" src="../assets/clients/sidomuncul.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 19" class="bg-white" src="../assets/clients/BP2MI.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 20" class="bg-white" src="../assets/clients/bumn.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 21" class="h-24 w-24" src="../assets/clients/pan.jpeg"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 22" class="w-24 h-24" src="../assets/clients/nasdem.jpeg"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 23" class="bg-white" src="../assets/clients/samudera.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 24" class="w-24 h-24" src="../assets/clients/asean.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 25" class="h-20 w-28" src="../assets/clients/btpn.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 26" class="bg-white" src="../assets/clients/bareksa.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 27" class="h-24 w-24" src="../assets/clients/energi.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 28" class="h-24 w-24" src="../assets/clients/BPK.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 29" class="h-24 w-24 bg-white" src="../assets/clients/LPS.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 30" class="h-24 w-24" src="../assets/clients/BPDPKS.jpeg"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 31" class="bg-white" src="../assets/clients/telkomsel.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 32" class="bg-white" src="../assets/clients/loreal.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 33" class="h-24 w-24" src="../assets/clients/bni.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 34" class="h-24 w-24" src="../assets/clients/ferarri.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 35" src="../assets/clients/bri.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 36" class="h-24 w-24" src="../assets/clients/jims-honey.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 37" class="h-24 w-20" src="../assets/clients/dishub.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 38" class="h-24 w-24" src="../assets/clients/ppa.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 39" src="../assets/clients/blibli.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 40" src="../assets/clients/ovo.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 41" src="../assets/clients/mandiri.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 42" class="bg-white" src="../assets/clients/nyx.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 43" class="h-24 w-24 bg-white" src="../assets/clients/sandra-dewi.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 44" class="h-26 w-24" src="../assets/clients/PLN.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 45" class="bg-white" src="../assets/clients/zain.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 46" class="h-24 w-24" src="../assets/clients/ayam-gepuk.png"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 47" class="h-24 w-24" src="../assets/clients/cheris.jpeg"/>
-     </div>
-     <div class="border p-4 flex items-center justify-center">
-      <img alt="Client logo 48" class="h-24 w-24" src="../assets/clients/badan-siber.png"/>
-     </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 1" src="../assets/clients/pertamina.jpeg" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 2" class="h-24 w-24" src="../assets/clients/plataran.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 3" src="../assets/clients/ggf.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 4" src="../assets/clients/antam.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 5" src="../assets/clients/yamaha.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 6" src="../assets/clients/j&t.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 7" class="h-24 w-24" src="../assets/clients/kadin.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 8" src="../assets/clients/capsugel.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 9" src="../assets/clients/jotun.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 10" src="../assets/clients/hyundai.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 11" src="../assets/clients/astra.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 12" class="bg-white" src="../assets/clients/country-fiesta.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 13" class="bg-white h-24 w-24" src="../assets/clients/kideco.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 14" class=" bg-white" src="../assets/clients/indika.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 15" class="h-24 w-24" src="../assets/clients/PPATK.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 16" class="h-24 w-24" src="../assets/clients/kemenko.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 17" src="../assets/clients/bpjs.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 18" src="../assets/clients/sidomuncul.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 19" class="bg-white" src="../assets/clients/BP2MI.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 20" class="bg-white" src="../assets/clients/bumn.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 21" class="h-24 w-24" src="../assets/clients/pan.jpeg" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 22" class="w-24 h-24" src="../assets/clients/nasdem.jpeg" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 23" class="bg-white" src="../assets/clients/samudera.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 24" class="w-24 h-24" src="../assets/clients/asean.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 25" class="h-20 w-28" src="../assets/clients/btpn.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 26" class="bg-white" src="../assets/clients/bareksa.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 27" class="h-24 w-24" src="../assets/clients/energi.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 28" class="h-24 w-24" src="../assets/clients/BPK.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 29" class="h-24 w-24 bg-white" src="../assets/clients/LPS.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 30" class="h-24 w-24" src="../assets/clients/BPDPKS.jpeg" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 31" class="bg-white" src="../assets/clients/telkomsel.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 32" class="bg-white" src="../assets/clients/loreal.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 33" class="h-24 w-24" src="../assets/clients/bni.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 34" class="h-24 w-24" src="../assets/clients/ferarri.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 35" src="../assets/clients/bri.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 36" class="h-24 w-24" src="../assets/clients/jims-honey.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 37" class="h-24 w-20" src="../assets/clients/dishub.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 38" class="h-24 w-24" src="../assets/clients/ppa.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 39" src="../assets/clients/blibli.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 40" src="../assets/clients/ovo.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 41" src="../assets/clients/mandiri.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 42" class="bg-white" src="../assets/clients/nyx.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 43" class="h-24 w-24 bg-white" src="../assets/clients/sandra-dewi.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 44" class="h-26 w-24" src="../assets/clients/PLN.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 45" class="bg-white" src="../assets/clients/zain.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 46" class="h-24 w-24" src="../assets/clients/ayam-gepuk.png" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 47" class="h-24 w-24" src="../assets/clients/cheris.jpeg" />
+      </div>
+      <div class="border p-4 flex items-center justify-center">
+        <img alt="Client logo 48" class="h-24 w-24" src="../assets/clients/badan-siber.png" />
+      </div>
     </div>
     <p class="text-center mt-8">
-     more than 50 happy clients
+      more than 50 happy clients
     </p>
     <p class="text-center mt-2">
-     1/1
+      1/1
     </p>
-   </section>
+  </section>
   <!-- END Our Client-->
-  
+
   <!-- Our Partner -->
-  <section class="text-center mb-10">
+  <section class="text-center mb-10 fade-in">
     <h2 class="text-3xl font-bold mb-5 mt-8">
       Our Partner
     </h2>
     <div class="bg-black p-5 rounded-lg">
-      <img class="w-3/4 mx-auto" height="200" src="../assets/our-partner.png" width="500"/>
+      <img class="w-3/4 mx-auto" height="200" src="../assets/our-partner.png" width="500" />
     </div>
   </section>
   <!-- END Our Partner -->
 
   <!-- Our Community -->
-  <section class="text-center mb-10">
+  <section class="text-center mb-10 fade-in">
     <h2 class="text-3xl font-bold mb-5 mt-8">
       Our Community
     </h2>
     <div class="bg-black p-5 rounded-lg">
-      <img class="w-3/4 mx-auto" height="200" src="../assets/community.png" width="500"/>
+      <img class="w-3/4 mx-auto" height="200" src="../assets/community.png" width="500" />
     </div>
   </section>
   <!-- END Our Community -->
 
   <!-- Our Team -->
-  <section class="bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-16 relative">
+  <section class="bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-16 relative fade-in">
     <!-- Header -->
     <div class="text-center text-white px-4">
       <h2 class="text-4xl md:text-3xl font-bold font-poppins drop-shadow-lg">Professional Team</h2>
       <p class="mt-4 text-sm md:text-lg max-w-2xl mx-auto font-opensans">
-        Nawasena has a team of professionals in their respective fields, where every action and decision prioritizes professionalism and client satisfaction.
+        Nawasena has a team of professionals in their respective fields, where every action and decision prioritizes
+        professionalism and client satisfaction.
       </p>
     </div>
 
     <!-- Wrapper for Content -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center mt-12 px-6">
       <!-- Card 1 -->
-      <div class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px]">
-        <img
-          alt="Portrait of Mulyo Prabowo"
-          class="rounded-lg w-32 h-32 md:w-48 md:h-48 object-cover mx-auto mb-4"
-          src="../assets/pak-yoyo.jpg"
-        />
+      <div
+        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px]">
+        <img alt="Portrait of Mulyo Prabowo" class="rounded-lg w-32 h-32 md:w-48 md:h-48 object-cover mx-auto mb-4"
+          src="../assets/pak-yoyo.jpg" />
         <div class="text-center">
-          <h3 class="text-xl md:text-2xl text-white font-bold font-poppins group-hover:text-orange-300">Mulyo Prabowo</h3>
+          <h3 class="text-xl md:text-2xl text-white font-bold font-poppins group-hover:text-orange-300">Mulyo Prabowo
+          </h3>
           <p class="text-sm md:text-base text-white font-opensans">CEO</p>
           <p class="text-sm md:text-base text-white/80 mt-2 font-opensans line-clamp-4">
-            Seorang direktur yang berdedikasi tinggi, selalu memberikan yang terbaik bagi perusahaan, dan aktif terlibat langsung di lapangan, memberikan pelayanan terbaik untuk semua client nya.
+            Seorang direktur yang berdedikasi tinggi, selalu memberikan yang terbaik bagi perusahaan, dan aktif terlibat
+            langsung di lapangan, memberikan pelayanan terbaik untuk semua client nya.
           </p>
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px]">
-        <img
-          alt="Portrait of Suratno"
-          class="rounded-lg w-32 h-32 md:w-48 md:h-48 object-cover mx-auto mb-4"
-          src="../assets/pak-yoyo.jpg"
-        />
+      <div
+        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px]">
+        <img alt="Portrait of Suratno" class="rounded-lg w-32 h-32 md:w-48 md:h-48 object-cover mx-auto mb-4"
+          src="../assets/pak-yoyo.jpg" />
         <div class="text-center">
           <h3 class="text-xl md:text-2xl text-white font-bold font-poppins group-hover:text-orange-300">Ratno</h3>
           <p class="text-sm md:text-base text-white font-opensans">Head of Operational</p>
           <p class="text-sm md:text-base text-white/80 mt-2 font-opensans line-clamp-4">
-            Seorang kepala operasional yang berpengalaman, selalu memastikan semua operasional berjalan lancar dan efisien, serta memberikan solusi terbaik untuk setiap tantangan yang dihadapi.
+            Seorang kepala operasional yang berpengalaman, selalu memastikan semua operasional berjalan lancar dan
+            efisien, serta memberikan solusi terbaik untuk setiap tantangan yang dihadapi.
           </p>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px]">
-        <img
-          alt="Portrait of Tyas Ramadhianta"
-          class="rounded-lg w-32 h-32 md:w-48 md:h-48 object-cover mx-auto mb-4"
-          src="../assets/pak-yoyo.jpg"
-        />
+      <div
+        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px]">
+        <img alt="Portrait of Tyas Ramadhianta" class="rounded-lg w-32 h-32 md:w-48 md:h-48 object-cover mx-auto mb-4"
+          src="../assets/pak-yoyo.jpg" />
         <div class="text-center">
-          <h3 class="text-xl md:text-2xl text-white font-bold font-poppins group-hover:text-orange-300">Tyas Ramadhianta</h3>
+          <h3 class="text-xl md:text-2xl text-white font-bold font-poppins group-hover:text-orange-300">Tyas Ramadhianta
+          </h3>
           <p class="text-sm md:text-base text-white font-opensans">Sales Marketing</p>
           <p class="text-sm md:text-base text-white/80 mt-2 font-opensans line-clamp-4">
-            Seorang kepala operasional yang berpengalaman, selalu memastikan semua operasional berjalan lancar dan efisien, serta memberikan solusi terbaik untuk setiap tantangan yang dihadapi.
+            Seorang kepala operasional yang berpengalaman, selalu memastikan semua operasional berjalan lancar dan
+            efisien, serta memberikan solusi terbaik untuk setiap tantangan yang dihadapi.
           </p>
         </div>
       </div>
@@ -398,12 +410,11 @@
   <!-- END Our Team -->
 
   <!-- Footer -->
-    <div id="footer"></div>
+  <div id="footer"></div>
   <!-- END Footer -->
 
   <!-- Scripts -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <!-- <script src="js/script-clients.js"></script> -->
   <script>
     // Load Navbar
     fetch('navbar.html')
@@ -504,7 +515,7 @@
     }
 
     // Event listener untuk tombol panah
-    leftArrow.addEventListener("click", () => { 
+    leftArrow.addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + documentationData.length) % documentationData.length;
       updateCards();
     });
@@ -516,7 +527,32 @@
 
     // Inisialisasi konten awal
     updateCards();
+
+    // Scroll Animation
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeInElements = document.querySelectorAll('.fade-in');
+
+      const observerOptions = {
+        root: null, // Use the viewport as the root
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the element is visible
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Stop observing once the animation is triggered
+          }
+        });
+      }, observerOptions);
+
+      fadeInElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
   </script>
 
 </body>
+
 </html>

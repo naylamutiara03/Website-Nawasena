@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services</title>
-  <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            poppins: ['Poppins', 'sans-serif'],
-            opensans: ['Open Sans', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        opensans: ['Open Sans', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 
 </head>
+
 <body class="bg-black text-white">
     <!-- Navbar -->
     <div id="navbar"></div>
     <!-- END Navbar -->
 
     <!-- Services -->
-    <section class="w-full bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-12 mt-20 text-center">
+    <section class="w-full bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-12 mt-20 text-center fade-in">
         <h2 class="text-3xl font-bold font-poppins">Event Management That We Offer You</h2>
-        <p class="text-gray-200 mt-2 font-opensans">In addition to handling event management, Nawasena also operates as a support event organizer, specializing in supporting all production and rental equipment.</p>
+        <p class="text-gray-200 mt-2 font-opensans">In addition to handling event management, Nawasena also operates as
+            a support event organizer, specializing in supporting all production and rental equipment.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
             <div class="flex flex-col items-center">
                 <div class="p-6 bg-white rounded-full">
@@ -63,31 +81,37 @@
         </div>
     </section>
     <!-- END Services -->
-    
+
     <!-- All production support -->
     <div class="container mx-auto px-4 py-8 text-center flex flex-col items-center">
-        <h1 class="text-4xl font-bold font-poppins mt-6">
+        <h1 class="text-4xl font-bold font-poppins mt-6 fade-in">
             ALL PRODUCTION SUPPORT
         </h1>
         <!-- Booth Exhibition -->
-        <div class="mb-8 flex flex-col md:flex-row items-center justify-center text-center">
+        <div class="mb-8 flex flex-col md:flex-row items-center justify-center text-center fade-in">
             <div class="relative mb-2 md:mb-0 md:mr-4">
-                <img alt="Booth exhibition with various displays and products" class="w-full md:w-96 rounded-lg" height="800" src="../assets/booth/booth-wm6.png" width="800"/>
+                <img alt="Booth exhibition with various displays and products" class="w-full md:w-96 rounded-lg"
+                    height="800" src="../assets/booth/booth-wm6.png" width="800" />
             </div>
             <div class="md:w-1/2 text-center md:text-left">
                 <h2 class="text-2xl font-bold mb-2 text-blue-400 font-poppins mt-4">
                     BOOTH EXHIBITION
                 </h2>
                 <p class="text-gray-300 font-opensans">
-                    Booth pameran adalah ruang untuk memperkenalkan produk atau jasa dalam pameran, digunakan oleh perusahaan atau individu untuk memamerkan dan mempromosikan produk, layanan, atau merek mereka. Booth pameran yang menarik dapat menarik perhatian pengunjung dan meningkatkan kesan positif yang mendalam. Kami menyediakan layanan kreatif hingga pembuatan bahan promosi untuk mendukung kesuksesan kegiatan Anda.
+                    Booth pameran adalah ruang untuk memperkenalkan produk atau jasa dalam pameran, digunakan oleh
+                    perusahaan atau individu untuk memamerkan dan mempromosikan produk, layanan, atau merek mereka.
+                    Booth pameran yang menarik dapat menarik perhatian pengunjung dan meningkatkan kesan positif yang
+                    mendalam. Kami menyediakan layanan kreatif hingga pembuatan bahan promosi untuk mendukung kesuksesan
+                    kegiatan Anda.
                 </p>
             </div>
         </div>
         <!-- Custom Production -->
-        <div class="mb-8 flex flex-col md:flex-row items-center justify-center text-center">
+        <div class="mb-8 flex flex-col md:flex-row items-center justify-center text-center fade-in">
             <div class="md:w-1/2 md:order-2 md:ml-4">
                 <div class="relative mb-2 md:mb-0">
-                    <img alt="Custom production setup for an event" class="w-full md:w-96 rounded-lg" height="400" src="../assets/custom-production/cover-wm.png" width="800"/>
+                    <img alt="Custom production setup for an event" class="w-full md:w-96 rounded-lg" height="400"
+                        src="../assets/custom-production/cover-wm.png" width="800" />
                 </div>
             </div>
             <div class="md:w-1/2 text-center md:text-right">
@@ -95,29 +119,36 @@
                     CUSTOM PRODUCTION
                 </h2>
                 <p class="text-gray-300 font-opensans">
-                    Event adalah kegiatan atau festival yang diselenggarakan untuk memperingati atau merayakan suatu peristiwa atau tema penting dalam hidup atau komunitas kita. Kami hadir untuk merealisasikan ide dan desain konsep dari perencanaan, eksekusi, hingga SDM profesional, guna memastikan acara berjalan sesuai dengan harapan.
+                    Event adalah kegiatan atau festival yang diselenggarakan untuk memperingati atau merayakan suatu
+                    peristiwa atau tema penting dalam hidup atau komunitas kita. Kami hadir untuk merealisasikan ide dan
+                    desain konsep dari perencanaan, eksekusi, hingga SDM profesional, guna memastikan acara berjalan
+                    sesuai dengan harapan.
                 </p>
             </div>
         </div>
         <!-- Rental Equipment -->
-        <div class="mb-8 flex flex-col md:flex-row items-center justify-center text-center">
+        <div class="mb-8 flex flex-col md:flex-row items-center justify-center text-center fade-in">
             <div class="relative mb-4 md:mb-0 md:mr-4">
-                <img alt="Booth exhibition with various displays and products" class="w-full md:w-96 rounded-lg" height="400" src="../assets/rental-equipment/cover-wm.png" width="800"/>
+                <img alt="Booth exhibition with various displays and products" class="w-full md:w-96 rounded-lg"
+                    height="400" src="../assets/rental-equipment/cover-wm.png" width="800" />
             </div>
             <div class="md:w-1/2 text-center md:text-left mb-12">
                 <h2 class="text-2xl font-bold mt-0 text-blue-400 font-poppins">
                     RENTAL EQUIPMENT
                 </h2>
                 <p class="text-gray-300 font-opensans">
-                    Rental equipment adalah rental / sewa kebutuhan barang – barang event, contoh seperti podium acrylic, Sofa, kursi, Meja, Kursi, AC, Air Cooler, Air purifier dll. Nawasena menyediakan seluruh equipment kebutuhan event, untuk mensupport kebutuhan anda
+                    Rental equipment adalah rental / sewa kebutuhan barang – barang event, contoh seperti podium
+                    acrylic, Sofa, kursi, Meja, Kursi, AC, Air Cooler, Air purifier dll. Nawasena menyediakan seluruh
+                    equipment kebutuhan event, untuk mensupport kebutuhan anda
                 </p>
             </div>
         </div>
         <!-- Support All Product -->
-        <div class="mb-8 flex flex-col md:flex-row items-center justify-center text-center">
+        <div class="mb-8 flex flex-col md:flex-row items-center justify-center text-center fade-in">
             <div class="md:w-1/2 md:order-2 md:ml-4">
                 <div class="relative mb-4 md:mb-0">
-                    <img alt="Custom production setup for an event" class="w-full md:w-96 rounded-lg" height="800" src="../assets/custom-production/cp-wm4.png" width="800"/>
+                    <img alt="Custom production setup for an event" class="w-full md:w-96 rounded-lg" height="800"
+                        src="../assets/custom-production/cp-wm4.png" width="800" />
                 </div>
             </div>
             <div class="md:w-1/2 text-center md:text-right">
@@ -125,28 +156,36 @@
                     SUPPORT ALL PRODUCT & CONCEPTS
                 </h2>
                 <p class="text-gray-300 font-opensans">
-                    Nawasena hadir untuk mendukung seluruh kegiatan event, dengan menyediakan equipment event ( Meja, kursi, barstoll, ac, genset, sound, LED Videotron dll ) agar semua kebutuhan event terpenuhi dari mulai konsep, ide kreatif, produksi & equipment.
+                    Nawasena hadir untuk mendukung seluruh kegiatan event, dengan menyediakan equipment event ( Meja,
+                    kursi, barstoll, ac, genset, sound, LED Videotron dll ) agar semua kebutuhan event terpenuhi dari
+                    mulai konsep, ide kreatif, produksi & equipment.
                 </p>
             </div>
         </div>
     </div>
 
     <!-- Feedback Form -->
-    <div class="bg-gray-800 p-8 rounded-lg mb-8 max-w-3xl mx-auto">
+    <div class="bg-gray-800 p-8 rounded-lg mb-8 max-w-3xl mx-auto fade-in">
         <h2 class="text-2xl font-bold mb-4 text-center font-poppins">
             Feedback Form
         </h2>
         <form class="space-y-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="First Name" type="text"/>
-                <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Last Name" type="text"/>
+                <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="First Name"
+                    type="text" />
+                <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Last Name"
+                    type="text" />
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Email" type="email"/>
-                <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Phone" type="text"/>
+                <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Email"
+                    type="email" />
+                <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Phone"
+                    type="text" />
             </div>
-            <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Address" type="text"/>
-            <textarea class="w-full p-3 rounded-lg bg-gray-700 text-white h-32 font-opensans" placeholder="Type your message here..."></textarea>
+            <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Address"
+                type="text" />
+            <textarea class="w-full p-3 rounded-lg bg-gray-700 text-white h-32 font-opensans"
+                placeholder="Type your message here..."></textarea>
             <button class="w-full p-3 rounded-lg bg-blue-400 text-white font-bold font-opensans" type="submit">
                 Submit
             </button>
@@ -163,29 +202,54 @@
     <script>
         // Load Navbar
         fetch('navbar.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('navbar').innerHTML = html;
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
 
-            // Mobile menu toggle
-            const menuButton = document.getElementById('menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
+                // Mobile menu toggle
+                const menuButton = document.getElementById('menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
 
-            if (menuButton && mobileMenu) {
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            }
-        })
-        .catch(error => console.error('Error fetching navbar:', error));
+                if (menuButton && mobileMenu) {
+                    menuButton.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+            })
+            .catch(error => console.error('Error fetching navbar:', error));
 
         // Load Footer
         fetch('footer.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('footer').innerHTML = html;
-        })
-        .catch(error => console.error('Error fetching footer:', error));
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching footer:', error));
+
+        // Scroll Animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observerOptions = {
+                root: null, // Use the viewport as the root
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                    }
+                });
+            }, observerOptions);
+
+            fadeInElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
     </script>
 </body>
+
 </html>

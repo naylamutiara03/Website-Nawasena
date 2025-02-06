@@ -1,176 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
-  <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            poppins: ['Poppins', 'sans-serif'],
-            opensans: ['Open Sans', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        opensans: ['Open Sans', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
+
 <body class="bg-black text-white">
     <!-- Navbar -->
     <div id="navbar"></div>
     <!-- END Navbar -->
 
     <!-- WHO WE ARE -->
-    <section class="flex flex-col md:flex-row items-center mb-12 px-4 md:px-12">
+    <section class="flex flex-col md:flex-row items-center mb-12 px-4 md:px-12 fade-in">
         <div class="md:w-1/2 md:pr-6 md:mb-0">
             <h2 class="text-5xl font-bold mb-4 text-left ml-16 font-poppins">
-              WHO WE ARE?
+                WHO WE ARE?
             </h2>
             <p class="text-lg mb-6 text-left ml-16 font-poppins">
-              WE HAVE 10 YEARS OF EXPERIENCE
+                WE HAVE 10 YEARS OF EXPERIENCE
             </p>
             <p class="text-gray-400 mb-6 text-left ml-16 font-opensans">
-              Dengan pengalaman lebih dari 10 tahun yang andal dalam event management dan production, Nawasena selalu memberikan yang terbaik terhadap klien. Sehingga PT Nawasena Selenggara selalu memiliki harapan untuk menjadi salah satu event management terbaik yang selalu memberikan kepuasan kepada klien dalam menyelenggarakan kegiatan.
+                Dengan pengalaman lebih dari 10 tahun yang andal dalam event management dan production, Nawasena selalu
+                memberikan yang terbaik terhadap klien. Sehingga PT Nawasena Selenggara selalu memiliki harapan untuk
+                menjadi salah satu event management terbaik yang selalu memberikan kepuasan kepada klien dalam
+                menyelenggarakan kegiatan.
             </p>
         </div>
         <div class="md:w-1/2">
-            <img alt="Image of people racing go-karts" class="mx-auto rounded-full" src="../assets/about-wm.png"/>
+            <img alt="Image of people racing go-karts" class="mx-auto rounded-full" src="../assets/about-wm.png" />
         </div>
     </section>
     <!-- END WHO WE ARE-->
-    
+
     <!-- Legality -->
-    <section class="text-center mt-12 px-4 md:px-20 mb-40">
+    <section class="text-center mt-12 px-4 md:px-20 mb-40 fade-in">
         <h2 class="text-3xl font-bold font-poppins mb-20">Legality of Company</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-        <div class="flex flex-col items-center">
-            <div class="p-6 bg-white rounded-full">
-            <img src="../assets/legal-1.png" alt="Perseroan" class="w-12 h-12">
+            <div class="flex flex-col items-center">
+                <div class="p-6 bg-white rounded-full">
+                    <img src="../assets/legal-1.png" alt="Perseroan" class="w-12 h-12">
+                </div>
+                <span class="mt-4 font-poppins">Perusahaan Berbadan Hukum Perseroan</span>
             </div>
-            <span class="mt-4 font-poppins">Perusahaan Berbadan Hukum Perseroan</span>
-        </div>
-        <div class="flex flex-col items-center">
-            <div class="p-6 bg-white rounded-full">
-            <img src="../assets/legal-2.png" alt="Kementerian" class="w-12 h-12">
+            <div class="flex flex-col items-center">
+                <div class="p-6 bg-white rounded-full">
+                    <img src="../assets/legal-2.png" alt="Kementerian" class="w-12 h-12">
+                </div>
+                <span class="mt-4 font-poppins">Terdaftar Kementerian</span>
             </div>
-            <span class="mt-4 font-poppins">Terdaftar Kementerian</span>
-        </div>
-        <div class="flex flex-col items-center">
-            <div class="p-6 bg-white rounded-full">
-            <img src="../assets/legal-3.png" alt="Induk" class="w-12 h-12">
+            <div class="flex flex-col items-center">
+                <div class="p-6 bg-white rounded-full">
+                    <img src="../assets/legal-3.png" alt="Induk" class="w-12 h-12">
+                </div>
+                <span class="mt-4 font-poppins">Nomor Induk</span>
             </div>
-            <span class="mt-4 font-poppins">Nomor Induk</span>
-        </div>
-        <div class="flex flex-col items-center">
-            <div class="p-6 bg-white rounded-full">
-            <img src="../assets/legal-4.png" alt="Kemenkeu" class="w-12 h-12">
+            <div class="flex flex-col items-center">
+                <div class="p-6 bg-white rounded-full">
+                    <img src="../assets/legal-4.png" alt="Kemenkeu" class="w-12 h-12">
+                </div>
+                <span class="mt-4 font-poppins">PKP DJP Kemenkeu </span>
             </div>
-            <span class="mt-4 font-poppins">PKP DJP Kemenkeu </span>
-        </div>
         </div>
     </section>
     <!-- END Legality -->
 
     <!-- WHY CHOOSE US? -->
-<section class="text-center mb-28 px-4 md:px-12">
-    <h2 class="text-3xl font-bold mb-12">WHY CHOOSE US?</h2>
-    <div class="space-y-8">
-        <style>
-            .icon-container {
-                width: 160px;
-                height: 160px;
-                perspective: 800px;
-            }
-
-            .rotating-icon {
-                width: 100%;
-                height: 100%;
-                animation: flip 4s linear infinite alternate;
-                transform-style: preserve-3d;
-                backface-visibility: visible;
-            }
-
-            @keyframes flip {
-                0% {
-                    transform: rotateY(0deg);
+    <section class="text-center mb-28 px-4 md:px-12 fade-in">
+        <h2 class="text-3xl font-bold mb-12">WHY CHOOSE US?</h2>
+        <div class="space-y-8">
+            <style>
+                .icon-container {
+                    width: 160px;
+                    height: 160px;
+                    perspective: 800px;
                 }
-                100% {
-                    transform: rotateY(180deg);
+
+                .rotating-icon {
+                    width: 100%;
+                    height: 100%;
+                    animation: flip 4s linear infinite alternate;
+                    transform-style: preserve-3d;
+                    backface-visibility: visible;
                 }
-            }
-        </style>
 
-        <!-- TEAMWORK -->
-        <div class="flex flex-col md:flex-row items-center md:space-y-0">
-            <div class="md:w-1/2 md:order-2 flex ml-10">
-                <div class="icon-container">
-                    <img alt="Icon representing teamwork" class="rotating-icon" src="../assets/teamwork.png" />
+                @keyframes flip {
+                    0% {
+                        transform: rotateY(0deg);
+                    }
+
+                    100% {
+                        transform: rotateY(180deg);
+                    }
+                }
+            </style>
+
+            <!-- TEAMWORK -->
+            <div class="flex flex-col md:flex-row items-center md:space-y-0 fade-in">
+                <div class="md:w-1/2 md:order-2 flex ml-10">
+                    <div class="icon-container">
+                        <img alt="Icon representing teamwork" class="rotating-icon" src="../assets/teamwork.png" />
+                    </div>
+                </div>
+                <div class="md:w-1/2 text-center md:text-right">
+                    <h3 class="text-2xl font-bold text-cyan-600 mb-2">TEAMWORK</h3>
+                    <p class="text-white">In a successful team, every individual should have a clear understanding of
+                        their respective roles and the duties they are responsible for within a project. It is essential
+                        for each member to not only acknowledge their responsibilities but also demonstrate a strong
+                        sense of integrity in fulfilling them with dedication and precision. Challenges and obstacles
+                        that arise during the course of the project must be approached collectively, fostering open
+                        communication and collaboration. By working together to find effective solutions, the team can
+                        overcome any difficulties and ensure that the project progresses smoothly and achieves its
+                        goals.</p>
                 </div>
             </div>
-            <div class="md:w-1/2 text-center md:text-right">
-                <h3 class="text-2xl font-bold text-cyan-600 mb-2">TEAMWORK</h3>
-                <p class="text-white">In a successful team, every individual should have a clear understanding of their respective roles and the duties they are responsible for within a project. It is essential for each member to not only acknowledge their responsibilities but also demonstrate a strong sense of integrity in fulfilling them with dedication and precision. Challenges and obstacles that arise during the course of the project must be approached collectively, fostering open communication and collaboration. By working together to find effective solutions, the team can overcome any difficulties and ensure that the project progresses smoothly and achieves its goals.</p>
-            </div>
-        </div>
 
-        <!-- CREATIVITY -->
-        <div class="flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-            <div class="md:w-1/2 flex justify-center md:justify-end">
-                <div class="icon-container">
-                    <img alt="Icon representing creativity" class="rotating-icon" src="../assets/idea.png" />
+            <!-- CREATIVITY -->
+            <div class="flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0 fade-in">
+                <div class="md:w-1/2 flex justify-center md:justify-end">
+                    <div class="icon-container">
+                        <img alt="Icon representing creativity" class="rotating-icon" src="../assets/idea.png" />
+                    </div>
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-cyan-600 mb-2">CREATIVITY</h3>
+                    <p class="text-white">We truly value this opportunity because it allows us to showcase our latest
+                        skills, innovations, and creative ideas to our clients. Seeing their genuine smiles and
+                        experiencing their satisfaction is not just a reward for us but also a measure of our success.
+                        It serves as a powerful motivation, pushing us to continuously strive for excellence by crafting
+                        remarkable masterpieces that bring joy and happiness. Their positive feedback inspires us to
+                        explore new possibilities and deliver even greater experiences, making every project a chance to
+                        grow and leave a lasting impact.</p>
                 </div>
             </div>
-            <div class="md:w-1/2 text-center md:text-left">
-                <h3 class="text-2xl font-bold text-cyan-600 mb-2">CREATIVITY</h3>
-                <p class="text-white">We truly value this opportunity because it allows us to showcase our latest skills, innovations, and creative ideas to our clients. Seeing their genuine smiles and experiencing their satisfaction is not just a reward for us but also a measure of our success. It serves as a powerful motivation, pushing us to continuously strive for excellence by crafting remarkable masterpieces that bring joy and happiness. Their positive feedback inspires us to explore new possibilities and deliver even greater experiences, making every project a chance to grow and leave a lasting impact.</p>
-            </div>
-        </div>
 
-        <!-- TRUSTED -->
-        <div class="flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-            <div class="md:w-1/2 md:order-2 flex ml-10">
-                <div class="icon-container">
-                    <img alt="Icon representing trust" class="rotating-icon" src="../assets/trust.png" />
+            <!-- TRUSTED -->
+            <div class="flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0 fade-in">
+                <div class="md:w-1/2 md:order-2 flex ml-10">
+                    <div class="icon-container">
+                        <img alt="Icon representing trust" class="rotating-icon" src="../assets/trust.png" />
+                    </div>
+                </div>
+                <div class="md:w-1/2 text-center md:text-right">
+                    <h3 class="text-2xl font-bold text-cyan-600 mb-2">TRUSTED</h3>
+                    <p class="text-white">In every project we undertake, trust serves as the cornerstone that
+                        strengthens the bond between our team and our clients. We are deeply committed to maintaining
+                        transparency in our communication, ensuring reliability in every action we take, and fulfilling
+                        every promise we make with unwavering dedication. By prioritizing these values, we aim to create
+                        not just solutions but meaningful collaborations that stand the test of time. This approach
+                        allows us to cultivate strong, enduring relationships while working hand in hand to achieve
+                        shared goals and mutual success.</p>
                 </div>
             </div>
-            <div class="md:w-1/2 text-center md:text-right">
-                <h3 class="text-2xl font-bold text-cyan-600 mb-2">TRUSTED</h3>
-                <p class="text-white">In every project we undertake, trust serves as the cornerstone that strengthens the bond between our team and our clients. We are deeply committed to maintaining transparency in our communication, ensuring reliability in every action we take, and fulfilling every promise we make with unwavering dedication. By prioritizing these values, we aim to create not just solutions but meaningful collaborations that stand the test of time. This approach allows us to cultivate strong, enduring relationships while working hand in hand to achieve shared goals and mutual success.</p>
-            </div>
-        </div>
 
-        <!-- FAST -->
-        <div class="flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-            <div class="md:w-1/2 flex justify-center md:justify-end">
-                <div class="icon-container">
-                    <img alt="Icon representing speed" class="rotating-icon" src="../assets/fast-time.png" />
+            <!-- FAST -->
+            <div class="flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0 fade-in">
+                <div class="md:w-1/2 flex justify-center md:justify-end">
+                    <div class="icon-container">
+                        <img alt="Icon representing speed" class="rotating-icon" src="../assets/fast-time.png" />
+                    </div>
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-cyan-600 mb-2">FAST</h3>
+                    <p class="text-white">At our company, the principle of 'No Delay' is an integral part of our work
+                        culture. We firmly believe that client satisfaction begins with the speed at which we respond to
+                        inquiries and requests. There is no doubt that our commitment to fast, efficient service has
+                        been key to maintaining long-lasting relationships with our clients. In fact, we consistently
+                        work with many repeat clients, which serves as a testament to our quick response times and
+                        dedication to addressing their needs in a timely manner.</p>
                 </div>
             </div>
-            <div class="md:w-1/2 text-center md:text-left">
-                <h3 class="text-2xl font-bold text-cyan-600 mb-2">FAST</h3>
-                <p class="text-white">At our company, the principle of 'No Delay' is an integral part of our work culture. We firmly believe that client satisfaction begins with the speed at which we respond to inquiries and requests. There is no doubt that our commitment to fast, efficient service has been key to maintaining long-lasting relationships with our clients. In fact, we consistently work with many repeat clients, which serves as a testament to our quick response times and dedication to addressing their needs in a timely manner.</p>
-            </div>
         </div>
-    </div>
-</section>
-<!-- END WHY CHOOSE US? -->
+    </section>
+    <!-- END WHY CHOOSE US? -->
 
-
-
-    
     <!-- Footer -->
     <div id="footer"></div>
     <!-- END Footer -->
@@ -180,29 +222,54 @@
     <script>
         // Load Navbar
         fetch('navbar.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('navbar').innerHTML = html;
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
 
-            // Mobile menu toggle
-            const menuButton = document.getElementById('menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
+                // Mobile menu toggle
+                const menuButton = document.getElementById('menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
 
-            if (menuButton && mobileMenu) {
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            }
-        })
-        .catch(error => console.error('Error fetching navbar:', error));
+                if (menuButton && mobileMenu) {
+                    menuButton.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+            })
+            .catch(error => console.error('Error fetching navbar:', error));
 
         // Load Footer
         fetch('footer.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('footer').innerHTML = html;
-        })
-        .catch(error => console.error('Error fetching footer:', error));
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching footer:', error));
+
+        // Scroll Animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observerOptions = {
+                root: null, // Use the viewport as the root
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                    }
+                });
+            }, observerOptions);
+
+            fadeInElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
     </script>
 </body>
+
 </html>

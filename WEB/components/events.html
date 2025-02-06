@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,20 +14,36 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-        theme: {
-            extend: {
-            fontFamily: {
-                poppins: ['Poppins', 'sans-serif'],
-                opensans: ['Open Sans', 'sans-serif'],
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        opensans: ['Open Sans', 'sans-serif'],
+                    },
+                },
             },
-            },
-        },
         };
     </script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
+
 <body class="bg-black text-white">
 
     <!-- Navbar -->
@@ -35,14 +52,14 @@
 
     <!-- Fetch Data -->
     <div class="container mx-auto px-4 py-10">
-        <h1 class="text-center text-4xl font-bold mb-10">Portfolio</h1>
+        <h1 class="text-center text-4xl font-bold mb-10 fade-in">Portfolio</h1>
 
         <!-- Section 2024 -->
-        <h2 class="text-center text-3xl font-semibold mb-6">2024</h2>
+        <h2 class="text-center text-3xl font-semibold mb-6 fade-in">2024</h2>
         <div id="portfolio-2024" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
 
         <!-- Section 2023 -->
-        <h2 class="text-center text-3xl font-semibold mt-16 mb-6">2023</h2>
+        <h2 class="text-center text-3xl font-semibold mt-16 mb-6 fade-in">2023</h2>
         <div id="portfolio-2023" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
     </div>
     <!-- END Fetch Data -->
@@ -56,29 +73,54 @@
     <script>
         // Load Navbar
         fetch('navbar.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('navbar').innerHTML = html;
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
 
-            // Mobile menu toggle
-            const menuButton = document.getElementById('menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
+                // Mobile menu toggle
+                const menuButton = document.getElementById('menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
 
-            if (menuButton && mobileMenu) {
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            }
-        })
-        .catch(error => console.error('Error fetching navbar:', error));
+                if (menuButton && mobileMenu) {
+                    menuButton.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+            })
+            .catch(error => console.error('Error fetching navbar:', error));
 
         // Load Footer
         fetch('footer.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('footer').innerHTML = html;
-        })
-        .catch(error => console.error('Error fetching footer:', error));
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching footer:', error));
+
+        // Scroll Animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observerOptions = {
+                root: null, // Use the viewport as the root
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                    }
+                });
+            }, observerOptions);
+
+            fadeInElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
     </script>
 </body>
+
 </html>
