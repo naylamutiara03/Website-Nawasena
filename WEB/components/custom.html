@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Production</title>
+    <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        opensans: ['Open Sans', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover effect for images */
+        .image-container img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hover effect for back button */
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <!-- END Navbar -->
+
+    <!-- Back Button & Title Container -->
+    <div class="flex items-center justify-center px-6 md:px-12 py-5 mb-6">
+        <!-- Back Button -->
+        <button onclick="goBack()" class="text-white text-3xl back-button transition-transform duration-300 mr-4 ml-16">
+            <i class="fa fa-arrow-left"></i>
+        </button>
+
+        <!-- Title -->
+        <h1 class="text-center text-2xl md:text-3xl font-bold w-full">CUSTOM PRODUCTION</h1>
+    </div>
+
+    <!-- Custom Production Cards -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-1 mb-10">
+        <div class="p-0.5">
+            <img alt="Karing Race" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm1.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="Akademi Kepolisian" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm2.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="Shape Project" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm3.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="LCS" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm4.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="Karnaval" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm5.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="Bunga" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm6.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="Hari Bhakti" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm7.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="Halal Bihalal" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm8.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="Travel Fair" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm9.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="Air Mancur" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm10.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="Jakarta Global" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm11.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="Jasindo" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm12.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="Stand" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm13.png" />
+        </div>
+        <div class="p-0.5">
+            <img alt="Jasindo Golf" class="rounded-lg w-full h-auto" src="../assets/custom-production/cp-wm14.png" />
+        </div>
+        
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- END Footer -->
+
+    <!-- Scripts Load Navbar & Footer -->
+    <script>
+        // Load Navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching navbar:', error));
+
+        // Load Footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching footer:', error));
+
+        // Scroll Animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observerOptions = {
+                root: null, // Use the viewport as the root
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                    }
+                });
+            }, observerOptions);
+
+            fadeInElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+    <script>
+        function goBack() {
+            if (document.referrer) {
+                window.history.back();
+            } else {
+                window.location.href = "home.html"; // Default ke home jika tidak ada halaman sebelumnya
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
