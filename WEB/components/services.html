@@ -94,9 +94,9 @@
         <!-- Booth Exhibition (Garis di kiri) -->
         <div class="mb-8 flex flex-col md:flex-row items-center justify-center text-center fade-in">
             <div class="relative flex items-center">
-                <div class="hidden md:block border-l-4 border-gray-500 h-72"></div>
+                <div class="hidden md:block border-l-4 border-gray-500 h-72 fade-in"></div>
                 <img alt="Booth exhibition with various displays and products" class="w-full md:w-96 rounded-lg ml-4"
-                    height="800" src="../assets/booth/booth-wm6.png" width="800" />
+                    height="800" src="../assets/booth/booth-wm6.jpg" width="800" />
             </div>
             <div class="md:w-1/2 text-center md:text-left">
                 <h2 class="text-2xl font-bold mb-2 text-blue-400 font-poppins mt-2 ml-10">
@@ -118,11 +118,11 @@
             <div class="md:w-1/2 md:order-2 md:ml-4">
                 <div class="relative flex items-center">
                     <img alt="Custom production setup for an event" class="w-full md:w-96 rounded-lg mr-4" height="400"
-                        src="../assets/custom-production/cover-wm.png" width="800" />
-                    <div class="hidden md:block border-r-4 border-gray-500 h-72"></div>
+                        src="../assets/custom-production/cover-wm.jpg" width="800" />
+                    <div class="hidden md:block border-r-4 border-gray-500 h-72 fade-in"></div>
                 </div>
             </div>
-            <div class="md:w-1/2 text-center md:text-right">
+            <div class="md:w-1/2 text-center md:text-right ml-16">
                 <h2 class="text-2xl font-bold mb-2 text-blue-400 font-poppins">
                     CUSTOM PRODUCTION
                 </h2>
@@ -138,7 +138,7 @@
         <!-- Rental Equipment (Garis di kiri) -->
         <div class="mb-8 flex flex-col md:flex-row items-center justify-center text-center fade-in">
             <div class="relative flex items-center">
-                <div class="hidden md:block border-l-4 border-gray-500 h-72"></div>
+                <div class="hidden md:block border-l-4 border-gray-500 h-72 fade-in"></div>
                 <img alt="Rental equipment for events" class="w-full md:w-96 rounded-lg ml-4" height="400"
                     src="../assets/rental.jpg" width="800" />
             </div>
@@ -160,10 +160,10 @@
                 <div class="relative flex items-center">
                     <img alt="Support all product & concepts" class="w-full md:w-96 rounded-lg mr-4" height="800"
                         src="../assets/support.jpg" width="800" />
-                    <div class="hidden md:block border-r-4 border-gray-500 h-72"></div>
+                    <div class="hidden md:block border-r-4 border-gray-500 h-72 fade-in"></div>
                 </div>
             </div>
-            <div class="md:w-1/2 text-center md:text-right">
+            <div class="md:w-1/2 text-center md:text-right ml-16">
                 <h2 class="text-2xl font-bold mb-2 text-blue-400 font-poppins">
                     SUPPORT ALL PRODUCT & CONCEPTS
                 </h2>
@@ -182,24 +182,39 @@
         <h2 class="text-2xl font-bold mb-4 text-center font-poppins">
             Feedback Form
         </h2>
-        <form class="space-y-4">
+
+        <!-- Alert Pop-up -->
+        <div id="alertBox" class="hidden rounded-sm border-s-4 border-red-500 bg-red-50 p-4 mb-4">
+            <div class="flex items-center gap-2 text-red-800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                    <path fill-rule="evenodd"
+                        d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                        clip-rule="evenodd" />
+                </svg>
+                <strong class="block font-medium"> Semua field harus diisi! </strong>
+            </div>
+        </div>
+        <!-- END Alert Pop-up -->
+
+        <form id="feedbackForm" class="space-y-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="First Name"
-                    type="text" />
-                <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Last Name"
-                    type="text" />
+                <input id="firstName" class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans"
+                    placeholder="First Name" type="text" />
+                <input id="lastName" class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans"
+                    placeholder="Last Name" type="text" />
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Email"
+                <input id="email" class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Email"
                     type="email" />
-                <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Phone"
+                <input id="phone" class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Phone"
                     type="text" />
             </div>
-            <input class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Address"
+            <input id="address" class="w-full p-3 rounded-lg bg-gray-700 text-white font-opensans" placeholder="Address"
                 type="text" />
-            <textarea class="w-full p-3 rounded-lg bg-gray-700 text-white h-32 font-opensans"
+            <textarea id="message" class="w-full p-3 rounded-lg bg-gray-700 text-white h-32 font-opensans"
                 placeholder="Type your message here..."></textarea>
-            <button class="w-full p-3 rounded-lg bg-blue-400 text-white font-bold font-opensans" type="submit">
+            <button type="submit" class="w-full p-3 rounded-lg bg-blue-400 text-white font-bold font-opensans 
+            transition duration-300 ease-in-out hover:bg-blue-500 hover:shadow-lg">
                 Submit
             </button>
         </form>
@@ -261,6 +276,64 @@
             fadeInElements.forEach(element => {
                 observer.observe(element);
             });
+        });
+
+        document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Mencegah submit default
+
+            // Ambil nilai input
+            let firstName = document.getElementById("firstName").value.trim();
+            let lastName = document.getElementById("lastName").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let address = document.getElementById("address").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            // Validasi jika ada yang kosong
+            let fields = [
+                { id: "firstName", value: firstName },
+                { id: "lastName", value: lastName },
+                { id: "email", value: email },
+                { id: "phone", value: phone },
+                { id: "address", value: address },
+                { id: "message", value: message }
+            ];
+
+            let isValid = true;
+            fields.forEach(field => {
+                let inputField = document.getElementById(field.id);
+                if (field.value === "") {
+                    inputField.style.border = "2px solid red";
+                    isValid = false;
+                } else {
+                    inputField.style.border = "none";
+                }
+            });
+
+            // Jika ada input yang kosong, tampilkan alert pop-up
+            if (!isValid) {
+                let alertBox = document.getElementById("alertBox");
+                alertBox.classList.remove("hidden"); // Menampilkan alert
+                setTimeout(() => {
+                    alertBox.classList.add("hidden"); // Menghilangkan alert setelah 5 detik
+                }, 3000);
+                return;
+            }
+
+            // Format pesan untuk WhatsApp
+            let whatsappNumber = "6285930247131"; // Ganti dengan nomor WhatsApp Anda
+            let whatsappMessage = `Hello, I want to send feedback:\n\n`
+                + `*First Name:* ${firstName}\n`
+                + `*Last Name:* ${lastName}\n`
+                + `*Email:* ${email}\n`
+                + `*Phone:* ${phone}\n`
+                + `*Address:* ${address}\n`
+                + `*Message:* ${message}`;
+
+            let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+            // Redirect ke WhatsApp
+            window.open(whatsappURL, "_blank");
         });
     </script>
 </body>
