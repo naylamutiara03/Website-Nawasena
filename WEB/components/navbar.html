@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Active Link Navigation</title>
-  <script defer src="./script.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     .active-link {
       color: #60a5fa;
       font-weight: bold;
+    }
+
+    nav .mark{
+      background-image: linear-gradient(transparent, #60a5fa);
     }
   </style>
 </head>
@@ -43,7 +45,6 @@
     </div>
   </header>
 
-
   <!-- Mobile Dropdown Menu -->
   <div id="mobile-menu" class="hidden bg-black text-white p-4 space-y-4">
     <a href="home.html" class="block hover:text-blue-400 font-poppins nav-link">Home</a>
@@ -53,6 +54,7 @@
     <a href="contact.html"
       class="block bg-blue-500 px-4 py-2 rounded-full text-black hover:bg-blue-600 nav-link">Contact</a>
   </div>
+  <script src="script-navbar.js"></script>
 </body>
 
 </html>
