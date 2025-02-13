@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Nawasena</title>
+    <title>Services</title>
     <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -23,6 +23,9 @@
         };
     </script>
 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
@@ -39,46 +42,59 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .nav-link.active {
+            color: #60a5fa;
+            /* Change this to your desired active color */
+            font-weight: bold;
+            /* Optional: make it bold */
+        }
     </style>
 
 </head>
 
 <body class="bg-black text-white">
-    <!-- Navbar -->
-    <header id="navbar" class="flex justify-end items-center p-4 md:p-6 px-6 md:px-20">
-        <a href="home.html" class="mr-auto">
-            <img src="../assets/logo.png" alt="Logo" class="h-16 md:h-16 cursor-pointer ml-8">
-        </a>
-        <nav class="hidden md:block">
-            <ul class="flex space-x-8 text-lg">
-                <li><a href="home.html" class="hover:text-blue-400 font-poppins nav-link">Home</a></li>
-                <li><a href="services.html" class="hover:text-blue-400 font-poppins nav-link active">Services</a></li>
-                <li><a href="about.html" class="hover:text-blue-400 font-poppins nav-link">About</a></li>
-                <li><a href="events.html" class="hover:text-blue-400 font-poppins nav-link">Events</a></li>
-                <li>
-                    <a href="contact.html"
-                        class="bg-blue-500 px-6 py-2 rounded-full text-black hover:bg-blue-600 nav-link">Contact</a>
-                </li>
-            </ul>
-        </nav>
+    <nav
+        class="p-5 bg-black bg-opacity-90 shadow md:flex md:items-center md:justify-between fixed top-0 left-0 w-full z-50">
+        <div class="flex justify-between items-center">
+            <a href="home.html" class="text-2xl font-[Poppins] cursor-pointer ml-4">
+                <img class="h-12 inline" src="../assets/logo.png" alt="Logo">
+            </a>
 
-        <style>
-            .nav-link.active {
-                color: #60a5fa;
-                /* Change this to your desired active color */
-                font-weight: bold;
-                /* Optional: make it bold */
-            }
-        </style>
-        <div class="block md:hidden ml-4">
-            <button id="menu-button" class="focus:outline-none">
-                <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
+            <!-- Tombol menu hamburger untuk mobile -->
+            <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
         </div>
-    </header>
+
+        <!-- Navigasi -->
+        <ul id="menu-list"
+            class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-black md:bg-transparent w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4 my-6 md:my-0">
+                <a href="home.html"
+                    class="text-xl hover:text-blue-500 duration-500 font-poppins block text-center md:text-left">Home</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="services.html"
+                    class="text-xl hover:text-blue-500 duration-500 font-poppins nav-link active block text-center md:text-left">Service</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="about.html"
+                    class="text-xl hover:text-blue-500 duration-500 font-poppins block text-center md:text-left">About</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="events.html"
+                    class="text-xl hover:text-blue-500 duration-500 font-poppins block text-center md:text-left">Events</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="contact.html"
+                    class="bg-blue-500 text-white font-[Poppins] duration-500 px-6 py-2 w-[150px] text-center block mx-auto md:mx-4 hover:bg-cyan-400 rounded">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+
 
     <!-- Services -->
     <section class="w-full bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-12 mt-20 text-center fade-in">
@@ -257,23 +273,16 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // // Load Navbar
-        // fetch('navbar.html')
-        //     .then(response => response.text())
-        //     .then(html => {
-        //         document.getElementById('navbar').innerHTML = html;
-
-        //         // Mobile menu toggle
-        //         const menuButton = document.getElementById('menu-button');
-        //         const mobileMenu = document.getElementById('mobile-menu');
-
-        //         if (menuButton && mobileMenu) {
-        //             menuButton.addEventListener('click', () => {
-        //                 mobileMenu.classList.toggle('hidden');
-        //             });
-        //         }
-        //     })
-        //     .catch(error => console.error('Error fetching navbar:', error));
+        function Menu(e) {
+            let list = document.getElementById('menu-list');
+            if (e.name === 'menu') {
+                e.name = "close";
+                list.classList.add('top-[70px]', 'opacity-100');
+            } else {
+                e.name = "menu";
+                list.classList.remove('top-[70px]', 'opacity-100');
+            }
+        }
 
         // Load Footer
         fetch('footer.html')

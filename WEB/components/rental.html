@@ -59,8 +59,32 @@
 <body class="bg-black text-white">
 
     <!-- Navbar -->
-    <div id="navbar"></div>
-    <!-- END Navbar -->
+    <header id="navbar" class="flex justify-end items-center p-4 md:p-6 px-6 md:px-20">
+        <a href="home.html" class="mr-auto">
+            <img src="../assets/logo.png" alt="Logo" class="h-16 md:h-16 cursor-pointer ml-8">
+        </a>
+        <nav class="hidden md:block">
+            <ul class="flex space-x-8 text-lg">
+                <li><a href="home.html" class="hover:text-blue-400 font-poppins nav-link">Home</a></li>
+                <li><a href="services.html" class="hover:text-blue-400 font-poppins nav-link">Services</a></li>
+                <li><a href="about.html" class="hover:text-blue-400 font-poppins nav-link">About</a></li>
+                <li><a href="events.html" class="hover:text-blue-400 font-poppins nav-link">Events</a></li>
+                <li>
+                    <a href="contact.html"
+                        class="bg-blue-500 px-6 py-2 rounded-full text-black hover:bg-blue-600 nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="block md:hidden ml-4">
+            <button id="menu-button" class="focus:outline-none">
+                <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
 
     <!-- Back Button & Title Container -->
     <div class="flex items-center justify-center px-6 md:px-12 py-5 mb-6 max-w-5xl mx-auto">
@@ -76,15 +100,15 @@
     <!-- Rental Equipment Cards -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10 max-w-5xl mx-auto">
         <div class="p-2 flex justify-center">
-            <img alt="Kamera" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Meja Bundar" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm1.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Lampu Tembak" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Bangku Kayu" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm2.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Videotron" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Stand" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm3.jpg" />
         </div>
         <div class="p-2 flex justify-center">
@@ -92,19 +116,19 @@
                 src="../assets/rental-equipment/re-wm4.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Pengatur Sound" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Toilet" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm5.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Sound" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Booth" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm6.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Booth" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Kursi Formal" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm7.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Stage 1" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Misty Fan" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm8.jpg" />
         </div>
         <div class="p-2 flex justify-center">
@@ -112,64 +136,36 @@
                 src="../assets/rental-equipment/re-wm9.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Crane" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Glow in The Dark" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm10.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Jakarta Global" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="AC" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm11.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Stage 2" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Lampu" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm12.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Backdrop" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="TV" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm13.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Kursi" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Kamera" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm14.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Alat Musik 1" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Lampu Tembak" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm15.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Alat Musik 2" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Videotron Cube" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm16.jpg" />
         </div>
         <div class="p-2 flex justify-center">
-            <img alt="Bangku" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
+            <img alt="Sound" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
                 src="../assets/rental-equipment/re-wm17.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Toilet" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/rental-equipment/re-wm18.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Misty Fan" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/rental-equipment/re-wm19.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="AC" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/rental-equipment/re-wm20.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Meja Bundar" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/rental-equipment/re-wm21.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Lighting" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/rental-equipment/re-wm22.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Stand" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/rental-equipment/re-wm23.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Jasindo Gather Fest" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/rental-equipment/re-wm24.jpg" />
         </div>
     </div>
     <!-- END Rental Equipment Cards -->
@@ -181,13 +177,6 @@
 
     <!-- Scripts Load Navbar & Footer -->
     <script>
-        // Load Navbar
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navbar').innerHTML = html;
-            })
-            .catch(error => console.error('Error fetching navbar:', error));
 
         // Load Footer
         fetch('footer.html')
