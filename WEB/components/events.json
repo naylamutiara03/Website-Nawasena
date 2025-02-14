@@ -1,74 +1,162 @@
 [
-    {
-      "year": 2024,
-      "name": "KOPDAR IMIGRASI",
-      "location": "Jakarta",
-      "image": "../assets/portfolio/kopdar/p-wm1.jpg"
-    },
-    {
-      "year": 2024,
-      "name": "HARI BHAKTI IMIGRASI KE-74",
-      "location": "Jakarta",
-      "image": "../assets/portfolio/hari-bhakti/p-wm11.jpg"
-    },
-    {
-      "year": 2024,
-      "name": "MAIPARK 2028 AND BEYOND",
-      "location": "Jakarta Selatan",
-      "image": "../assets/portfolio/maipark2028/p-wm2.jpg"
-    },
-    {
-      "year": 2024,
-      "name": "BAREKSA PORTAL INVESTASI",
-      "location": "Jakarta",
-      "image": "../assets/portfolio/bareksa/p-wm3.jpg"
-    },
-    {
-      "year": 2024,
-      "name": "JASINDO GATHER FEST",
-      "location": "Jakarta",
-      "image": "../assets/portfolio/jasindo/p-wm4.jpg"
-    },
-    {
-      "year": 2024,
-      "name": "ELECTRIC KARTING RACE",
-      "location": "Bandung",
-      "image": "../assets/portfolio/electric/p-wm5.jpg"
-    },
-    {
-      "year": 2024,
-      "name": "IMIFEST 2024",
-      "location": "Bandung",
-      "image": "../assets/portfolio/imifest/p-wm6.jpg"
-    },
-    {
-      "year": 2024,
-      "name": "JASINDO GOLF TOURNAMENT",
-      "location": "Jakarta",
-      "image": "../assets/portfolio/jasindo-golf/p-wm7.jpg"
-    },
-    {
-      "year": 2024,
-      "name": "MAIPARK AWARD 2024",
-      "location": "Jakarta Selatan",
-      "image": "../assets/portfolio/maipark2024/p-wm9.jpg"
-    },
-    {
-      "year": 2024,
-      "name": "DIRJEN IMIGRASI",
-      "location": "Jakarta",
-      "image": "../assets/portfolio/dirjen/p-wm10.jpg"
-    },
-    {
-      "year": 2023,
-      "name": "TOPPING OFF",
-      "location": "Jakarta",
-      "image": "../assets/portfolio/topping/p-wm12.jpg"
-    },
-    {
-      "year": 2023,
-      "name": "LEE JONG SUK 2023 FANMEETING TOUR",
-      "location": "Jakarta",
-      "image": "../assets/portfolio/apple-wood/p-wm8.jpg"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "KOPDAR IMIGRASI",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/kopdar/p-wm1.jpg",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/kopdar/kopdar1.jpg",
+      "../assets/portfolio/kopdar/kopdar2.jpg",
+      "../assets/portfolio/kopdar/kopdar3.jpg",
+      "../assets/portfolio/kopdar/kopdar4.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "HARI BHAKTI IMIGRASI KE-74",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/hari-bhakti/p-wm11.jpg",
+    "video":"../assets/portfolio/hari-bhakti/hari-bhakti.mp4",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/hari-bhakti/hb-w1.jpg",
+      "../assets/portfolio/hari-bhakti/hb-w2.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "MAIPARK 2028 AND BEYOND",
+    "location": "Jakarta Selatan",
+    "image": "../assets/portfolio/maipark2028/p-wm2.jpg",
+    "video": "../assets/portfolio/maipark2028/maipark2028.mp4",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/maipark2028/m28-1.jpg",
+      "../assets/portfolio/maipark2028/m28-2.jpg",
+      "../assets/portfolio/maipark2028/m28-3.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "BAREKSA PORTAL INVESTASI",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/bareksa/p-wm3.jpg",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/bareksa/bareksa-w1.jpg",
+      "../assets/portfolio/bareksa/bareksa-w2.jpg",
+      "../assets/portfolio/bareksa/bareksa-w3.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "JASINDO GATHER FEST",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/jasindo/p-wm4.jpg",
+    "video":"../assets/portfolio/jasindo/jasindo-gather.mp4",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/jasindo/jasindo-w2.jpg",
+      "../assets/portfolio/jasindo/jasindo-w3.jpg",
+      "../assets/portfolio/jasindo/jasindo-w4.jpg",
+      "../assets/portfolio/jasindo/jasindo-w5.jpg",
+      "../assets/portfolio/jasindo/jasindo-w6.jpg",
+      "../assets/portfolio/jasindo/jasindo-w7.jpg",
+      "../assets/portfolio/jasindo/jasindo-w8.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "ELECTRIC KARTING RACE",
+    "location": "Bandung",
+    "image": "../assets/portfolio/electric/p-wm5.jpg",
+    "video":"../assets/portfolio/electric/karting-race.mp4",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/electric/electric-w1.jpg",
+      "../assets/portfolio/electric/electric-w2.jpg",
+      "../assets/portfolio/electric/electric-w3.jpg",
+      "../assets/portfolio/electric/electric-w4.jpg",
+      "../assets/portfolio/electric/electric-w5.jpg",
+      "../assets/portfolio/electric/electric-w6.jpg",
+      "../assets/portfolio/electric/electric-w7.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "IMIFEST 2024",
+    "location": "Bandung",
+    "image": "../assets/portfolio/imifest/p-wm6.jpg",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/imifest/imi-w1.jpg",
+      "../assets/portfolio/imifest/imi-w2.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "JASINDO GOLF TOURNAMENT",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/jasindo-golf/p-wm7.jpg",
+    "video":"../assets/portfolio/jasindo-golf/jasindo-golf.mp4",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/jasindo-golf/jg-w1.jpg",
+      "../assets/portfolio/jasindo-golf/jg-w2.jpg",
+      "../assets/portfolio/jasindo-golf/jg-w3.jpg",
+      "../assets/portfolio/jasindo-golf/jg-w4.jpg",
+      "../assets/portfolio/jasindo-golf/jg-w5.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "MAIPARK AWARD 2024",
+    "location": "Jakarta Selatan",
+    "image": "../assets/portfolio/maipark2024/p-wm9.jpg",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/maipark2024/m24-w1.jpg",
+      "../assets/portfolio/maipark2024/m24-w2.jpg",
+      "../assets/portfolio/maipark2024/m24-w3.jpg",
+      "../assets/portfolio/maipark2024/m24-w4.jpg",
+      "../assets/portfolio/maipark2024/m24-w5.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "DIRJEN IMIGRASI",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/dirjen/p-wm10.jpg",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/dirjen/dirjen-w1.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "TOPPING OFF",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/topping/p-wm12.jpg",
+    "year": 2023,
+    "gallery": [
+      "../assets/portfolio/topping/to-w1.jpg",
+      "../assets/portfolio/topping/to-w2.jpg",
+      "../assets/portfolio/topping/to-w3.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "LEE JONG SUK 2023 FANMEETING TOUR",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/apple-wood/p-wm8.jpg",
+    "year": 2023,
+    "gallery": [
+      "../assets/portfolio/apple-wood/aw-w1.jpg",
+      "../assets/portfolio/apple-wood/aw-w2.jpg",
+      "../assets/portfolio/apple-wood/aw-w3.jpg",
+      "../assets/portfolio/apple-wood/aw-w4.jpg",
+      "../assets/portfolio/apple-wood/aw-w5.jpg"
+    ]
+  }
+]

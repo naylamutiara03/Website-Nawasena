@@ -11,7 +11,6 @@ async function loadEvents() {
     }
 }
 
-// Fungsi untuk membuat kartu event berdasarkan tahun
 function renderEvents(events, year) {
     return events
         .filter(event => event.year === year)
@@ -22,12 +21,17 @@ function renderEvents(events, year) {
                     <h3 class="text-lg font-semibold font-poppins">${event.name}</h3>
                     <p class="text-gray-400 text-sm font-opensans">${event.location}</p>
                     <div class="flex justify-end">
-                        <a class="mt-2 inline-block bg-cyan-500 text-white px-3 py-1.5 text-sm rounded-full hover:bg-cyan-600 transition" href="#">See More</a>
+                        <a class="mt-2 inline-block bg-cyan-500 text-white px-3 py-1.5 text-sm rounded-full hover:bg-cyan-600 transition font-poppins" href="event-detail.html?id=${event.id}">See More</a>
                     </div>
                 </div>
             </div>
         `).join('');
 }
+
+function redirectToDetail(id) {
+    window.location.href = `event-detail.html?id=${id}`;
+}
+
 
 // Panggil fungsi saat halaman selesai dimuat
 document.addEventListener("DOMContentLoaded", loadEvents);

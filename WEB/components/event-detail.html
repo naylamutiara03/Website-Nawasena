@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Detail</title>
+    <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        opensans: ['Open Sans', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover effect for back button */
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav
+        class="p-5 bg-black bg-opacity-90 shadow md:flex md:items-center md:justify-between fixed top-0 left-0 w-full z-50">
+        <div class="flex justify-between items-center">
+            <a href="home.html" class="text-2xl font-[Poppins] cursor-pointer ml-4">
+                <img class="h-12 inline" src="../assets/logo.png" alt="Logo">
+            </a>
+
+            <!-- Tombol menu hamburger untuk mobile -->
+            <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+        </div>
+
+        <!-- Navigasi -->
+        <ul id="menu-list"
+            class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-black md:bg-transparent w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4 my-6 md:my-0">
+                <a href="home.html"
+                    class="text-xl hover:text-blue-500 duration-500 font-poppins block text-center md:text-left">Home</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="services.html"
+                    class="text-xl hover:text-blue-500 duration-500 font-poppins block text-center md:text-left">Service</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="about.html"
+                    class="text-xl hover:text-blue-500 duration-500 font-poppins block text-center md:text-left">About</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="events.html"
+                    class="text-xl hover:text-blue-500 duration-500 font-poppins block text-center md:text-left">Events</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="contact.html"
+                    class="bg-blue-500 text-white font-[Poppins] duration-500 px-6 py-2 w-[150px] text-center block mx-auto md:mx-4 hover:bg-cyan-400 rounded">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Back Button & Title -->
+    <div class="flex items-center justify-center px-6 md:px-12 py-5 mb-6 max-w-5xl mx-auto mt-20">
+        <button onclick="goBack()" class="text-white text-3xl back-button transition-transform duration-300 mr-4">
+            <i class="fa fa-arrow-left"></i>
+        </button>
+        <h1 class="text-center text-2xl md:text-3xl font-bold w-full">EVENT DETAIL</h1>
+    </div>
+
+    <!-- Event Detail -->
+    <div id="event-detail" class="max-w-5xl mx-auto px-6 fade-in"></div>
+    <div id="event-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 max-w-5xl mx-auto px-6 fade-in"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const eventId = urlParams.get('id');
+
+        async function loadEventDetail() {
+            const response = await fetch('events.json');
+            const events = await response.json();
+            const event = events.find(e => e.id == eventId);
+
+            if (event) {
+                document.getElementById('event-detail').innerHTML = `
+                    <h1 class="text-2xl font-bold">${event.name}</h1>
+                    <p class="text-gray-400">${event.location}</p>
+                    <img class="w-full h-64 object-cover rounded-md mt-4" src="${event.image}" alt="${event.name}">
+                    ${event.video ? `<video controls class="w-full mt-4">
+                        <source src="${event.video}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>` : ''}
+                `;
+
+                if (event.gallery && event.gallery.length > 0) {
+                    document.getElementById('event-gallery').innerHTML = event.gallery.map(img => `
+                        <img class="w-full h-40 object-cover rounded-md hover:scale-105 transition-transform" src="${img}" alt="Event Image">
+                    `).join('');
+                }
+            } else {
+                document.getElementById('event-detail').innerHTML = '<p>Event not found.</p>';
+            }
+        }
+
+        loadEventDetail();
+    </script>
+
+    <script>
+        function goBack() {
+            if (document.referrer) {
+                window.history.back();
+            } else {
+                window.location.href = "home.html";
+            }
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeInElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+
+</html>
