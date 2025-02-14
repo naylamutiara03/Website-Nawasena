@@ -8,6 +8,7 @@
   <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -72,7 +73,7 @@
       <a href="home.html" class="text-2xl font-[Poppins] cursor-pointer ml-4">
         <img class="h-12 inline" src="../assets/logo.png" alt="Logo">
       </a>
-      
+
       <!-- Tombol menu hamburger untuk mobile -->
       <span class="text-3xl cursor-pointer mx-2 md:hidden block">
         <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
@@ -105,30 +106,38 @@
     </ul>
   </nav>
 
-  <!-- Slider Section -->
-  <section class="swiper-container mt-20 h-screen overflow-hidden"> <!-- Tambahkan mt-20 di sini -->
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="../assets/thumbnail-web.png" alt="Event 1" class="w-full h-full object-cover rounded-lg">
+  <!-- Slider -->
+  <div class="slider mt-32">
+    <div class="list">
+      <div class="item">
+        <img src="../assets/thumbnail/thumbnail-1.jpg" alt="">
       </div>
-      <div class="swiper-slide">
-        <img src="../assets/thumbnail.JPG" alt="Event 2" class="w-full h-full object-cover rounded-lg">
+      <div class="item">
+        <img src="../assets/thumbnail/thumbnail-2.jpg" alt="">
       </div>
-      <div class="swiper-slide">
-        <img src="../assets/thumbnail2.jpg" alt="Event 3" class="w-full h-full object-cover rounded-lg">
+      <div class="item">
+        <img src="../assets/thumbnail/thumbnail-3.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="../assets/thumbnail/thumbnail-4.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="../assets/thumbnail/thumbnail-5.jpg" alt="">
       </div>
     </div>
-
-    <!-- Pagination -->
-    <div class="swiper-pagination"></div>
-  </section>
-
-  <!-- Navigation buttons -->
-  <div class="flex justify-between mt-4">
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="buttons">
+      <button id="prev"><</button>
+          <button id="next">></button>
+    </div>
+    <ul class="dots">
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </div>
-  <!-- END Slider -->
+  <!-- End Slider -->
 
   <!-- Services Section -->
   <section class="text-center mt-12 px-4 md:px-20 fade-in">
@@ -594,7 +603,8 @@
         <img alt="Portrait of Tyas Ramadhianta" class="rounded-lg w-32 h-32 md:w-48 md:h-48 object-cover mx-auto mb-4"
           src="../assets/mba-tyas-removebg-preview.png" />
         <div class="text-center">
-          <h3 class="text-xl md:text-2xl text-white font-bold font-poppins group-hover:text-orange-300">Tyas Ramadhianta
+          <h3 class="text-xl md:text-2xl text-white font-bold font-poppins group-hover:text-orange-300">Tyas
+            Ramadhianta
           </h3>
           <p class="text-sm md:text-base text-white font-opensans">Sales Marketing</p>
           <p class="text-sm md:text-base text-white/80 mt-2 font-opensans line-clamp-4">
@@ -613,6 +623,7 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="slider.js"></script>
   <script>
     function Menu(e) {
       let list = document.getElementById('menu-list');
@@ -625,7 +636,6 @@
       }
     }
 
-
     // Load Footer
     fetch('footer.html')
       .then(response => response.text())
@@ -634,22 +644,6 @@
       })
       .catch(error => console.error('Error fetching footer:', error));
 
-    // Initialize Swiper for slider
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
 
     // Data dokumentasi untuk pergantian konten
     const documentationData = [
