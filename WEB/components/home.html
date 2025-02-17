@@ -62,10 +62,51 @@
       font-weight: bold;
       /* Optional: make it bold */
     }
+
+    /* .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #f7f9fb;
+      transition: opacity 0.75s, visibility 0.75s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .loader-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader::after {
+      content: "";
+      width: 75px;
+      height: 75px;
+      border: 15px solid #dddddd;
+      border-top-color: #60a5fa;
+      border-radius: 50%;
+      animation: loading 0.75s ease infinite;
+    }
+
+    @keyframes loading {
+      from {
+        transform: rotate(0turn);
+      }
+
+      to {
+        transform: rotate(1turn);
+      }
+    } */
   </style>
 </head>
 
 <body class="bg-black text-white">
+  <div class="loader"></div>
+
   <!-- Navbar -->
   <nav
     class="p-5 bg-black bg-opacity-90 shadow md:flex md:items-center md:justify-between fixed top-0 left-0 w-full z-50">
@@ -110,19 +151,19 @@
   <div class="slider mt-32">
     <div class="list">
       <div class="item">
-        <img src="../assets/thumbnail/thumbnail-1.jpg" alt="">
+        <img src="../assets/thumbnail/thumbnail1.jpg" alt="">
       </div>
       <div class="item">
-        <img src="../assets/thumbnail/thumbnail-2.jpg" alt="">
+        <img src="../assets/thumbnail/thumbnail2.jpg" alt="">
       </div>
       <div class="item">
-        <img src="../assets/thumbnail/thumbnail-3.jpg" alt="">
+        <img src="../assets/thumbnail/thumbnail3.jpg" alt="">
       </div>
       <div class="item">
-        <img src="../assets/thumbnail/thumbnail-4.jpg" alt="">
+        <img src="../assets/thumbnail/thumbnail4.jpg" alt="">
       </div>
       <div class="item">
-        <img src="../assets/thumbnail/thumbnail-5.jpg" alt="">
+        <img src="../assets/thumbnail/thumbnail5.jpg" alt="">
       </div>
     </div>
     <div class="buttons">
@@ -167,12 +208,12 @@
         <span class="mt-4 font-poppins">Rental Equipment</span>
       </a>
 
-      <div class="flex flex-col items-center">
+      <a href="support.html" class="flex flex-col items-center">
         <div class="p-6 bg-white rounded-full transition duration-300 hover:scale-110">
           <img src="../assets/icon-support.png" alt="Support" class="w-12 h-12">
         </div>
         <span class="mt-4 font-poppins">Support All Product</span>
-      </div>
+      </a>
     </div>
   </section>
   <!-- END Services-->
@@ -686,49 +727,65 @@
     // Inisialisasi konten awal (dokumentasi)
     updateCards();
 
-    // CLIENT: Fungsi untuk mengganti halaman pagination
-    // Fungsi untuk mengganti tampilan logo saat tombol pagination diklik
     function changePage(pageNumber) {
       const allLogos = document.querySelectorAll('.client-logo'); // Ambil semua logo
       const logosPerPage = 24; // Jumlah logo per halaman
       const startIndex = (pageNumber - 1) * logosPerPage;
       const endIndex = pageNumber * logosPerPage;
 
-      // Sembunyikan semua logo
-      allLogos.forEach(logo => logo.style.display = 'none');
-
-      // Tampilkan logo yang sesuai dengan halaman yang dipilih
-      for (let i = startIndex; i < endIndex && i < allLogos.length; i++) {
-        allLogos[i].style.display = 'flex'; // Pastikan logo ditampilkan dengan flex
-      }
-
-      // Update tombol pagination
-      const buttons = document.querySelectorAll('.pagination-button');
-      buttons.forEach(button => {
-        button.classList.remove('active'); // Hapus kelas active dari semua tombol
+      // Sembunyikan semua logo terlebih dahulu
+      allLogos.forEach((logo, index) => {
+        if (index >= startIndex && index < endIndex) {
+          logo.style.display = "flex"; // Tampilkan logo yang sesuai dengan halaman
+        } else {
+          logo.style.display = "none"; // Sembunyikan logo lainnya
+        }
       });
-      buttons[pageNumber - 1].classList.add('active'); // Tambahkan kelas active pada tombol yang sesuai
+
+      // Update tampilan tombol pagination
+      document.querySelectorAll(".pagination-button").forEach(button => {
+        button.classList.remove("bg-gray-300");
+        button.classList.add("bg-white");
+      });
+
+      document.getElementById(`page-${pageNumber}`).classList.remove("bg-white");
+      document.getElementById(`page-${pageNumber}`).classList.add("bg-gray-400");
     }
 
-    // Menampilkan halaman pertama saat pertama kali load
-    window.onload = () => changePage(1);
-    // END CLIENT
+    // Jalankan fungsi ini saat halaman dimuat agar halaman pertama ditampilkan secara default
+    document.addEventListener("DOMContentLoaded", function () {
+      changePage(1);
+    });
+
+    // Script Loading
+    window.addEventListener('load', () => {
+      const loader = document.querySelector('.loader');
+
+      // Set a timeout to hide the loader after 2 seconds
+      setTimeout(() => {
+        loader.classList.add('loader-hidden');
+
+        loader.addEventListener('transitionend', () => {
+          document.body.removeChild(loader);
+        });
+      }, 1000); // 2000 milliseconds = 2 seconds
+    });
 
     // Scroll Animation
     document.addEventListener("DOMContentLoaded", function () {
       const fadeInElements = document.querySelectorAll('.fade-in');
 
       const observerOptions = {
-        root: null, // Use the viewport as the root
+        root: null, // Gunakan viewport sebagai root
         rootMargin: '0px',
-        threshold: 0.1 // Trigger when 10% of the element is visible
+        threshold: 0.1 // Trigger ketika 10% elemen terlihat
       };
 
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            observer.unobserve(entry.target); // Hentikan pengamatan setelah animasi dipicu
           }
         });
       }, observerOptions);

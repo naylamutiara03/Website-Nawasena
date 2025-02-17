@@ -56,10 +56,50 @@
         .back-button:hover {
             transform: translateX(-5px);
         }
+
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #f7f9fb;
+            transition: opacity 0.75s, visibility 0.75s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loader-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader::after {
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #dddddd;
+            border-top-color: #60a5fa;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+
+        @keyframes loading {
+            from {
+                transform: rotate(0turn);
+            }
+
+            to {
+                transform: rotate(1turn);
+            }
+        }
     </style>
 </head>
 
 <body class="bg-black text-white">
+    <div class="loader"></div>
     <!-- Navbar -->
     <nav
         class="p-5 bg-black bg-opacity-90 shadow md:flex md:items-center md:justify-between fixed top-0 left-0 w-full z-50">
@@ -147,7 +187,7 @@
     <div id="footer"></div>
     <!-- END Footer -->
 
-    <!-- Scripts Load Navbar & Footer -->
+    <!-- Scripts -->
     <script>
 
         // Load Footer
@@ -157,6 +197,20 @@
                 document.getElementById('footer').innerHTML = html;
             })
             .catch(error => console.error('Error fetching footer:', error));
+
+        // Script Loading
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.loader');
+
+            // Set a timeout to hide the loader after 2 seconds
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+
+                loader.addEventListener('transitionend', () => {
+                    document.body.removeChild(loader);
+                });
+            }, 1000); // 2000 milliseconds = 2 seconds
+        });
 
         // Scroll Animation
         document.addEventListener("DOMContentLoaded", function () {
@@ -184,7 +238,7 @@
     </script>
 
     <script>
-         function Menu(e) {
+        function Menu(e) {
             let list = document.getElementById('menu-list');
             if (e.name === 'menu') {
                 e.name = "close";

@@ -158,5 +158,14 @@
       "../assets/portfolio/apple-wood/aw-w4.jpg",
       "../assets/portfolio/apple-wood/aw-w5.jpg"
     ]
+  },
+  {
+    "id": 13,
+    "name": "D&E WORLD TOUR FANCON - DElight Party",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/delight/delight-cover.jpg",
+    "year": 2023,
+    "gallery": [
+    ]
   }
 ]
