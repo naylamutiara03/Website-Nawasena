@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support All Product</title>
+    <title>Support All Product & Concepts</title>
     <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,6 +22,9 @@
             },
         };
     </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <!-- Google Fonts -->
     <link
@@ -41,11 +44,11 @@
         }
 
         /* Hover effect for images */
-        .image-container img {
+        .hover-effect {
             transition: transform 0.3s ease-in-out;
         }
 
-        .image-container img:hover {
+        .hover-effect:hover {
             transform: scale(1.05);
         }
 
@@ -97,7 +100,6 @@
 
 <body class="bg-black text-white">
     <div class="loader"></div>
-
     <!-- Navbar -->
     <nav
         class="p-5 bg-black bg-opacity-90 shadow md:flex md:items-center md:justify-between fixed top-0 left-0 w-full z-50">
@@ -133,11 +135,12 @@
             </li>
             <li class="mx-4 my-6 md:my-0">
                 <a href="contact.html"
-                    class="bg-blue-500 text-white font-[Poppins] duration-500 px-6 py-2 w-[150px] text-center block mx-auto md:mx-4 hover:bg-cyan-400 rounded">Contact</a>
+                    class="bg-blue-500 text-white font-[Poppins] duration-500 px-6 py-2 w-[150px] text-center block mx-auto md:mx-4 hover:bg-cyan-400 rounded">
+                    Contact
+                </a>
             </li>
         </ul>
     </nav>
-    <!-- END Navbar -->
 
     <!-- Back Button & Title Container -->
     <div class="flex items-center justify-center px-6 md:px-12 py-5 mb-6 max-w-5xl mx-auto mt-20">
@@ -147,7 +150,7 @@
         </button>
 
         <!-- Title -->
-        <h1 class="text-center text-2xl md:text-3xl font-bold w-full">SUPPORT ALL PRODUCT</h1>
+        <h1 class="text-center text-2xl md:text-3xl font-bold w-full">SUPPORT ALL PRODUCT & CONCEPTS</h1>
     </div>
 
     <!-- Support Cards -->
@@ -187,13 +190,13 @@
     </div>
     <!-- END Support Cards -->
 
-
     <!-- Footer -->
     <div id="footer"></div>
     <!-- END Footer -->
 
-    <!-- Scripts Load Navbar & Footer -->
+    <!-- Scripts -->
     <script>
+
         // Load Footer
         fetch('footer.html')
             .then(response => response.text())
@@ -242,6 +245,17 @@
     </script>
 
     <script>
+        function Menu(e) {
+            let list = document.getElementById('menu-list');
+            if (e.name === 'menu') {
+                e.name = "close";
+                list.classList.add('top-[70px]', 'opacity-100');
+            } else {
+                e.name = "menu";
+                list.classList.remove('top-[70px]', 'opacity-100');
+            }
+        }
+
         function goBack() {
             if (document.referrer) {
                 window.history.back();

@@ -23,6 +23,9 @@
         };
     </script>
 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
@@ -41,11 +44,11 @@
         }
 
         /* Hover effect for images */
-        .image-container img {
+        .hover-effect {
             transition: transform 0.3s ease-in-out;
         }
 
-        .image-container img:hover {
+        .hover-effect:hover {
             transform: scale(1.05);
         }
 
@@ -97,7 +100,6 @@
 
 <body class="bg-black text-white">
     <div class="loader"></div>
-
     <!-- Navbar -->
     <nav
         class="p-5 bg-black bg-opacity-90 shadow md:flex md:items-center md:justify-between fixed top-0 left-0 w-full z-50">
@@ -133,11 +135,12 @@
             </li>
             <li class="mx-4 my-6 md:my-0">
                 <a href="contact.html"
-                    class="bg-blue-500 text-white font-[Poppins] duration-500 px-6 py-2 w-[150px] text-center block mx-auto md:mx-4 hover:bg-cyan-400 rounded">Contact</a>
+                    class="bg-blue-500 text-white font-[Poppins] duration-500 px-6 py-2 w-[150px] text-center block mx-auto md:mx-4 hover:bg-cyan-400 rounded">
+                    Contact
+                </a>
             </li>
         </ul>
     </nav>
-    <!-- END Navbar -->
 
     <!-- Back Button & Title Container -->
     <div class="flex items-center justify-center px-6 md:px-12 py-5 mb-6 max-w-5xl mx-auto mt-20">
@@ -151,61 +154,83 @@
     </div>
 
     <!-- Custom Production Cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10 max-w-5xl mx-auto">
-        <div class="p-2 flex justify-center">
-            <img alt="Karting Race" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/custom-production/cp-wm1.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Akademi Kepolisian" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/custom-production/cp-wm2.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Shape Project" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/custom-production/cp-wm3.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="LCS" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/custom-production/cp-wm4.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Karnaval" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/custom-production/cp-wm5.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Bunga" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/custom-production/cp-wm6.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Hari Bhakti" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/custom-production/cp-wm7.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Halal Bihalal" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/custom-production/cp-wm8.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Air Mancur" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/custom-production/cp-wm10.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Jakarta Global" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/custom-production/cp-wm11.jpg" />
-        </div>
-        <div class="p-2 flex justify-center">
-            <img alt="Jasindo" class="rounded-lg w-full h-[180px] sm:h-[250px] md:h-[300px] object-cover"
-                src="../assets/custom-production/cp-wm12.jpg" />
+    <div class="mb-10 max-w-5xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-2 flex justify-center">
+                <img alt="Karting Race"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover"
+                    src="../assets/custom-production/cp-wm1.jpg" />
+            </div>
+            <div class="p-2 flex justify-center">
+                <img alt="Akademi Kepolisian"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover"
+                    src="../assets/custom-production/cp-wm2.jpg" />
+            </div>
+            <div class="p-2 flex justify-center">
+                <img alt="Shape Project"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover"
+                    src="../assets/custom-production/cp-wm3.jpg" />
+            </div>
+            <div class="p-2 flex justify-center">
+                <img alt="LCS"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover"
+                    src="../assets/custom-production/cp-wm4.jpg" />
+            </div>
+            <div class="p-2 flex justify-center">
+                <img alt="Karnaval"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover"
+                    src="../assets/custom-production/cp-wm5.jpg" />
+            </div>
+            <div class="p-2 flex justify-center">
+                <img alt="Bunga"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover"
+                    src="../assets/custom-production/cp-wm6.jpg" />
+            </div>
+            <div class="p-2 flex justify-center">
+                <img alt="Bunga"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover"
+                    src="../assets/custom-production/cp-wm7.jpg" />
+            </div>
+            <div class="p-2 flex justify-center">
+                <img alt="Bunga"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover"
+                    src="../assets/custom-production/cp-wm8.jpg" />
+            </div>
+            <div class="p-2 flex justify-center">
+                <img alt="Bunga"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[300px] object-cover"
+                    src="../assets/custom-production/cp-wm10.jpg" />
+            </div>
+            <div class="p-2 flex justify-center">
+                <img alt="Bunga"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover"
+                    src="../assets/custom-production/cp-wm11.jpg" />
+            </div>
+            <div class="p-2 flex justify-center">
+                <img alt="Bunga"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover"
+                    src="../assets/custom-production/cp-wm12.jpg" />
+            </div>
+            <div class="p-2 flex justify-center">
+                <img alt="Bunga"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover"
+                    src="../assets/custom-production/cp-wm13.jpg" />
+            </div>
+            <div class="p-2 flex justify-center">
+                <img alt="Bunga"
+                    class="rounded-lg w-full max-h-[500px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover"
+                    src="../assets/custom-production/cp-wm14.jpg" />
+            </div>
         </div>
     </div>
-    <!-- END Custom Production Cards -->
-
 
     <!-- Footer -->
     <div id="footer"></div>
     <!-- END Footer -->
 
-    <!-- Scripts Load Navbar & Footer -->
+    <!-- Scripts -->
     <script>
+
         // Load Footer
         fetch('footer.html')
             .then(response => response.text())
@@ -254,6 +279,17 @@
     </script>
 
     <script>
+        function Menu(e) {
+            let list = document.getElementById('menu-list');
+            if (e.name === 'menu') {
+                e.name = "close";
+                list.classList.add('top-[70px]', 'opacity-100');
+            } else {
+                e.name = "menu";
+                list.classList.remove('top-[70px]', 'opacity-100');
+            }
+        }
+
         function goBack() {
             if (document.referrer) {
                 window.history.back();

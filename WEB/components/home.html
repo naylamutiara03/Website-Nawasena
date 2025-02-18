@@ -63,7 +63,7 @@
       /* Optional: make it bold */
     }
 
-    /* .loader {
+    .loader {
       position: fixed;
       top: 0;
       left: 0;
@@ -100,12 +100,14 @@
       to {
         transform: rotate(1turn);
       }
-    } */
+    }
   </style>
 </head>
 
 <body class="bg-black text-white">
+  <!-- Loader -->
   <div class="loader"></div>
+  <!-- End Loader -->
 
   <!-- Navbar -->
   <nav
@@ -219,7 +221,7 @@
   <!-- END Services-->
 
   <!-- Documentation Section -->
-  <section class="product">
+  <section class="product fade-in">
     <h2 class="product-category text-center text-3xl font-poppins">Project Documentation</h2>
     <button class="pre-btn"><img src="../assets/arrow.png" alt=""></button>
     <button class="nxt-btn"><img src="../assets/arrow.png" alt=""></button>
@@ -284,7 +286,7 @@
   <!-- END Documentation-->
 
   <!-- Our Client -->
-  <section class="our-client container mx-auto py-12 fade-in">
+  <section class="container mx-auto py-12 fade-in">
     <h1 class="text-3xl font-bold text-center mb-8 font-poppins">
       Our Clients
     </h1>
@@ -533,8 +535,8 @@
   <!-- END Our Client -->
 
   <!-- Our Partner -->
-  <section class="container mx-auto py-12">
-    <h1 class="text-center text-3xl font-bold mb-8">
+  <section class="container mx-auto py-12 fade-in">
+    <h1 class="text-center text-3xl font-bold mb-8 font-poppins">
       Our Partner
     </h1>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -575,29 +577,27 @@
   <!-- END Our Partner -->
 
   <!-- Our Community -->
-  <section class="container mx-auto py-12 text-center">
-    <h1 class="text-3xl font-bold mb-8">Our Community</h1>
-    <div class="flex justify-center">
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-fit mx-auto">
-        <div class="p-4 border border-white flex items-center justify-center">
-          <img alt="Logo of GASINDO" height="150" src="../assets/community/rental.png" width="150" />
-        </div>
-        <div class="p-4 border border-white flex items-center justify-center">
-          <img alt="Logo of LEXA" height="150" class="bg-white" src="../assets/community/pekerja.jpg" width="150" />
-        </div>
-        <div class="p-4 border border-white flex items-center justify-center">
-          <img alt="Logo of Ars" height="150" src="../assets/community/rmi.jpg" width="150" />
-        </div>
-        <div class="p-4 border border-white flex items-center justify-center">
-          <img alt="Logo of CENTRAL events" height="150" src="../assets/community/eoc.jpeg" width="150" />
-        </div>
+  <section class="mb-8 fade-in">
+    <h2 class="text-center text-3xl font-bold my-8 font-poppins">
+      Our Community
+    </h2>
+    <section class="flex justify-center">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <img alt="Logo of RI" class="border border-gray-700" height="200" src="../assets/community/rental.png"
+          width="200" />
+        <img alt="Logo of Pekerja Event Indonesia" class="border border-gray-700" height="200"
+          src="../assets/community/pekerja.jpg" width="200" />
+        <img alt="Logo of RMI" class="border border-gray-700" height="200" src="../assets/community/rmi.jpg"
+          width="200" />
+        <img alt="Logo of EOC Indonesia" class="border border-gray-700" height="150" src="../assets/community/eoc.jpeg"
+          width="200" />
       </div>
-    </div>
+    </section>
   </section>
   <!-- END Our Community -->
 
   <!-- Our Team -->
-  <section class="our-team bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-16 relative fade-in mb-20">
+  <section class="bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-16 relative mb-20 fade-in">
     <!-- Header -->
     <div class="text-center text-white px-4">
       <h2 class="text-4xl md:text-3xl font-bold font-poppins drop-shadow-lg">Professional Team</h2>
@@ -611,7 +611,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center mt-12 px-6">
       <!-- Card 1 -->
       <div
-        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px]">
+        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px] fade-in">
         <img alt="Portrait of Ratno" class="rounded-lg w-40 h-40 md:w-48 md:h-48 object-contain mx-auto mb-4"
           src="../assets/mas-ratno.png" />
         <div class="text-center">
@@ -627,7 +627,7 @@
 
       <!-- Card 2 -->
       <div
-        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px]">
+        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px] fade-in">
         <img alt="Portrait of Mulyo Prabowo" class="rounded-lg w-30 h-30 md:w-30 md:h-30 object-cover mx-auto mb-4"
           src="../assets/pak-yoyo-removebg-preview.png" />
         <div class="text-center">
@@ -643,7 +643,7 @@
 
       <!-- Card 3 -->
       <div
-        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px]">
+        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px] fade-in">
         <img alt="Portrait of Tyas Ramadhianta" class="rounded-lg w-32 h-32 md:w-48 md:h-48 object-cover mx-auto mb-4"
           src="../assets/mba-tyas-removebg-preview.png" />
         <div class="text-center">
@@ -690,43 +690,8 @@
       })
       .catch(error => console.error('Error fetching footer:', error));
 
-    // Referensi elemen
-    const leftArrow = document.getElementById("left-arrow");
-    const rightArrow = document.getElementById("right-arrow");
-    const documentationCards = document.querySelectorAll(".documentation-card");
-    const paginationDots = document.querySelectorAll(".pagination-dots div");
 
-    // Fungsi untuk memperbarui konten card dan pagination
-    function updateCards() {
-      documentationCards.forEach((card, index) => {
-        const dataIndex = (currentIndex + index) % documentationData.length;
-        const data = documentationData[dataIndex];
-        card.querySelector("img").src = data.imgSrc;
-        card.querySelector("h2").textContent = data.title;
-        card.querySelector("p").textContent = data.location;
-      });
-
-      // Update pagination dots
-      paginationDots.forEach((dot, index) => {
-        dot.classList.toggle('bg-black', index === currentIndex);
-        dot.classList.toggle('bg-gray-300', index !== currentIndex);
-      });
-    }
-
-    // Event listener untuk tombol panah
-    leftArrow.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + documentationData.length) % documentationData.length;
-      updateCards();
-    });
-
-    rightArrow.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % documentationData.length;
-      updateCards();
-    });
-
-    // Inisialisasi konten awal (dokumentasi)
-    updateCards();
-
+    // script client
     function changePage(pageNumber) {
       const allLogos = document.querySelectorAll('.client-logo'); // Ambil semua logo
       const logosPerPage = 24; // Jumlah logo per halaman
@@ -744,18 +709,24 @@
 
       // Update tampilan tombol pagination
       document.querySelectorAll(".pagination-button").forEach(button => {
-        button.classList.remove("bg-gray-300");
-        button.classList.add("bg-white");
+        button.classList.remove("bg-gray-400"); // Hapus warna aktif
+        button.classList.add("bg-white"); // Kembalikan ke warna default
+        button.classList.add("text-gray-700"); // Kembalikan teks ke warna default
       });
 
-      document.getElementById(`page-${pageNumber}`).classList.remove("bg-white");
-      document.getElementById(`page-${pageNumber}`).classList.add("bg-gray-400");
+      // Set tombol yang aktif
+      const activeButton = document.getElementById(`page-${pageNumber}`);
+      activeButton.classList.remove("bg-white");
+      activeButton.classList.add("bg-gray-400");
+      activeButton.classList.remove("text-gray-700"); // Hapus warna teks default
+      activeButton.classList.add("text-white"); // Ubah warna teks untuk tombol aktif
     }
 
     // Jalankan fungsi ini saat halaman dimuat agar halaman pertama ditampilkan secara default
     document.addEventListener("DOMContentLoaded", function () {
       changePage(1);
     });
+    // END script client
 
     // Script Loading
     window.addEventListener('load', () => {
@@ -771,7 +742,7 @@
       }, 1000); // 2000 milliseconds = 2 seconds
     });
 
-    // Scroll Animation
+    // script Scroll Animation
     document.addEventListener("DOMContentLoaded", function () {
       const fadeInElements = document.querySelectorAll('.fade-in');
 
