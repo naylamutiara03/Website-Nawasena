@@ -101,6 +101,33 @@
         transform: rotate(1turn);
       }
     }
+
+    .client-logo {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .client-logo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .partner-logo {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .partner-logo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .community-logo {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .community-logo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
 
@@ -540,36 +567,36 @@
       Our Partner
     </h1>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-      <div class="p-4 border border-white flex items-center justify-center">
+      <div class="partner-logo p-4 border border-white flex items-center justify-center">
         <img alt="Logo of GASINDO" height="150" src="../assets/partner/gasindo.jpg" width="150" />
       </div>
-      <div class="p-4 border border-white flex items-center justify-center">
+      <div class="partner-logo p-4 border border-white flex items-center justify-center">
         <img alt="Logo of LEXA" height="150" class="bg-white" src="../assets/partner/lexa.png" width="150" />
       </div>
-      <div class="p-4 border border-white flex items-center justify-center">
+      <div class="partner-logo p-4 border border-white flex items-center justify-center">
         <img alt="Logo of Ars" height="150" src="../assets/partner/ars.png" width="150" />
       </div>
-      <div class="p-4 border border-white flex items-center justify-center">
+      <div class="partner-logo p-4 border border-white flex items-center justify-center">
         <img alt="Logo of CENTRAL events" height="150" src="../assets/partner/central-event.png" width="150" />
       </div>
-      <div class="p-4 border border-white flex items-center justify-center">
+      <div class="partner-logo p-4 border border-white flex items-center justify-center">
         <img alt="Logo of SR Solusi Rental Equipment" height="150" src="../assets/partner/melvi.png" width="150" />
       </div>
-      <div class="p-4 border border-white flex items-center justify-center">
+      <div class="partner-logo p-4 border border-white flex items-center justify-center">
         <img alt="Logo of Total Rental" height="150" class="bg-white" src="../assets/partner/total.png" width="150" />
       </div>
-      <div class="p-4 border border-white flex items-center justify-center">
+      <div class="partner-logo p-4 border border-white flex items-center justify-center">
         <img alt="Logo of SHUTSHOOT OFFICIAL" height="150" class="bg-white" src="../assets/partner/shuttshot.png"
           width="150" />
       </div>
-      <div class="p-4 border border-white flex items-center justify-center">
+      <div class="partner-logo p-4 border border-white flex items-center justify-center">
         <img alt="Logo of Bintang Jaya" height="150" class="bg-white" src="../assets/partner/wb.png" width="150" />
       </div>
-      <div class="p-4 border border-white flex items-center justify-center">
+      <div class="partner-logo p-4 border border-white flex items-center justify-center">
         <img alt="Logo of MAXINDO LED" height="150" class="bg-white" src="../assets/partner/bintang-jaya.png"
           width="150" />
       </div>
-      <div class="p-4 border border-white flex items-center justify-center">
+      <div class="partner-logo p-4 border border-white flex items-center justify-center">
         <img alt="Logo of W3" height="150" src="../assets/partner/maxindo.png" width="150" />
       </div>
     </div>
@@ -583,13 +610,13 @@
     </h2>
     <section class="flex justify-center">
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        <img alt="Logo of RI" class="border border-gray-700" height="200" src="../assets/community/rental.png"
+        <img alt="Logo of RI" class="community-logo border-gray-700" height="200" src="../assets/community/rental.png"
           width="200" />
-        <img alt="Logo of Pekerja Event Indonesia" class="border border-gray-700" height="200"
+        <img alt="Logo of Pekerja Event Indonesia" class="community-logo border border-gray-700" height="200"
           src="../assets/community/pekerja.jpg" width="200" />
-        <img alt="Logo of RMI" class="border border-gray-700" height="200" src="../assets/community/rmi.jpg"
+        <img alt="Logo of RMI" class="community-logo border border-gray-700" height="200" src="../assets/community/rmi.jpg"
           width="200" />
-        <img alt="Logo of EOC Indonesia" class="border border-gray-700" height="150" src="../assets/community/eoc.jpeg"
+        <img alt="Logo of EOC Indonesia" class="community-logo border border-gray-700" height="150" src="../assets/community/eoc.jpeg"
           width="200" />
       </div>
     </section>
