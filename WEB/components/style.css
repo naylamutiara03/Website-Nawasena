@@ -174,16 +174,6 @@
   right: 0;
 }
 
-/* style lainnya */
-.text-center {
-  display: block !important;
-  /* Pastikan tidak tersembunyi */
-  opacity: 1 !important;
-  /* Jika menggunakan efek fade-in */
-  position: relative !important;
-  z-index: 10 !important;
-}
-
 .our-client {
   display: block !important;
   /* Pastikan tidak tersembunyi */
@@ -193,11 +183,91 @@
   z-index: 10 !important;
 }
 
-.our-team {
-  display: block !important;
-  /* Pastikan tidak tersembunyi */
-  opacity: 1 !important;
-  /* Jika menggunakan efek fade-in */
-  position: relative !important;
-  z-index: 10 !important;
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: flex;
+  animation: 30s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 20px;
+  /* Ubah margin untuk mengurangi ruang antar gambar */
+  transition: transform 0.3s ease;
+  /* Tambahkan efek transisi */
+}
+
+.logos-slide img:hover {
+  transform: scale(1.1);
+  /* Tambahkan efek hover */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .logos-slide img {
+    height: 40px;
+    /* Ubah tinggi gambar untuk layar kecil */
+    margin: 0 10px;
+    /* Ubah margin untuk layar kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  .logos-slide img {
+    height: 30px;
+    /* Ubah tinggi gambar untuk layar sangat kecil */
+    margin: 0 5px;
+    /* Ubah margin untuk layar sangat kecil */
+  }
+}
+
+/* style card portfolio */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk efek halus */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Mengangkat kartu sedikit ke atas */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan saat hover */
 }

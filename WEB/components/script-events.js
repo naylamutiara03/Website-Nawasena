@@ -15,7 +15,7 @@ function renderEvents(events, year) {
     return events
         .filter(event => event.year === year)
         .map(event => `
-            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-md">
+            <div class="card bg-gray-800 rounded-lg overflow-hidden shadow-md">
                 <img class="w-full h-56 object-cover" src="${event.image}" alt="${event.name}">
                 <div class="p-3">
                     <h3 class="text-lg font-semibold font-poppins">${event.name}</h3>
@@ -27,11 +27,6 @@ function renderEvents(events, year) {
             </div>
         `).join('');
 }
-
-function redirectToDetail(id) {
-    window.location.href = `event-detail.html?id=${id}`;
-}
-
 
 // Panggil fungsi saat halaman selesai dimuat
 document.addEventListener("DOMContentLoaded", loadEvents);
