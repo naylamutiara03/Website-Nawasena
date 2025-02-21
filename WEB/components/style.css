@@ -227,7 +227,7 @@
 
 .logos-slide {
   display: flex;
-  animation: 30s slide infinite linear;
+  animation: 40s slide infinite linear;
 }
 
 .logos-slide img {

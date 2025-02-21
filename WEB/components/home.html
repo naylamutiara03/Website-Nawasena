@@ -124,7 +124,7 @@
 
 <body class="bg-black text-white">
   <!-- Loader -->
-  <div class="loader"></div>
+  <!-- <div class="loader"></div> -->
   <!-- End Loader -->
 
   <!-- Navbar -->
@@ -309,7 +309,7 @@
 
   <!-- Client Section -->
   <div class="logos">
-    <div class="logos-slide">
+    <div class="logos-slide w-[600%]">
       <img class="client-logo" src="../assets/clients/pertamina.jpeg" />
       <img class="client-logo" src="../assets/clients/plataran.png" />
       <img class="client-logo" src="../assets/clients/ggf.png" />
@@ -375,8 +375,8 @@
       <img class="client-logo" src="../assets/clients/airfast.png" />
       <img class="client-logo" src="../assets/clients/pemda.png" />
       <img class="client-logo" src="../assets/clients/pupr.png" />
-      <img class="client-logo" src="../assets/clients/bank-ina.png" />
-      <img class="client-logo" src="../assets/clients/singapore.png" />
+      <img class="client-logo" src="../assets/clients/bank-ina.jpg" />
+      <img class="client-logo" src="../assets/clients/singapore.jpg" />
       <img class="client-logo" src="../assets/clients/maipark.png" />
       <img class="client-logo" src="../assets/clients/nippon.png" />
       <!-- Tambahkan gambar lainnya dengan kelas client-logo -->
@@ -540,19 +540,19 @@
       })
       .catch(error => console.error('Error fetching footer:', error));
 
-    // Script Loading
-    window.addEventListener('load', () => {
-      const loader = document.querySelector('.loader');
+    // // Script Loading
+    // window.addEventListener('load', () => {
+    //   const loader = document.querySelector('.loader');
 
-      // Set a timeout to hide the loader after 2 seconds
-      setTimeout(() => {
-        loader.classList.add('loader-hidden');
+    //   // Set a timeout to hide the loader after 2 seconds
+    //   setTimeout(() => {
+    //     loader.classList.add('loader-hidden');
 
-        loader.addEventListener('transitionend', () => {
-          document.body.removeChild(loader);
-        });
-      }, 1000); // 2000 milliseconds = 2 seconds
-    });
+    //     loader.addEventListener('transitionend', () => {
+    //       document.body.removeChild(loader);
+    //     });
+    //   }, 1000);
+    // });
 
     // script Scroll Animation
     document.addEventListener("DOMContentLoaded", function () {
