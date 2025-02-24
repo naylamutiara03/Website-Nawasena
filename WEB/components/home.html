@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 
@@ -124,7 +125,7 @@
 
 <body class="bg-black text-white">
   <!-- Loader -->
-  <!-- <div class="loader"></div> -->
+  <div class="loader"></div>
   <!-- End Loader -->
 
   <!-- Navbar -->
@@ -244,7 +245,7 @@
 
   <!-- Documentation Section -->
   <section class="product fade-in">
-    <h2 class="product-category text-center text-3xl font-poppins">Project Documentation</h2>
+    <h2 class="mb-4 font-bold text-3xl font-poppins">Project Documentation</h2>
     <button class="pre-btn"><img src="../assets/arrow.png" alt=""></button>
     <button class="nxt-btn"><img src="../assets/arrow.png" alt=""></button>
     <div class="product-container">
@@ -262,7 +263,7 @@
           <img src="../assets/dokumentasi/dokum-wm2.jpg" class="product-thumb" alt="">
         </div>
         <div class="product-info">
-          <h2 class="product-brand">PSS Gala Dinner 2023-Jakarta</h2>
+          <h2 class="product-brand">PSS Gala Dinner 2023</h2>
           <p class="product-short-description">Jakarta</p>
         </div>
       </div>
@@ -308,7 +309,10 @@
   <!-- END Documentation-->
 
   <!-- Client Section -->
-  <div class="logos">
+  <div class="text-center mt-12">
+    <h2 class="text-3xl font-bold font-poppins">Our Client</h2>
+  </div>
+  <div class="logos fade-in mt-6">
     <div class="logos-slide w-[600%]">
       <img class="client-logo" src="../assets/clients/pertamina.jpeg" />
       <img class="client-logo" src="../assets/clients/plataran.png" />
@@ -375,57 +379,33 @@
       <img class="client-logo" src="../assets/clients/airfast.png" />
       <img class="client-logo" src="../assets/clients/pemda.png" />
       <img class="client-logo" src="../assets/clients/pupr.png" />
-      <img class="client-logo" src="../assets/clients/bank-ina.jpg" />
-      <img class="client-logo" src="../assets/clients/singapore.jpg" />
+      <img class="client-logo" src="../assets/clients/bank-ina.png" />
+      <!-- <img class="client-logo" src="../assets/clients/singapore.jpg" />
       <img class="client-logo" src="../assets/clients/maipark.png" />
-      <img class="client-logo" src="../assets/clients/nippon.png" />
+      <img class="client-logo" src="../assets/clients/nippon.png" /> -->
       <!-- Tambahkan gambar lainnya dengan kelas client-logo -->
     </div>
   </div>
   <!-- END Client -->
 
-  <!-- Our Partner -->
-  <section class="container mx-auto py-12 fade-in">
-    <h1 class="text-center text-3xl font-bold mb-8 font-poppins">
-      Our Partner
-    </h1>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-      <div class="partner-logo p-4 border border-white flex items-center justify-center">
-        <img alt="Logo of GASINDO" height="150" src="../assets/partner/gasindo.jpg" width="150" />
-      </div>
-      <div class="partner-logo p-4 border border-white flex items-center justify-center">
-        <img alt="Logo of LEXA" height="150" class="bg-white" src="../assets/partner/lexa.png" width="150" />
-      </div>
-      <div class="partner-logo p-4 border border-white flex items-center justify-center">
-        <img alt="Logo of Ars" height="150" src="../assets/partner/ars.png" width="150" />
-      </div>
-      <div class="partner-logo p-4 border border-white flex items-center justify-center">
-        <img alt="Logo of CENTRAL events" height="150" src="../assets/partner/central-event.png" width="150" />
-      </div>
-      <div class="partner-logo p-4 border border-white flex items-center justify-center">
-        <img alt="Logo of SR Solusi Rental Equipment" height="150" src="../assets/partner/melvi.png" width="150" />
-      </div>
-      <div class="partner-logo p-4 border border-white flex items-center justify-center">
-        <img alt="Logo of Total Rental" height="150" class="bg-white" src="../assets/partner/total.png" width="150" />
-      </div>
-      <div class="partner-logo p-4 border border-white flex items-center justify-center">
-        <img alt="Logo of SHUTSHOOT OFFICIAL" height="150" class="bg-white" src="../assets/partner/shuttshot.png"
-          width="150" />
-      </div>
-      <div class="partner-logo p-4 border border-white flex items-center justify-center">
-        <img alt="Logo of Bintang Jaya" height="150" class="bg-white" src="../assets/partner/wb.png" width="150" />
-      </div>
-      <div class="partner-logo p-4 border border-white flex items-center justify-center">
-        <img alt="Logo of MAXINDO LED" height="150" class="bg-white" src="../assets/partner/bintang-jaya.png"
-          width="150" />
-      </div>
-      <div class="partner-logo p-4 border border-white flex items-center justify-center">
-        <img alt="Logo of W3" height="150" src="../assets/partner/maxindo.png" width="150" />
-      </div>
-    </div>
-  </section>
-  <!-- END Our Partner -->
-
+  <!-- Partner Section -->
+  <div class="container mx-auto text-center mt-12 fade-in">
+    <h2 class="text-3xl font-bold mb-6 font-poppins">Our Partners</h2>
+    <section class="customer-logos flex flex-wrap justify-center items-center gap-6">
+      <div class="slide"><img class="partner-logo" src="../assets/partner/gasindo.jpg" alt="logo"></div>
+      <div class="slide"><img class="partner-logo bg-white" src="../assets/partner/lexa.png" alt="logo"></div>
+      <div class="slide"><img class="partner-logo" src="../assets/partner/ars.png" alt="logo"></div>
+      <div class="slide"><img class="partner-logo" src="../assets/partner/central-event.png" alt="logo"></div>
+      <div class="slide"><img class="partner-logo bg-white" src="../assets/partner/melvi.png" alt="logo"></div>
+      <div class="slide"><img class="partner-logo bg-white" src="../assets/partner/total.png" alt="logo"></div>
+      <div class="slide"><img class="partner-logo bg-white" src="../assets/partner/shuttshot.png" alt="logo"></div>
+      <div class="slide"><img class="partner-logo bg-white" src="../assets/partner/wb.png" alt="logo"></div>
+      <div class="slide"><img class="partner-logo bg-white" src="../assets/partner/bintang-jaya.png" alt="logo"></div>
+      <div class="slide"><img class="partner-logo" src="../assets/partner/maxindo.png" alt="logo"></div>
+    </section>
+  </div>
+  <!-- END Partner -->
+   
   <!-- Our Community -->
   <section class="mb-8 fade-in">
     <h2 class="text-center text-3xl font-bold my-8 font-poppins">
@@ -540,19 +520,42 @@
       })
       .catch(error => console.error('Error fetching footer:', error));
 
-    // // Script Loading
-    // window.addEventListener('load', () => {
-    //   const loader = document.querySelector('.loader');
+    // Script Loading
+    window.addEventListener('load', () => {
+      const loader = document.querySelector('.loader');
 
-    //   // Set a timeout to hide the loader after 2 seconds
-    //   setTimeout(() => {
-    //     loader.classList.add('loader-hidden');
+      // Set a timeout to hide the loader after 2 seconds
+      setTimeout(() => {
+        loader.classList.add('loader-hidden');
 
-    //     loader.addEventListener('transitionend', () => {
-    //       document.body.removeChild(loader);
-    //     });
-    //   }, 1000);
-    // });
+        loader.addEventListener('transitionend', () => {
+          document.body.removeChild(loader);
+        });
+      }, 1000);
+    });
+
+    $(document).ready(function () {
+      $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+          breakpoint: 768,
+          setting: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 520,
+          setting: {
+            slidesToShow: 3
+          }
+        }]
+      });
+    });
 
     // script Scroll Animation
     document.addEventListener("DOMContentLoaded", function () {
