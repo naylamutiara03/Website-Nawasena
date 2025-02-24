@@ -15,16 +15,17 @@ function renderEvents(events, year) {
     return events
         .filter(event => event.year === year)
         .map(event => `
-            <div class="card bg-gray-800 rounded-lg overflow-hidden shadow-md">
+            <div class="card bg-gray-800 rounded-lg overflow-hidden shadow-md flex flex-col h-full">
                 <img class="w-full h-56 object-cover" src="${event.image}" alt="${event.name}">
-                <div class="p-3">
+                <div class="p-3 flex flex-col flex-grow">
                     <h3 class="text-lg font-semibold font-poppins">${event.name}</h3>
                     <p class="text-gray-400 text-sm font-opensans">${event.location}</p>
-                    <div class="flex justify-end">
+                    <div class="flex justify-end mt-auto">
                         <a class="mt-2 inline-block bg-cyan-500 text-white px-3 py-1.5 text-sm rounded-full hover:bg-cyan-600 transition font-poppins" href="event-detail.html?id=${event.id}">See More</a>
                     </div>
                 </div>
             </div>
+
         `).join('');
 }
 
