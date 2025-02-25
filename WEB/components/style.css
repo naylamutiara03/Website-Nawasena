@@ -162,15 +162,6 @@
   right: 0;
 }
 
-.our-client {
-  display: block !important;
-  /* Pastikan tidak tersembunyi */
-  opacity: 1 !important;
-  /* Jika menggunakan efek fade-in */
-  position: relative !important;
-  z-index: 10 !important;
-}
-
 /* style logo slider CLIENT */
 
 @keyframes slide {
@@ -266,10 +257,9 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   /* Menambahkan bayangan saat hover */
 }
-
 /* END style card portfolio */
 
-
+/* style our partner*/
 h2 {
   text-align: center;
   padding: 20px;
@@ -322,3 +312,4 @@ h2 {
 .copy {
   padding-top: 250px;
 }
+/* END style our partner*/

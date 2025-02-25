@@ -528,7 +528,6 @@
   </section>
   <!-- END Our Community -->
 
-
   <!-- Our Team -->
   <section class="bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-16 relative mb-20 fade-in">
     <!-- Header -->
@@ -624,15 +623,16 @@
       .catch(error => console.error('Error fetching footer:', error));
 
     // Script Loading
-    window.addEventListener('load', () => {
-      const loader = document.querySelector('.loader');
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
 
-      // Set a timeout to hide the loader after 2 seconds
       setTimeout(() => {
-        loader.classList.add('loader-hidden');
+        loader.classList.add("loader-hidden");
 
-        loader.addEventListener('transitionend', () => {
-          document.body.removeChild(loader);
+        loader.addEventListener("transitionend", () => {
+          if (document.body.contains(loader)) {
+            document.body.removeChild(loader);
+          }
         });
       }, 1000);
     });

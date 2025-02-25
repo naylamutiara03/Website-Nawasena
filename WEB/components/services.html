@@ -315,6 +315,7 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+        // script navbar
         function Menu(e) {
             let list = document.getElementById('menu-list');
             if (e.name === 'menu') {
@@ -335,17 +336,18 @@
             .catch(error => console.error('Error fetching footer:', error));
 
         // Script Loading
-        window.addEventListener('load', () => {
-            const loader = document.querySelector('.loader');
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader");
 
-            // Set a timeout to hide the loader after 2 seconds
             setTimeout(() => {
-                loader.classList.add('loader-hidden');
+                loader.classList.add("loader-hidden");
 
-                loader.addEventListener('transitionend', () => {
-                    document.body.removeChild(loader);
+                loader.addEventListener("transitionend", () => {
+                    if (document.body.contains(loader)) {
+                        document.body.removeChild(loader);
+                    }
                 });
-            }, 1000); // 2000 milliseconds = 2 seconds
+            }, 1000);
         });
 
         // Scroll Animation

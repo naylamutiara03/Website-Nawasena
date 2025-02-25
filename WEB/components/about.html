@@ -175,7 +175,7 @@
             </div>
             <div class="flex flex-col items-center transition-transform transform hover:scale-105">
                 <div class="p-6 bg-white rounded-full shadow-lg">
-                    <img src="../assets/legal-2.png" alt="Kementerian" class="w-16 h-16"> 
+                    <img src="../assets/legal-2.png" alt="Kementerian" class="w-16 h-16">
                 </div>
                 <span class="mt-4 font-poppins text-white">Terdaftar Kementerian</span>
             </div>
@@ -324,17 +324,18 @@
         }
 
         // Script Loading
-        window.addEventListener('load', () => {
-            const loader = document.querySelector('.loader');
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader");
 
-            // Set a timeout to hide the loader after 2 seconds
             setTimeout(() => {
-                loader.classList.add('loader-hidden');
+                loader.classList.add("loader-hidden");
 
-                loader.addEventListener('transitionend', () => {
-                    document.body.removeChild(loader);
+                loader.addEventListener("transitionend", () => {
+                    if (document.body.contains(loader)) {
+                        document.body.removeChild(loader);
+                    }
                 });
-            }, 1000); // 2000 milliseconds = 2 seconds
+            }, 1000);
         });
 
         // Load Footer
