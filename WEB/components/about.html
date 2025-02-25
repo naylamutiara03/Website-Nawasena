@@ -91,6 +91,15 @@
                 transform: rotate(1turn);
             }
         }
+
+        .about {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 
@@ -156,7 +165,7 @@
             </p>
         </div>
         <div class="md:w-1/2 flex justify-center">
-            <img alt="Image of people racing go-karts" class="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg"
+            <img alt="Image of people racing go-karts" class="about w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg"
                 src="../assets/about-wm.jpg" />
         </div>
     </section>

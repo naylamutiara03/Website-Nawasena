@@ -112,6 +112,32 @@
   overflow: hidden;
 }
 
+.hover-location {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  color: black;
+  padding: 5px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hover-location i {
+  color: red;
+  font-size: 16px;
+}
+
+.product-image:hover .hover-location {
+  opacity: 1;
+}
+
 .product-thumb {
   width: 100%;
   height: 100%;
@@ -162,8 +188,9 @@
   right: 0;
 }
 
-/* style logo slider CLIENT */
+/* END PROJECT DOCUMENTATION */
 
+/* style logo slider CLIENT */
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -214,32 +241,25 @@
 .logos-slide img {
   height: 50px;
   margin: 0 20px;
-  /* Ubah margin untuk mengurangi ruang antar gambar */
   transition: transform 0.3s ease;
-  /* Tambahkan efek transisi */
 }
 
 .logos-slide img:hover {
   transform: scale(1.1);
-  /* Tambahkan efek hover */
 }
 
 /* Responsif */
 @media (max-width: 768px) {
   .logos-slide img {
     height: 40px;
-    /* Ubah tinggi gambar untuk layar kecil */
     margin: 0 10px;
-    /* Ubah margin untuk layar kecil */
   }
 }
 
 @media (max-width: 480px) {
   .logos-slide img {
     height: 30px;
-    /* Ubah tinggi gambar untuk layar sangat kecil */
     margin: 0 5px;
-    /* Ubah margin untuk layar sangat kecil */
   }
 }
 
@@ -248,15 +268,13 @@
 /* style card portfolio */
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Transisi untuk efek halus */
 }
 
 .card:hover {
   transform: translateY(-5px);
-  /* Mengangkat kartu sedikit ke atas */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  /* Menambahkan bayangan saat hover */
 }
+
 /* END style card portfolio */
 
 /* style our partner*/
@@ -312,4 +330,5 @@ h2 {
 .copy {
   padding-top: 250px;
 }
+
 /* END style our partner*/
