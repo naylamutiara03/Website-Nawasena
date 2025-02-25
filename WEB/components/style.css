@@ -127,6 +127,8 @@
   gap: 5px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  white-space: nowrap;
+  /* Mencegah teks turun ke bawah */
 }
 
 .hover-location i {
@@ -137,6 +139,7 @@
 .product-image:hover .hover-location {
   opacity: 1;
 }
+
 
 .product-thumb {
   width: 100%;

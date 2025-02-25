@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "KOPDAR IMIGRASI",
-    "location": "Jakarta",
+    "name": "KOPDAR HUMAS IMIGRASI",
+    "location": "Ayana Ballroom - Jakarta Pusat",
     "image": "../assets/portfolio/kopdar/p-wm1.jpg",
     "year": 2024,
     "gallery": [
@@ -97,7 +97,7 @@
   {
     "id": 8,
     "name": "JASINDO GOLF TOURNAMENT",
-    "location": "Jakarta",
+    "location": "Emeralda Golf Club - Depok",
     "image": "../assets/portfolio/jasindo-golf/p-wm7.jpg",
     "video":"../assets/portfolio/jasindo-golf/jasindo-golf.mp4",
     "year": 2024,
