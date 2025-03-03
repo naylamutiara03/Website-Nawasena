@@ -20,8 +20,8 @@
     "video":"../assets/portfolio/hari-bhakti/hari-bhakti.mp4",
     "year": 2024,
     "gallery": [
-      "../assets/portfolio/hari-bhakti/hb-w1.jpg",
-      "../assets/portfolio/hari-bhakti/hb-w2.jpg"
+      "../assets/portfolio/hari-bhakti/hb1.jpg",
+      "../assets/portfolio/hari-bhakti/hb2.jpg"
     ]
   },
   {
@@ -60,7 +60,6 @@
       "../assets/portfolio/jasindo/jasindo-w2.jpg",
       "../assets/portfolio/jasindo/jasindo-w3.jpg",
       "../assets/portfolio/jasindo/jasindo-w4.jpg",
-      "../assets/portfolio/jasindo/jasindo-w5.jpg",
       "../assets/portfolio/jasindo/jasindo-w6.jpg",
       "../assets/portfolio/jasindo/jasindo-w7.jpg",
       "../assets/portfolio/jasindo/jasindo-w8.jpg"
@@ -130,7 +129,7 @@
     "image": "../assets/portfolio/dirjen/p-wm10.jpg",
     "year": 2024,
     "gallery": [
-      "../assets/portfolio/dirjen/dirjen-w1.jpg"
+      "../assets/portfolio/dirjen/dirjen1.jpg"
     ]
   },
   {
@@ -155,7 +154,6 @@
       "../assets/portfolio/apple-wood/aw-w1.jpg",
       "../assets/portfolio/apple-wood/aw-w2.jpg",
       "../assets/portfolio/apple-wood/aw-w3.jpg",
-      "../assets/portfolio/apple-wood/aw-w4.jpg",
       "../assets/portfolio/apple-wood/aw-w5.jpg"
     ]
   },
@@ -166,6 +164,7 @@
     "image": "../assets/portfolio/delight/delight-cover.jpg",
     "year": 2023,
     "gallery": [
+      "../assets/portfolio/delight/d1.jpg"
     ]
   }
 ]

@@ -48,7 +48,7 @@
     </style>
 </head>
 
-<body class="bg-black text-white">
+<body class="bg-black text-white min-h-screen flex flex-col">
     <!-- Navbar -->
     <nav
         class="p-5 bg-black bg-opacity-90 shadow md:flex md:items-center md:justify-between fixed top-0 left-0 w-full z-50">
@@ -91,20 +91,29 @@
         </ul>
     </nav>
 
-    <!-- Back Button & Title -->
-    <div class="flex items-center justify-center px-6 md:px-12 py-5 mb-6 max-w-5xl mx-auto mt-20">
-        <button onclick="goBack()" class="text-white text-3xl back-button transition-transform duration-300 mr-4">
-            <i class="fa fa-arrow-left"></i>
-        </button>
-        <h1 class="text-center text-2xl md:text-3xl font-bold w-full font-poppins">EVENT DETAIL</h1>
-    </div>
+    <main class="flex-grow pt-32">
+        <!-- Sticky Header -->
+        <div class="fixed top-[64px] left-0 w-full bg-black bg-opacity-90 z-40 shadow-md mt-4">
+            <div class="flex items-center justify-center px-6 md:px-12 py-4 max-w-5xl mx-auto">
+                <button onclick="goBack()"
+                    class="text-white text-3xl back-button transition-transform duration-300 mr-4">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+                <h1 class="text-center text-2xl md:text-3xl font-bold w-full font-poppins">EVENT DETAIL</h1>
+            </div>
+            <div class="text-center text-xl font-semibold text-white pb-4">
+                <span id="event-name"></span>
+            </div>
+        </div>
 
-    <!-- Event Detail -->
-    <div id="event-detail" class="max-w-5xl mx-auto px-6 fade-in"></div>
-    <div id="event-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 max-w-5xl mx-auto px-6 fade-in mb-8"></div>
+        <!-- Event Detail -->
+        <div id="event-detail" class="max-w-5xl mx-auto px-6 fade-in"></div>
+        <div id="event-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 max-w-5xl mx-auto px-6 fade-in mb-20">
+        </div>
+    </main>
 
     <!-- Footer -->
-    <div id="footer"></div>
+    <footer id="footer" class="mt-auto"></footer>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -116,30 +125,44 @@
             const event = events.find(e => e.id == eventId);
 
             if (event) {
+                document.getElementById('event-name').textContent = event.name;
                 document.getElementById('event-detail').innerHTML = `
-                    <h1 class="text-2xl font-bold text-center">${event.name}</h1>
-                    <p class="text-gray-400 text-center">${event.location}</p>
-                    <img class="w-full h-64 object-cover rounded-md mt-4" src="${event.image}" alt="${event.name}">
-                    ${event.video ? `<video controls class="w-full mt-4">
-                        <source src="${event.video}" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>` : ''}
-                `;
+            <p class="text-gray-400 text-center pt-16">${event.location}</p>
+            ${event.video ? `<video controls class="w-full mt-4">
+                <source src="${event.video}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>` : ''}
+        `;
 
                 if (event.gallery && event.gallery.length > 0) {
                     document.getElementById('event-gallery').innerHTML = event.gallery.map(img => `
-                        <img class="w-full h-40 object-cover rounded-md hover:scale-105 transition-transform" src="${img}" alt="Event Image">
-                    `).join('');
+                <img class="w-full h-40 object-cover rounded-md hover:scale-105 transition-transform" src="${img}" alt="Event Image">
+            `).join('');
                 }
             } else {
+                document.getElementById('event-name').textContent = "Event Not Found";
                 document.getElementById('event-detail').innerHTML = '<p>Event not found.</p>';
             }
         }
+
 
         loadEventDetail();
     </script>
 
     <script>
+        //script navbar
+        function Menu(e) {
+            let list = document.getElementById('menu-list');
+            if (e.name === 'menu') {
+                e.name = "close";
+                list.classList.add('top-[70px]', 'opacity-100');
+            } else {
+                e.name = "menu";
+                list.classList.remove('top-[70px]', 'opacity-100');
+            }
+        }
+
+        //script back button
         function goBack() {
             if (document.referrer) {
                 window.history.back();

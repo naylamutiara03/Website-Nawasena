@@ -207,7 +207,7 @@
 .logos {
   overflow: hidden;
   padding: 60px 0;
-  background: white;
+  background: #fafafa;
   white-space: nowrap;
   position: relative;
 }
