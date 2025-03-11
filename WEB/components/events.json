@@ -27,7 +27,7 @@
   {
     "id": 3,
     "name": "MAIPARK 2028 AND BEYOND",
-    "location": "Jakarta Selatan",
+    "location": "Plataran Senayan - Jakarta Selatan",
     "image": "../assets/portfolio/maipark2028/p-wm2.jpg",
     "video": "../assets/portfolio/maipark2028/maipark2028.mp4",
     "year": 2024,
@@ -52,7 +52,7 @@
   {
     "id": 5,
     "name": "JASINDO GATHER FEST",
-    "location": "Jakarta",
+    "location": "Kota Tua - Jakarta",
     "image": "../assets/portfolio/jasindo/p-wm4.jpg",
     "video":"../assets/portfolio/jasindo/jasindo-gather.mp4",
     "year": 2024,
@@ -96,7 +96,7 @@
   {
     "id": 8,
     "name": "JASINDO GOLF TOURNAMENT",
-    "location": "Emeralda Golf Club - Depok",
+    "location": "Suvarna Golf - Jakarta",
     "image": "../assets/portfolio/jasindo-golf/p-wm7.jpg",
     "video":"../assets/portfolio/jasindo-golf/jasindo-golf.mp4",
     "year": 2024,
@@ -135,7 +135,7 @@
   {
     "id": 11,
     "name": "TOPPING OFF",
-    "location": "Jakarta",
+    "location": "Gelora Bung Karno - Jakarta",
     "image": "../assets/portfolio/topping/p-wm12.jpg",
     "year": 2023,
     "gallery": [
