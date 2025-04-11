@@ -21,7 +21,11 @@
     "year": 2024,
     "gallery": [
       "../assets/portfolio/hari-bhakti/hb1.jpg",
-      "../assets/portfolio/hari-bhakti/hb2.jpg"
+      "../assets/portfolio/hari-bhakti/hb2.jpg",
+      "../assets/portfolio/hari-bhakti/hb3.png",
+      "../assets/portfolio/hari-bhakti/hb4.png",
+      "../assets/portfolio/hari-bhakti/hb5.png",
+      "../assets/portfolio/hari-bhakti/hb6.png"
     ]
   },
   {
@@ -62,7 +66,9 @@
       "../assets/portfolio/jasindo/jasindo-w4.jpg",
       "../assets/portfolio/jasindo/jasindo-w6.jpg",
       "../assets/portfolio/jasindo/jasindo-w7.jpg",
-      "../assets/portfolio/jasindo/jasindo-w8.jpg"
+      "../assets/portfolio/jasindo/jasindo-w8.jpg",
+      "../assets/portfolio/jasindo/jasindo-w9.png",
+      "../assets/portfolio/jasindo/jasindo-w10.png"
     ]
   },
   {
@@ -90,7 +96,9 @@
     "year": 2024,
     "gallery": [
       "../assets/portfolio/imifest/imi-w1.jpg",
-      "../assets/portfolio/imifest/imi-w2.jpg"
+      "../assets/portfolio/imifest/imi-w2.jpg",
+      "../assets/portfolio/imifest/imi-w3.png",
+      "../assets/portfolio/imifest/imi-w4.png"
     ]
   },
   {
@@ -124,16 +132,125 @@
   },
   {
     "id": 10,
-    "name": "DIRJEN IMIGRASI",
+    "name": "PERAYAAN HUT KE-10 TASPEN",
     "location": "Jakarta",
-    "image": "../assets/portfolio/dirjen/p-wm10.jpg",
+    "image": "../assets/portfolio/hut-taspen/2.png",
     "year": 2024,
     "gallery": [
-      "../assets/portfolio/dirjen/dirjen1.jpg"
+      "../assets/portfolio/hut-taspen/1.png"
     ]
   },
   {
     "id": 11,
+    "name": "RANS FOODS LAUNCHING",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/rans/1.png",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/rans/2.png",
+      "../assets/portfolio/rans/3.png"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "MEETING JASINDO",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/meeting-jasindo/1.png",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/meeting-jasindo/2.png",
+      "../assets/portfolio/meeting-jasindo/3.png"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "SOSIALISASI PENGUATAN KEBIJAKAN IMIGRASI",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/sosialisasi/1.png",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/sosialisasi/2.png"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "SEHAT BARENG JASINDO",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/sehat-jasindo/1.png",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/sehat-jasindo/2.png",
+      "../assets/portfolio/sehat-jasindo/3.png"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "JAKARTA TRANSPORT FORUM",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/transport-forum/1.png",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/transport-forum/2.png"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "LAUNCHING SIDO MUNCUL TOLAK ANGIN BATUK",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/sidomuncul/1.png",
+    "year": 2024
+  },
+  {
+    "id": 17,
+    "name": "PROPERTY ASET SHOWCASE",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/property/1.png",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/property/2.png",
+      "../assets/portfolio/property/3.png"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "LOGO JAKARTA 497",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/jkt-497/1.png",
+    "year": 2024
+  },
+  {
+    "id": 19,
+    "name": "PERTAMINA PHE",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/pertamina-phe/2.png",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/pertamina-phe/1.png"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "MMSGI GALA DINNER 2024 NEW HORIZON",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/mmsgi/4.png",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/mmsgi/5.png",
+      "../assets/portfolio/mmsgi/6.png"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "PT.INDUSTRI JAMU DAN FARMASI SIDO MUNCUL TBK",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/industri-jamu/1.png",
+    "year": 2024,
+    "gallery": [
+      "../assets/portfolio/industri-jamu/2.png"
+    ]
+  },
+  {
+    "id": 22,
     "name": "TOPPING OFF",
     "location": "Gelora Bung Karno - Jakarta",
     "image": "../assets/portfolio/topping/p-wm12.jpg",
@@ -145,7 +262,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 23,
     "name": "LEE JONG SUK 2023 FANMEETING TOUR",
     "location": "Jakarta",
     "image": "../assets/portfolio/apple-wood/p-wm8.jpg",
@@ -158,13 +275,76 @@
     ]
   },
   {
-    "id": 13,
+    "id": 24,
     "name": "D&E WORLD TOUR FANCON - DElight Party",
     "location": "Jakarta",
     "image": "../assets/portfolio/delight/delight-cover.jpg",
     "year": 2023,
     "gallery": [
       "../assets/portfolio/delight/d1.jpg"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "SEKRETARIAT KEPRESIDENAN",
+    "location": "Ancol Ecopark & Putri Duyung",
+    "image": "../assets/portfolio/sekretariat/1.png",
+    "year": 2023,
+    "gallery": [
+      "../assets/portfolio/sekretariat/2.png"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "JM - GROUNDBREAKING TOL PROBOWANGI",
+    "location": "Probolinggo",
+    "image": "../assets/portfolio/groundbreaking/1.png",
+    "year": 2023,
+    "gallery": [
+      "../assets/portfolio/groundbreaking/2.png"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "MOYA - BCA",
+    "location": "Jakarta",
+    "image": "../assets/portfolio/moya/1.png",
+    "year": 2023,
+    "gallery": [
+      "../assets/portfolio/moya/2.png",
+      "../assets/portfolio/moya/3.png"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "JM - BPJT PUPR",
+    "location": "Auditorium PUPR",
+    "image": "../assets/portfolio/bpjt/2.png",
+    "year": 2023,
+    "gallery": [
+      "../assets/portfolio/bpjt/1.png"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "KIMIA FARMA - LEXA",
+    "location": "Thamrin Nine",
+    "image": "../assets/portfolio/kimia-farma/1.png",
+    "year": 2023,
+    "gallery": [
+      "../assets/portfolio/kimia-farma/2.png",
+      "../assets/portfolio/kimia-farma/3.png"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "PSS GALA DINNER",
+    "location": "Ballroom Raffless",
+    "image": "../assets/portfolio/gala-dinner/1.png",
+    "year": 2023,
+    "gallery": [
+      "../assets/portfolio/gala-dinner/2.png",
+      "../assets/portfolio/gala-dinner/3.png"
     ]
   }
 ]
