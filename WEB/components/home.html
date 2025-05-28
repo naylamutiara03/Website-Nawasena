@@ -11,20 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 
-  <!-- Tailwind CSS -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            poppins: ['Poppins', 'sans-serif'],
-            opensans: ['Open Sans', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
-
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -202,13 +188,13 @@
   <!-- End Slider -->
 
   <!-- Services Section -->
-  <section class="text-center mt-12 px-4 md:px-20 fade-in">
+  <section class="text-center mt-12 px-4 md:px-20">
     <h2 class="text-3xl font-bold font-poppins">Professional Event Management & Production</h2>
     <p class="text-gray-300 mt-2 font-opensans">In addition to handling event management, Nawasena also operates as a
       support event organizer, specializing in supporting all production and rental equipment.</p>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-      <a href="booth.html" class="flex flex-col items-center">
-        <div class="p-6 bg-white rounded-full transition duration-300 hover:scale-110">
+      <a href="booth.html" class="flex flex-col items-center animate-fadeIn">
+        <div class="p-6 bg-white rounded-full transition duration-300 animate-fadeIn">
           <img src="../assets/booth-ex.png" alt="Booth" class="w-12 h-12">
         </div>
         <span class="mt-4 font-poppins">Booth Exhibition</span>
@@ -239,7 +225,7 @@
   <!-- END Services-->
 
   <!-- Documentation Section -->
-  <section class="product fade-in">
+  <section class="product">
     <h2 class="mb-8 font-bold text-3xl font-poppins text-center">Project Documentation</h2>
     <button class="pre-btn"><img src="../assets/arrow.png" alt=""></button>
     <button class="nxt-btn"><img src="../assets/arrow.png" alt=""></button>
@@ -316,7 +302,7 @@
   <!-- END Documentation-->
 
   <!-- Client Section -->
-  <div class="text-center mt-12 fade-in">
+  <div class="text-center mt-12 animate-fadeIn">
     <h2 class="text-3xl font-bold font-poppins">Our Clients</h2>
   </div>
   <div class="logos fade-in mt-6 mb-8">
@@ -493,7 +479,7 @@
   <!-- END Client -->
 
   <!-- Our Partner -->
-  <section class="w-full py-8 fade-in">
+  <section class="w-full py-8 animate-fadeIn">
     <div class="container mx-auto px-4">
       <h1 class="text-center text-3xl font-bold mb-8 font-poppins text-white py-4">
         Our Partner
@@ -528,7 +514,7 @@
   <!-- END Our Partner -->
 
   <!-- Our Community -->
-  <section class="w-full py-8 fade-in">
+  <section class="w-full py-8 animate-fadeIn">
     <div class="container mx-auto px-4">
       <h2 class="text-center text-3xl font-bold mb-4 font-poppins py-4 rounded-lg shadow-md">
         Our Community
@@ -548,9 +534,8 @@
   </section>
   <!-- END Our Community -->
 
-
   <!-- Our Team -->
-  <section class="product py-16 relative mb-10 fade-in">
+  <section class="team py-16 relative mb-10 animate-fadeIn">
     <!-- Header -->
     <div class="text-center text-white px-4">
       <h2 class="text-4xl md:text-3xl font-bold font-poppins drop-shadow-lg">Professional Team</h2>
@@ -564,7 +549,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center mt-12 px-6">
       <!-- Card 1 -->
       <div
-        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px] fade-in">
+        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-transparent min-h-[350px]">
         <img alt="Portrait of Ratno" class="rounded-lg w-40 h-40 md:w-48 md:h-48 object-contain mx-auto mb-4"
           src="../assets/mas-ratno.png" />
         <div class="text-center">
@@ -580,7 +565,7 @@
 
       <!-- Card 2 -->
       <div
-        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px] fade-in">
+        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px]">
         <img alt="Portrait of Mulyo Prabowo" class="rounded-lg w-30 h-30 md:w-30 md:h-30 object-cover mx-auto mb-4"
           src="../assets/pak-yoyo-removebg-preview.png" />
         <div class="text-center">
@@ -596,7 +581,7 @@
 
       <!-- Card 3 -->
       <div
-        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px] fade-in">
+        class="group bg-white/10 rounded-lg p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-white/20 min-h-[350px]">
         <img alt="Portrait of Tyas Ramadhianta" class="rounded-lg w-32 h-32 md:w-48 md:h-48 object-cover mx-auto mb-4"
           src="../assets/mba-tyas-removebg-preview.png" />
         <div class="text-center">

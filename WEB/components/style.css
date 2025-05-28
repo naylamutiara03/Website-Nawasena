@@ -85,7 +85,6 @@
   background: linear-gradient(to right, #f97316, #9ca3af, #3b82f6);
 }
 
-
 .product-container {
   padding: 0 10vw;
   display: flex;
@@ -296,3 +295,18 @@
 }
 
 /* END style card portfolio */
+
+/* style professional team */
+.team {
+  position: relative;
+  padding: 20px;
+  margin-top: 100px;
+  background: linear-gradient(to right, #f97316, #9ca3af, #3b82f6);
+      animation: fadeIn 2s ease-in-out;
+}
+/* END style professional team */
+
+/* style services */
+.services {
+  animation: fadeIn 2s ease-in-out;
+}
