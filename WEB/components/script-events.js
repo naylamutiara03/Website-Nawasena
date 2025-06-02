@@ -21,13 +21,18 @@ function renderEvents(events, year) {
                     <h3 class="text-lg font-semibold font-poppins">${event.name}</h3>
                     <p class="text-gray-400 text-sm font-opensans">${event.location}</p>
                     <div class="flex justify-end mt-auto">
-                        <a class="mt-2 inline-block bg-cyan-500 text-white px-3 py-1.5 text-sm rounded-full hover:bg-cyan-600 transition font-poppins" href="event-detail.html?id=${event.id}">See More</a>
+                        <button
+                            class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full font-poppins text-sm"
+                            onclick="window.location.href='event-detail.html?id=${event.id}'"
+                        >
+                            See More
+                        </button>
                     </div>
                 </div>
             </div>
-
         `).join('');
 }
+
 
 // Panggil fungsi saat halaman selesai dimuat
 document.addEventListener("DOMContentLoaded", loadEvents);
