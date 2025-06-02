@@ -194,12 +194,12 @@
 
 /* style logo slider CLIENT */
 @keyframes slide {
-  from {
-    transform: translateX(0);
+  0% {
+    transform: translateX(0%);
   }
 
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(-200%);
   }
 }
 
@@ -236,18 +236,16 @@
 }
 
 .logos-slide {
-  display: flex;
-  animation: 40s slide infinite linear;
+  display: inline-block;
+  width: 200%;
+  white-space: nowrap;
+  animation: slide 60s linear infinite;
 }
 
 .logos-slide img {
   height: 50px;
   margin: 0 20px;
   transition: transform 0.3s ease;
-}
-
-.partner-logo-img {
-  height: 70px; /* misalnya, dari 50px ke 70px */
 }
 
 @media (max-width: 768px) {
@@ -261,7 +259,6 @@
     height: 50px;
   }
 }
-
 
 .logos-slide img:hover {
   transform: scale(1.1);
@@ -284,6 +281,83 @@
 
 /* END style logo slider CLIENT */
 
+/* style logo slider PARTNER */
+@keyframes slide-partner {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logos-partner {
+  height: 100px;
+  overflow: hidden;
+  padding: 20px 0;
+  background: white;
+  position: relative;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.logos-partner:before,
+.logos-partner:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos-partner:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos-partner:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos-partner:hover .logos-partner-slide {
+  animation-play-state: paused;
+}
+
+.logos-partner-slide {
+  display: flex; /* buat jadi 1 baris */
+  width: 200%; /* karena animasi translateX -50% */
+  animation: slide-partner 30s linear infinite;
+  align-items: center; /* supaya gambar vertikal rata tengah */
+}
+
+.logos-partner-slide img {
+  height: 70px;
+  margin: 0 15px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.logos-partner-slide img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logos-partner-slide img {
+    height: 40px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logos-partner-slide img {
+    height: 30px;
+    margin: 0 5px;
+  }
+}
+
 /* style card portfolio */
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -302,18 +376,21 @@
   padding: 20px;
   margin-top: 100px;
   background: linear-gradient(to right, #f97316, #9ca3af, #3b82f6);
-      animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
 }
+
 /* END style professional team */
 
 .services {
   background: linear-gradient(to right, #f97316, #9ca3af, #3b82f6);
 }
+
 /* END style services */
 
 .legality {
   background: linear-gradient(to right, #f97316, #9ca3af, #3b82f6);
 }
+
 /* END style services */
 
 .contact {
