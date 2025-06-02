@@ -7,21 +7,7 @@
     <title>Services - Nawasena</title>
     <link rel="icon" href="../assets/logo-nawasena.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        poppins: ['Poppins', 'sans-serif'],
-                        opensans: ['Open Sans', 'sans-serif'],
-                    },
-                },
-            },
-        };
-    </script>
+    <link rel="stylesheet" href="style.css">
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -148,37 +134,47 @@
     <!-- END Navbar -->
 
     <!-- Services -->
-    <section class="w-full bg-gradient-to-r from-orange-500 via-gray-400 to-blue-500 py-12 mt-20 text-center fade-in">
+    <section class="services py-12 mt-20 text-center fade-in">
         <h2 class="text-3xl font-bold font-poppins">Event Management That We Offer You</h2>
-        <p class="text-gray-200 mt-2 font-opensans">In addition to handling event management, Nawasena also operates as
-            a support event organizer, specializing in supporting all production and rental equipment.</p>
+        <p class="text-gray-200 mt-2 font-opensans">
+            In addition to handling event management, Nawasena also operates as
+            a support event organizer, specializing in supporting all production and rental equipment.
+        </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-            <a href="booth.html" class="flex flex-col items-center">
-                <div class="p-6 bg-white rounded-full transition duration-300 hover:scale-110">
+            <!-- Booth -->
+            <a href="booth.html" class="flex flex-col items-center group">
+                <div
+                    class="p-6 bg-white rounded-full transition-all duration-300 group-hover:bg-blue-500 group-hover:shadow-xl">
                     <img src="../assets/booth-ex.png" alt="Booth" class="w-12 h-12">
                 </div>
                 <span class="mt-4 font-poppins">Booth Exhibition</span>
             </a>
 
-            <a href="custom.html" class="flex flex-col items-center">
-                <div class="p-6 bg-white rounded-full transition duration-300 hover:scale-110">
+            <!-- Custom -->
+            <a href="custom.html" class="flex flex-col items-center group">
+                <div
+                    class="p-6 bg-white rounded-full transition-all duration-300 group-hover:bg-blue-500 group-hover:shadow-xl">
                     <img src="../assets/icon-custom.png" alt="Production" class="w-12 h-12">
                 </div>
                 <span class="mt-4 font-poppins">Custom Production</span>
             </a>
 
-            <a href="rental.html" class="flex flex-col items-center">
-                <div class="p-6 bg-white rounded-full transition duration-300 hover:scale-110">
+            <!-- Rental -->
+            <a href="rental.html" class="flex flex-col items-center group">
+                <div
+                    class="p-6 bg-white rounded-full transition-all duration-300 group-hover:bg-blue-500 group-hover:shadow-xl">
                     <img src="../assets/icon-rental.png" alt="Rental" class="w-12 h-12">
                 </div>
                 <span class="mt-4 font-poppins">Rental Equipment</span>
             </a>
 
-            <a href="support.html" class="flex flex-col items-center">
-                <div class="p-6 bg-white rounded-full transition duration-300 hover:scale-110">
+            <!-- Support -->
+            <a href="support.html" class="flex flex-col items-center group">
+                <div
+                    class="p-6 bg-white rounded-full transition-all duration-300 group-hover:bg-blue-500 group-hover:shadow-xl">
                     <img src="../assets/icon-support.png" alt="Support" class="w-12 h-12">
                 </div>
-                <span class="mt-4 font-poppins">Support All Product & Concepts</span>
+                <span class="mt-4 font-poppins text-center">Support All Product & Concepts</span>
             </a>
         </div>
     </section>
@@ -196,7 +192,8 @@
                 <div class="hidden md:block h-full absolute left-0"></div>
                 <!-- Left border -->
                 <img alt="Booth exhibition with various displays and products"
-                    class="all-production w-full md:w-[400px] lg:w-[450px] rounded-lg" src="../assets/booth/booth-wm6.jpg" />
+                    class="all-production w-full md:w-[400px] lg:w-[450px] rounded-lg"
+                    src="../assets/booth/booth-wm6.jpg" />
             </div>
             <div class="max-w-md md:max-w-lg lg:max-w-xl">
                 <h2 class="text-2xl font-bold mb-2 mt-2 text-blue-400 font-poppins">
@@ -216,7 +213,8 @@
             <div class="relative flex justify-center md:order-2">
                 <div class="hidden md:block h-full absolute right-0"></div>
                 <!-- Right border -->
-                <img alt="Custom production setup for an event" class="all-production w-full md:w-[400px] lg:w-[450px] rounded-lg"
+                <img alt="Custom production setup for an event"
+                    class="all-production w-full md:w-[400px] lg:w-[450px] rounded-lg"
                     src="../assets/custom-production/cover-wm.jpg" />
             </div>
             <div class="max-w-md md:max-w-lg lg:max-w-xl">
@@ -237,8 +235,8 @@
             <div class="relative flex justify-center">
                 <div class="hidden md:block h-full absolute left-0"></div>
                 <!-- Left border -->
-                <img alt="Rental equipment for events" class="all-production w-full md:w-[400px] lg:w-[450px] rounded-lg"
-                    src="../assets/rental-wm.jpg" />
+                <img alt="Rental equipment for events"
+                    class="all-production w-full md:w-[400px] lg:w-[450px] rounded-lg" src="../assets/rental-wm.jpg" />
             </div>
             <div class="max-w-md md:max-w-lg lg:max-w-xl">
                 <h2 class="text-2xl font-bold mt-2 text-blue-400 font-poppins">
@@ -257,8 +255,8 @@
             <div class="relative flex justify-center md:order-2">
                 <div class="hidden md:block h-full absolute right-0"></div>
                 <!-- Right border -->
-                <img alt="Support all product & concepts" class="all-production w-full md:w-[400px] lg:w-[450px] rounded-lg"
-                    src="../assets/support-wm.jpg" />
+                <img alt="Support all product & concepts"
+                    class="all-production w-full md:w-[400px] lg:w-[450px] rounded-lg" src="../assets/support-wm.jpg" />
             </div>
             <div class="max-w-md md:max-w-lg lg:max-w-xl">
                 <h2 class="text-2xl font-bold mb-2 mt-2 text-blue-400 font-poppins">
@@ -280,17 +278,23 @@
         </h2>
 
         <!-- Alert Pop-up -->
-        <div id="alertBox" class="hidden rounded-sm border-s-4 border-red-500 bg-red-50 p-4 mb-4">
-            <div class="flex items-center gap-2 text-red-800">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+        <div id="alertBox"
+            class="hidden opacity-0 bg-red-500/10 border-l-4 border-red-500 text-red-200 p-4 rounded-md mb-4 transition-opacity duration-300">
+            <div class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-400 mt-1" viewBox="0 0 20 20"
+                    fill="currentColor">
                     <path fill-rule="evenodd"
-                        d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                        d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l6.518 11.593c.75 1.333-.213 3.008-1.743 3.008H3.482c-1.53 0-2.493-1.675-1.743-3.008L8.257 3.1zM11 13a1 1 0 10-2 0 1 1 0 002 0zm-.25-6a.75.75 0 00-1.5 0v4.5a.75.75 0 001.5 0V7z"
                         clip-rule="evenodd" />
                 </svg>
-                <strong class="block font-medium"> Semua field harus diisi! </strong>
+                <div>
+                    <p class="font-semibold">Semua field harus diisi!</p>
+                    <p class="text-sm text-red-300 mt-1">Mohon lengkapi semua input agar dapat mengirimkan feedback.</p>
+                </div>
             </div>
         </div>
         <!-- END Alert Pop-up -->
+
 
         <form id="feedbackForm" class="space-y-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -387,53 +391,54 @@
             event.preventDefault(); // Prevent default submit
 
             // Get input values
-            let firstName = document.getElementById("firstName").value.trim();
-            let lastName = document.getElementById("lastName").value.trim();
-            let email = document.getElementById("email").value.trim();
-            let phone = document.getElementById("phone").value.trim();
-            let address = document.getElementById("address").value.trim();
-            let message = document.getElementById("message").value.trim();
-
-            // Validate if any field is empty
             let fields = [
-                { id: "firstName", value: firstName },
-                { id: "lastName", value: lastName },
-                { id: "email", value: email },
-                { id: "phone", value: phone },
-                { id: "address", value: address },
-                { id: "message", value: message }
+                { id: "firstName", value: document.getElementById("firstName").value.trim() },
+                { id: "lastName", value: document.getElementById("lastName").value.trim() },
+                { id: "email", value: document.getElementById("email").value.trim() },
+                { id: "phone", value: document.getElementById("phone").value.trim() },
+                { id: "address", value: document.getElementById("address").value.trim() },
+                { id: "message", value: document.getElementById("message").value.trim() }
             ];
 
             let isValid = true;
+
+            // Validate fields
             fields.forEach(field => {
                 let inputField = document.getElementById(field.id);
                 if (field.value === "") {
-                    inputField.style.border = "2px solid red";
+                    inputField.classList.add("ring", "ring-red-500");
                     isValid = false;
                 } else {
-                    inputField.style.border = "none";
+                    inputField.classList.remove("ring", "ring-red-500");
                 }
             });
 
-            // If any input is empty, show alert pop-up
+            const alertBox = document.getElementById("alertBox");
+
             if (!isValid) {
-                let alertBox = document.getElementById("alertBox");
-                alertBox.classList.remove("hidden"); // Show alert
+                // Show alert with transition
+                alertBox.classList.remove("hidden", "opacity-0");
+                alertBox.classList.add("opacity-100");
+
                 setTimeout(() => {
-                    alertBox.classList.add("hidden"); // Hide alert after 3 seconds
+                    alertBox.classList.remove("opacity-100");
+                    alertBox.classList.add("opacity-0");
+                    setTimeout(() => {
+                        alertBox.classList.add("hidden");
+                    }, 300); // wait for fade out transition
                 }, 3000);
                 return;
             }
 
             // Format message for WhatsApp
-            let whatsappNumber = "62818825251"; // Replace with your WhatsApp number
+            let whatsappNumber = "62818825251"; // Ganti dengan nomor WA Anda
             let whatsappMessage = `Hello, I want to send feedback:\n\n`
-                + `*First Name:* ${firstName}\n`
-                + `*Last Name:* ${lastName}\n`
-                + `*Email:* ${email}\n`
-                + `*Phone:* ${phone}\n`
-                + `*Address:* ${address}\n`
-                + `*Message:* ${message}`;
+                + `*First Name:* ${fields[0].value}\n`
+                + `*Last Name:* ${fields[1].value}\n`
+                + `*Email:* ${fields[2].value}\n`
+                + `*Phone:* ${fields[3].value}\n`
+                + `*Address:* ${fields[4].value}\n`
+                + `*Message:* ${fields[5].value}`;
 
             let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 

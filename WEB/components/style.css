@@ -306,7 +306,7 @@
 }
 /* END style professional team */
 
-/* style services */
 .services {
-  animation: fadeIn 2s ease-in-out;
+  background: linear-gradient(to right, #f97316, #9ca3af, #3b82f6);
 }
+/* END style services */
