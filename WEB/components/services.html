@@ -12,11 +12,6 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
     <style>
         .fade-in {
             opacity: 0;
@@ -106,7 +101,7 @@
 
         <!-- Navigasi -->
         <ul id="menu-list"
-            class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-black md:bg-transparent w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500">
+            class="pointer-events-none md:pointer-events-auto md:flex md:items-center z-50 md:z-auto md:static absolute bg-black md:bg-transparent w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500">
             <li class="mx-4 my-6 md:my-0">
                 <a href="home.html"
                     class="text-xl hover:text-blue-500 duration-500 font-poppins block text-center md:text-left">Home</a>
@@ -333,10 +328,12 @@
             let list = document.getElementById('menu-list');
             if (e.name === 'menu') {
                 e.name = "close";
-                list.classList.add('top-[70px]', 'opacity-100');
+                list.classList.add('top-[70px]', 'opacity-100', 'pointer-events-auto');
+                list.classList.remove('pointer-events-none');
             } else {
                 e.name = "menu";
-                list.classList.remove('top-[70px]', 'opacity-100');
+                list.classList.remove('top-[70px]', 'opacity-100', 'pointer-events-auto');
+                list.classList.add('pointer-events-none');
             }
         }
 
