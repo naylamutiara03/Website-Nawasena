@@ -119,7 +119,7 @@
 
     <!-- Navigasi -->
     <ul id="menu-list"
-      class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-black md:bg-transparent w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500">
+      class="pointer-events-none md:pointer-events-auto md:flex md:items-center z-50 md:z-auto md:static absolute bg-black md:bg-transparent w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500">
       <li class="mx-4 my-6 md:my-0">
         <a href="home.html"
           class="text-xl hover:text-blue-500 duration-500 nav-link active block text-center md:text-left">Home</a>
@@ -604,14 +604,12 @@
   <script>
     //script navbar
     function Menu(e) {
-      let list = document.getElementById('menu-list');
-      if (e.name === 'menu') {
-        e.name = "close";
-        list.classList.add('top-[70px]', 'opacity-100');
-      } else {
-        e.name = "menu";
-        list.classList.remove('top-[70px]', 'opacity-100');
-      }
+      const menuList = document.getElementById("menu-list");
+      e.name = e.name === "menu" ? "close" : "menu";
+      menuList.classList.toggle("top-[80px]");
+      menuList.classList.toggle("opacity-100");
+      menuList.classList.toggle("pointer-events-auto");
+      menuList.classList.toggle("pointer-events-none");
     }
 
     // Load Footer
