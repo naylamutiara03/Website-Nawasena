@@ -61,7 +61,8 @@
             border: 15px solid #dddddd;
             border-top-color: #60a5fa;
             border-radius: 50%;
-            animation: loading 0.75s ease infinite;
+            animation: scaleIn 0.3s ease-out, loading 0.75s ease infinite;
+            animation-delay: 0.5s;
         }
 
         @keyframes loading {
@@ -71,6 +72,18 @@
 
             to {
                 transform: rotate(1turn);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
             }
         }
     </style>
@@ -137,8 +150,7 @@
                 <p class="flex items-center justify-center lg:justify-start gap-2"><i
                         class="fas fa-map-marker-alt text-lg"></i> Depok, Jawa Barat</p>
             </div>
-            <div
-                class="lg:w-1/2 contact p-6 md:p-8 rounded-lg w-full fade-in">
+            <div class="lg:w-1/2 contact p-6 md:p-8 rounded-lg w-full fade-in">
                 <h2 class="text-2xl font-bold mb-4 text-center font-poppins">Contact With Us</h2>
                 <form id="contactForm" class="space-y-4">
                     <input id="name" class="w-full p-2 rounded border border-gray-300 text-black"

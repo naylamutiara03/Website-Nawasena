@@ -17,7 +17,6 @@
     "name": "HARI BHAKTI IMIGRASI KE-74",
     "location": "Jakarta",
     "image": "../assets/portfolio/hari-bhakti/p-wm11.jpg",
-    "video":"../assets/portfolio/hari-bhakti/hari-bhakti.mp4",
     "year": 2024,
     "gallery": [
       "../assets/portfolio/hari-bhakti/hb1.jpg",
@@ -76,7 +75,6 @@
     "name": "ELECTRIC KARTING RACE",
     "location": "Bandung",
     "image": "../assets/portfolio/electric/p-wm5.jpg",
-    "video":"../assets/portfolio/electric/karting-race.mp4",
     "year": 2024,
     "gallery": [
       "../assets/portfolio/electric/electric-w1.jpg",
@@ -106,7 +104,6 @@
     "name": "JASINDO GOLF TOURNAMENT",
     "location": "Suvarna Golf - Jakarta",
     "image": "../assets/portfolio/jasindo-golf/p-wm7.jpg",
-    "video":"../assets/portfolio/jasindo-golf/jasindo-golf.mp4",
     "year": 2024,
     "gallery": [
       "../assets/portfolio/jasindo-golf/jg-w1.jpg",
