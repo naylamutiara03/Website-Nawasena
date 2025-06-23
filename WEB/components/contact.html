@@ -18,6 +18,38 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <style>
+        /* Gaya SVG Loader Huruf N */
+        .n-loader-svg {
+            width: 150px;
+            height: 200px;
+            stroke-width: 6;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        #n-single-path {
+            stroke-dasharray: 0;
+            stroke-dashoffset: 0;
+            animation: drawN 2s ease-in-out 1;
+            stroke: url(#blueToOrangeGradient);
+        }
+
+        @keyframes drawN {
+            0% {
+                stroke-dashoffset: var(--path-length);
+            }
+
+            75% {
+                stroke-dashoffset: 0;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+                opacity: 0;
+            }
+        }
+
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -42,7 +74,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-color: #f7f9fb;
+            background-color: black;
             transition: opacity 0.75s, visibility 0.75s;
             display: flex;
             justify-content: center;
@@ -53,27 +85,6 @@
         .loader-hidden {
             opacity: 0;
             visibility: hidden;
-        }
-
-        .loader::after {
-            content: "";
-            width: 75px;
-            height: 75px;
-            border: 15px solid #dddddd;
-            border-top-color: #60a5fa;
-            border-radius: 50%;
-            animation: scaleIn 0.3s ease-out, loading 0.75s ease infinite;
-            animation-delay: 0.5s;
-        }
-
-        @keyframes loading {
-            from {
-                transform: rotate(0turn);
-            }
-
-            to {
-                transform: rotate(1turn);
-            }
         }
 
         @keyframes scaleIn {
@@ -91,7 +102,22 @@
 </head>
 
 <body class="bg-black text-white">
-    <div class="loader"></div>
+    <!-- Loader -->
+    <div class="loader">
+        <svg viewBox="0 0 100 150" class="n-loader-svg">
+            <defs>
+                <linearGradient id="blueToOrangeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#007bff;stop-opacity:1" />
+                    <stop offset="60%" style="stop-color:#007bff;stop-opacity:1" />
+                    <stop offset="80%" style="stop-color:#FF8C00;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#FF4500;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <path id="n-single-path" d="M 10 130 L 10 20 L 90 130 L 90 20" />
+        </svg>
+    </div>
+    <!-- End Loader -->
 
     <!-- Navbar -->
     <nav
@@ -277,6 +303,27 @@
 
             // Arahkan pengguna ke WhatsApp
             window.open(whatsappURL, "_blank");
+        });
+
+        // script untuk animasi garis SVG (loader)
+        document.addEventListener('DOMContentLoaded', () => {
+            const path = document.getElementById('n-single-path');
+            const loader = document.querySelector('.loader');
+
+            const length = path.getTotalLength();
+            path.style.setProperty('--path-length', length);
+            path.style.strokeDasharray = length;
+            path.style.strokeDashoffset = length;
+
+            path.addEventListener('animationend', () => {
+                loader.classList.add('loader-hidden');
+
+                loader.addEventListener('animationend', (e) => {
+                    if (e.animationName === 'fadeOutLoader' && document.body.contains(loader)) {
+                        document.body.removeChild(loader);
+                    }
+                });
+            }, { once: true });
         });
     </script>
 </body>
