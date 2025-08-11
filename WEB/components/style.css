@@ -293,11 +293,10 @@
 
 .logos-partner {
   overflow: hidden;
-  padding: 20px 0;
-  background: white;
+  padding: 60px 0; /* sama seperti CLIENT */
+  background: #fafafa; /* sama seperti CLIENT */
+  white-space: nowrap;
   position: relative;
-  border-radius: 0;
-  box-shadow: none;
 }
 
 .logos-partner:before,
@@ -325,16 +324,15 @@
 }
 
 .logos-partner-slide {
-  display: flex; /* buat jadi 1 baris */
-  width: 200%; /* karena animasi translateX -50% */
-  animation: slide-partner 30s linear infinite;
-  align-items: center; /* supaya gambar vertikal rata tengah */
+  display: inline-block;
+  width: 200%;
+  white-space: nowrap;
+  animation: slide-partner 60s linear infinite; /* kecepatan sama */
 }
 
 .logos-partner-slide img {
-  height: 70px;
-  margin: 0 15px;
-  vertical-align: middle;
+  height: 50px; /* sama dengan CLIENT */
+  margin: 0 20px;
   transition: transform 0.3s ease;
 }
 
@@ -346,16 +344,17 @@
 @media (max-width: 768px) {
   .logos-partner-slide img {
     height: 40px;
-    margin: 0 10px;
+    margin: 0 15px;
   }
 }
 
 @media (max-width: 480px) {
   .logos-partner-slide img {
     height: 30px;
-    margin: 0 5px;
+    margin: 0 10px;
   }
 }
+/* END style logo slider PARTNER */
 
 /* style card portfolio */
 .card {
