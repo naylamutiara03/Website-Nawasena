@@ -287,12 +287,11 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-200%);
   }
 }
 
 .logos-partner {
-  height: 100px;
   overflow: hidden;
   padding: 20px 0;
   background: white;
