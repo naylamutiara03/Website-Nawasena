@@ -373,23 +373,38 @@
     "id": 32,
     "name": "K3 KESEHATAN MENTAL - HEALTHY LIFESTYLE & MENTAL HEALTH",
     "location": "Plaza BP Jamsostek - Jakarta Selatan",
-    "image": "../assets/portfolio/outing/COVER.jpg",
+    "image": "../assets/portfolio/k3/1.png",
     "year": 2025,
     "gallery": [
-      "../assets/portfolio/outing/2.png",
-      "../assets/portfolio/outing/3.png",
-      "../assets/portfolio/outing/4.png",
-      "../assets/portfolio/outing/5.png",
-      "../assets/portfolio/outing/7.png",
-      "../assets/portfolio/outing/8.png",
-      "../assets/portfolio/outing/9.png",
-      "../assets/portfolio/outing/10.png",
-      "../assets/portfolio/outing/11.png",
-      "../assets/portfolio/outing/12.png",
-      "../assets/portfolio/outing/13.png",
-      "../assets/portfolio/outing/14.png",
-      "../assets/portfolio/outing/15.png",
-      "../assets/portfolio/outing/16.png"
+      "../assets/portfolio/k3/2.png",
+      "../assets/portfolio/k3/3.png",
+      "../assets/portfolio/k3/4.png",
+      "../assets/portfolio/k3/5.png",
+      "../assets/portfolio/k3/6.png",
+      "../assets/portfolio/k3/7.png",
+      "../assets/portfolio/k3/8.png",
+      "../assets/portfolio/k3/9.png",
+      "../assets/portfolio/k3/10.png"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "BPJS KETENAGAKERJAAN DANA PENSIUN",
+    "location": "Plaza BP Jamsostek - Jakarta Selatan",
+    "image": "../assets/portfolio/bpjs/16.png",
+    "year": 2025,
+    "gallery": [
+      "../assets/portfolio/bpjs/2.png",
+      "../assets/portfolio/bpjs/3.png",
+      "../assets/portfolio/bpjs/4.png",
+      "../assets/portfolio/bpjs/5.png",
+      "../assets/portfolio/bpjs/6.png",
+      "../assets/portfolio/bpjs/7.png",
+      "../assets/portfolio/bpjs/8.png",
+      "../assets/portfolio/bpjs/9.png",
+      "../assets/portfolio/bpjs/11-new.png",
+      "../assets/portfolio/bpjs/13.png",
+      "../assets/portfolio/bpjs/15.png"
     ]
   }
 ]
