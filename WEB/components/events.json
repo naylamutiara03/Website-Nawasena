@@ -406,5 +406,23 @@
       "../assets/portfolio/bpjs/13.png",
       "../assets/portfolio/bpjs/15.png"
     ]
+  },
+  {
+    "id": 34,
+    "name": "ASURANSI JASINDO - SYUKURAN 52 TAHUN",
+    "location": "Graha Jasindo",
+    "image": "../assets/portfolio/asuransi-jasindo/13.png",
+    "year": 2025,
+    "gallery": [
+      "../assets/portfolio/asuransi-jasindo/1.png",
+      "../assets/portfolio/asuransi-jasindo/2.png",
+      "../assets/portfolio/asuransi-jasindo/3.png",
+      "../assets/portfolio/asuransi-jasindo/4.png",
+      "../assets/portfolio/asuransi-jasindo/6.png",
+      "../assets/portfolio/asuransi-jasindo/7.png",
+      "../assets/portfolio/asuransi-jasindo/9.png",
+      "../assets/portfolio/asuransi-jasindo/11.png",
+      "../assets/portfolio/asuransi-jasindo/12.png"
+    ]
   }
 ]
