@@ -4,6 +4,7 @@ async function loadEvents() {
         const events = await response.json(); // Convert ke JSON
 
         // Render data ke masing-masing tahun
+        document.getElementById("portfolio-2025").innerHTML = renderEvents(events, 2025);
         document.getElementById("portfolio-2024").innerHTML = renderEvents(events, 2024);
         document.getElementById("portfolio-2023").innerHTML = renderEvents(events, 2023);
     } catch (error) {

@@ -345,5 +345,51 @@
       "../assets/portfolio/gala-dinner/2.png",
       "../assets/portfolio/gala-dinner/3.png"
     ]
+  },
+  {
+    "id": 31,
+    "name": "OUTING NAWASENA - 2ND ANNIVERSARY “WE THRIVE TOGETHER”",
+    "location": "5G Resort - Bogor",
+    "image": "../assets/portfolio/outing/COVER.jpg",
+    "year": 2025,
+    "gallery": [
+      "../assets/portfolio/outing/2.png",
+      "../assets/portfolio/outing/3.png",
+      "../assets/portfolio/outing/4.png",
+      "../assets/portfolio/outing/5.png",
+      "../assets/portfolio/outing/7.png",
+      "../assets/portfolio/outing/8.png",
+      "../assets/portfolio/outing/9.png",
+      "../assets/portfolio/outing/10.png",
+      "../assets/portfolio/outing/11.png",
+      "../assets/portfolio/outing/12.png",
+      "../assets/portfolio/outing/13.png",
+      "../assets/portfolio/outing/14.png",
+      "../assets/portfolio/outing/15.png",
+      "../assets/portfolio/outing/16.png"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "K3 KESEHATAN MENTAL - HEALTHY LIFESTYLE & MENTAL HEALTH",
+    "location": "Plaza BP Jamsostek - Jakarta Selatan",
+    "image": "../assets/portfolio/outing/COVER.jpg",
+    "year": 2025,
+    "gallery": [
+      "../assets/portfolio/outing/2.png",
+      "../assets/portfolio/outing/3.png",
+      "../assets/portfolio/outing/4.png",
+      "../assets/portfolio/outing/5.png",
+      "../assets/portfolio/outing/7.png",
+      "../assets/portfolio/outing/8.png",
+      "../assets/portfolio/outing/9.png",
+      "../assets/portfolio/outing/10.png",
+      "../assets/portfolio/outing/11.png",
+      "../assets/portfolio/outing/12.png",
+      "../assets/portfolio/outing/13.png",
+      "../assets/portfolio/outing/14.png",
+      "../assets/portfolio/outing/15.png",
+      "../assets/portfolio/outing/16.png"
+    ]
   }
 ]
