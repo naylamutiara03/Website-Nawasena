@@ -456,5 +456,23 @@
       "../assets/portfolio/geo/23.png",
       "../assets/portfolio/geo/24.png"
     ]
+  },
+  {
+    "id": 36,
+    "name": "NARASEMESTA JASINDO",
+    "location": "Kali Ciliwung - Jakarta",
+    "image": "../assets/portfolio/narasemesta/5.png",
+    "year": 2025,
+    "gallery": [
+      "../assets/portfolio/narasemesta/1.png",
+      "../assets/portfolio/narasemesta/2.png",
+      "../assets/portfolio/narasemesta/3.png",
+      "../assets/portfolio/narasemesta/4.png",
+      "../assets/portfolio/narasemesta/5.png",
+      "../assets/portfolio/narasemesta/6.png",
+      "../assets/portfolio/narasemesta/7.png",
+      "../assets/portfolio/narasemesta/8.png",
+      "../assets/portfolio/narasemesta/9.png"
+    ]
   }
 ]
