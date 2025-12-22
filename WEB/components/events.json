@@ -424,5 +424,37 @@
       "../assets/portfolio/asuransi-jasindo/11.png",
       "../assets/portfolio/asuransi-jasindo/12.png"
     ]
+  },
+  {
+    "id": 35,
+    "name": "GEO EKSKURSI KABMN",
+    "location": "Bandung - Tangkuban Perahu & Sesar Lembang",
+    "image": "../assets/portfolio/geo/12.png",
+    "year": 2025,
+    "gallery": [
+      "../assets/portfolio/geo/1.png",
+      "../assets/portfolio/geo/10.png",
+      "../assets/portfolio/geo/3.png",
+      "../assets/portfolio/geo/4.png",
+      "../assets/portfolio/geo/5.png",
+      "../assets/portfolio/geo/6.png",
+      "../assets/portfolio/geo/7.png",
+      "../assets/portfolio/geo/8.png",
+      "../assets/portfolio/geo/9.png",
+      "../assets/portfolio/geo/11.png",
+      "../assets/portfolio/geo/12.png",
+      "../assets/portfolio/geo/13.png",
+      "../assets/portfolio/geo/14.png",
+      "../assets/portfolio/geo/15.png",
+      "../assets/portfolio/geo/16.png",
+      "../assets/portfolio/geo/17.png",
+      "../assets/portfolio/geo/18.png",
+      "../assets/portfolio/geo/19.png",
+      "../assets/portfolio/geo/20.png",
+      "../assets/portfolio/geo/21.png",
+      "../assets/portfolio/geo/22.png",
+      "../assets/portfolio/geo/23.png",
+      "../assets/portfolio/geo/24.png"
+    ]
   }
 ]
