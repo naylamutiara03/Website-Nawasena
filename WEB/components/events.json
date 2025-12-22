@@ -474,5 +474,36 @@
       "../assets/portfolio/narasemesta/8.png",
       "../assets/portfolio/narasemesta/9.png"
     ]
+  },
+  {
+    "id": 37,
+    "name": "LAUNCHING ASURANSI BARANG MILIK NEGARA",
+    "location": "Gedung Juanda 1 - Kementrian Keuangan RI",
+    "image": "../assets/portfolio/barang-milik-negara/11.png",
+    "year": 2025,
+    "gallery": [
+      "../assets/portfolio/barang-milik-negara/1.png",
+      "../assets/portfolio/barang-milik-negara/2.png",
+      "../assets/portfolio/barang-milik-negara/3.png",
+      "../assets/portfolio/barang-milik-negara/4.png",
+      "../assets/portfolio/barang-milik-negara/5.png",
+      "../assets/portfolio/barang-milik-negara/6.png",
+      "../assets/portfolio/barang-milik-negara/7.png",
+      "../assets/portfolio/barang-milik-negara/8.png",
+      "../assets/portfolio/barang-milik-negara/9.png",
+      "../assets/portfolio/barang-milik-negara/10.png",
+      "../assets/portfolio/barang-milik-negara/11.png",
+      "../assets/portfolio/barang-milik-negara/12.png",
+      "../assets/portfolio/barang-milik-negara/13.png",
+      "../assets/portfolio/barang-milik-negara/14.png",
+      "../assets/portfolio/barang-milik-negara/15.png",
+      "../assets/portfolio/barang-milik-negara/16.png",
+      "../assets/portfolio/barang-milik-negara/17.png",
+      "../assets/portfolio/barang-milik-negara/18.png",
+      "../assets/portfolio/barang-milik-negara/19.png",
+      "../assets/portfolio/barang-milik-negara/20.png",
+      "../assets/portfolio/barang-milik-negara/21.png",
+      "../assets/portfolio/barang-milik-negara/22.png"
+    ]
   }
 ]
