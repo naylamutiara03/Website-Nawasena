@@ -106,6 +106,109 @@
       transform: scale(1.05);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
+
+    .wa-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      box-shadow: 0 0 0 rgba(37, 211, 102, 0.7);
+      animation: pulse 2s infinite;
+      overflow: hidden;
+      animation: pulse 2s infinite, float 3s ease-in-out infinite;
+    }
+
+    /* icon */
+    .wa-float img {
+      width: 60%;
+      height: 60%;
+      z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    /* efek kilap */
+    .wa-shine {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(120deg,
+          transparent 40%,
+          rgba(255, 255, 255, 0.6) 50%,
+          transparent 60%);
+      animation: shine 3s infinite;
+    }
+
+    /* tooltip */
+    .wa-tooltip {
+      position: absolute;
+      right: 75px;
+      background: #25D366;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: 0.3s;
+    }
+
+    /* hover effects */
+    .wa-float:hover img {
+      transform: scale(1.1);
+    }
+
+    .wa-float:hover .wa-tooltip {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* pulse animation */
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* shine animation */
+    @keyframes shine {
+      0% {
+        transform: translateX(-100%) rotate(25deg);
+      }
+
+      100% {
+        transform: translateX(100%) rotate(25deg);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+    }
   </style>
 </head>
 
@@ -757,6 +860,14 @@
       }, { once: true });
     });
   </script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6281318182023?text=Halo%20Admin%20Nawasena,%20saya%20ingin%20bertanya%20tentang%20layanan%20Anda."
+    class="wa-float" target="_blank">
+    <span class="wa-shine"></span>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat WhatsApp">
+    <span class="wa-tooltip">Chat with us</span>
+  </a>
 
 </body>
 
