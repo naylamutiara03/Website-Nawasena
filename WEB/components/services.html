@@ -287,48 +287,201 @@
     <!-- END Navbar -->
 
     <!-- Services -->
-    <section class="services py-12 mt-20 text-center fade-in">
-        <h2 class="text-3xl font-bold font-poppins">Event Management That We Offer You</h2>
-        <p class="text-gray-200 mt-2 font-opensans">
-            In addition to handling event management, Nawasena also operates as
-            a support event organizer, specializing in supporting all production and rental equipment.
+    <section class="services py-12 mt-20 text-center px-4 md:px-20 relative" x-data="{ open: null }">
+
+        <h2 class="text-3xl md:text-4xl font-bold font-poppins text-white drop-shadow-lg">
+            Our Services
+        </h2>
+        <p class="text-white/80 mt-2 font-opensans mb-12 max-w-2xl mx-auto">
+            Pilih kategori di bawah ini untuk melihat detail layanan produksi dan manajemen acara kami.
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-            <!-- Booth -->
-            <a href="booth.html" class="flex flex-col items-center group">
-                <div
-                    class="p-6 bg-white rounded-full transition-all duration-300 group-hover:bg-blue-500 group-hover:shadow-xl">
-                    <img src="../assets/booth-ex.png" alt="Booth" class="w-12 h-12">
-                </div>
-                <span class="mt-4 font-poppins">Booth Exhibition</span>
-            </a>
 
-            <!-- Custom -->
-            <a href="custom.html" class="flex flex-col items-center group">
-                <div
-                    class="p-6 bg-white rounded-full transition-all duration-300 group-hover:bg-blue-500 group-hover:shadow-xl">
-                    <img src="../assets/icon-custom.png" alt="Production" class="w-12 h-12">
+        <div class="flex justify-center gap-8 md:gap-24 mb-16">
+            <div @click="open = (open === 'production' ? null : 'production')"
+                class="cursor-pointer group flex flex-col items-center transition-all duration-300"
+                :class="open === 'production' ? 'scale-110' : 'opacity-70 hover:opacity-100'">
+                <div class="w-28 h-28 md:w-40 md:h-40 bg-white rounded-2xl flex items-center justify-center shadow-2xl border-4 transition-all"
+                    :class="open === 'production' ? 'border-blue-500 shadow-blue-500/50' : 'border-transparent'">
+                    <img src="../assets/logo.png" alt="Production" class="w-16 md:w-24 object-contain">
                 </div>
-                <span class="mt-4 font-poppins">Custom Production</span>
-            </a>
+                <span
+                    class="mt-4 font-bold font-poppins text-sm md:text-lg text-white uppercase tracking-widest">Production</span>
+            </div>
 
-            <!-- Rental -->
-            <a href="rental.html" class="flex flex-col items-center group">
-                <div
-                    class="p-6 bg-white rounded-full transition-all duration-300 group-hover:bg-blue-500 group-hover:shadow-xl">
-                    <img src="../assets/icon-rental.png" alt="Rental" class="w-12 h-12">
+            <div @click="open = (open === 'eo' ? null : 'eo')"
+                class="cursor-pointer group flex flex-col items-center transition-all duration-300"
+                :class="open === 'eo' ? 'scale-110' : 'opacity-70 hover:opacity-100'">
+                <div class="w-28 h-28 md:w-40 md:h-40 bg-white rounded-2xl flex items-center justify-center shadow-2xl border-4 transition-all"
+                    :class="open === 'eo' ? 'border-blue-500 shadow-blue-500/50' : 'border-transparent'">
+                    <img src="../assets/logo-eo1.png" alt="EO" class="w-16 md:w-24 object-contain">
                 </div>
-                <span class="mt-4 font-poppins">Rental Equipment</span>
-            </a>
+                <span class="mt-4 font-bold font-poppins text-sm md:text-lg text-white uppercase tracking-widest">Event
+                    Services</span>
+            </div>
+        </div>
 
-            <!-- Support -->
-            <a href="support.html" class="flex flex-col items-center group">
-                <div
-                    class="p-6 bg-white rounded-full transition-all duration-300 group-hover:bg-blue-500 group-hover:shadow-xl">
-                    <img src="../assets/icon-support.png" alt="Support" class="w-12 h-12">
-                </div>
-                <span class="mt-4 font-poppins text-center">Support All Product & Concepts</span>
-            </a>
+        <div x-show="open !== null" x-transition:enter="transition ease-out duration-500"
+            x-transition:enter-start="opacity-0 -translate-y-10" x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-300" class="mt-4 overflow-hidden relative z-10">
+
+            <div
+                class="bg-black/40 p-8 md:p-12 rounded-[2.5rem] border border-white/20 backdrop-blur-xl shadow-2xl relative">
+
+                <button @click="open = null"
+                    class="absolute top-6 right-8 text-white/40 hover:text-white transition-all p-2 hover:bg-white/10 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <template x-if="open === 'production'">
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-12 text-white font-poppins">
+                            <span class="border-b-4 border-blue-500 pb-2">Production & Exhibition
+                        </h3>
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
+                            <a href="booth.html" class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full group-hover:bg-blue-500 transition-all duration-500 shadow-lg group-hover:shadow-blue-500/50">
+                                    <img src="../assets/booth-ex.png"
+                                        class="w-10 h-10 group-hover:brightness-0 group-hover:invert" alt="Booth">
+                                </div>
+                                <span
+                                    class="mt-4 text-sm font-semibold text-white group-hover:text-blue-300 transition-colors">Booth
+                                    Exhibition</span>
+                            </a>
+
+                            <a href="custom.html" class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full group-hover:bg-blue-500 transition-all duration-500 shadow-lg group-hover:shadow-blue-500/50">
+                                    <img src="../assets/icon-custom.png"
+                                        class="w-10 h-10 group-hover:brightness-0 group-hover:invert" alt="Custom">
+                                </div>
+                                <span
+                                    class="mt-4 text-sm font-semibold text-white group-hover:text-blue-300 transition-colors">Custom
+                                    Production</span>
+                            </a>
+
+                            <a href="rental.html" class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full group-hover:bg-blue-500 transition-all duration-500 shadow-lg group-hover:shadow-blue-500/50">
+                                    <img src="../assets/icon-rental.png"
+                                        class="w-10 h-10 group-hover:brightness-0 group-hover:invert" alt="Rental">
+                                </div>
+                                <span
+                                    class="mt-4 text-sm font-semibold text-white group-hover:text-blue-300 transition-colors">Rental
+                                    Equipment</span>
+                            </a>
+
+                            <a href="support.html" class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full group-hover:bg-blue-500 transition-all duration-500 shadow-lg group-hover:shadow-blue-500/50">
+                                    <img src="../assets/icon-support.png"
+                                        class="w-10 h-10 group-hover:brightness-0 group-hover:invert" alt="Support">
+                                </div>
+                                <span
+                                    class="mt-4 text-sm font-semibold text-white group-hover:text-blue-300 transition-colors text-center">Support
+                                    All Product & Concepts</span>
+                            </a>
+                        </div>
+                    </div>
+                </template>
+
+                <template x-if="open === 'eo'">
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-12 text-white font-poppins">
+                            <span class="border-b-4 border-blue-500 pb-2">Event Management Services
+                        </h3>
+
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-y-12 gap-x-6 max-w-5xl mx-auto">
+
+                            <div class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                    <img src="../assets/eo/conference/conference.png" class="w-10 h-10" alt="MICE">
+                                </div>
+                                <span class="mt-4 text-sm font-semibold text-white/90 text-center px-2">Conferences &
+                                    MICE</span>
+                            </div>
+
+                            <div class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                    <img src="../assets/eo/grand/grand.png" class="w-10 h-10" alt="Launch">
+                                </div>
+                                <span class="mt-4 text-sm font-semibold text-white/90 text-center px-2">Grand Openings &
+                                    Product Launches</span>
+                            </div>
+
+                            <div class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                    <img src="../assets/eo/gathering/gathering.png" class="w-10 h-10" alt="Gathering">
+                                </div>
+                                <span class="mt-4 text-sm font-semibold text-white/90 text-center px-2">Corporate
+                                    Gatherings & Outings</span>
+                            </div>
+
+                            <div class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                    <img src="../assets/eo/awarding/award.png" class="w-10 h-10" alt="Award">
+                                </div>
+                                <span class="mt-4 text-sm font-semibold text-white/90 text-center px-2">Awarding Nights
+                                    & Gala Dinners</span>
+                            </div>
+
+                            <div class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                    <img src="../assets/eo/training/training.png" class="w-10 h-10" alt="Training">
+                                </div>
+                                <span class="mt-4 text-sm font-semibold text-white/90 text-center px-2">Customized
+                                    Training Programs</span>
+                            </div>
+
+                            <div class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                    <img src="../assets/eo/team/team-building.png" class="w-10 h-10" alt="Team">
+                                </div>
+                                <span class="mt-4 text-sm font-semibold text-white/90 text-center px-2">Team Building &
+                                    Culture</span>
+                            </div>
+
+                            <div class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                    <img src="../assets/eo/keynote/keynote.png" class="w-10 h-10" alt="Speaker">
+                                </div>
+                                <span class="mt-4 text-sm font-semibold text-white/90 text-center px-2">Keynote Speaker
+                                    Management</span>
+                            </div>
+
+                            <div class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                    <img src="../assets/eo/creative/creative.png" class="w-10 h-10" alt="Creative">
+                                </div>
+                                <span class="mt-4 text-sm font-semibold text-white/90 text-center px-2">Creative Concept
+                                    & Storyboard</span>
+                            </div>
+
+                            <div class="flex flex-col items-center group">
+                                <div
+                                    class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition-transform duration-300">
+                                    <img src="../assets/eo/digital/digital.png" class="w-10 h-10" alt="Digital">
+                                </div>
+                                <span class="mt-4 text-sm font-semibold text-white/90 text-center px-2">Digital & Hybrid
+                                    Experience</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </template>
+            </div>
         </div>
     </section>
     <!-- END Services -->
@@ -480,6 +633,7 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script>
         // script navbar
         function Menu(e) {
