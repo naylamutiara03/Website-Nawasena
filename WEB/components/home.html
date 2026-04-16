@@ -350,8 +350,8 @@
           :class="open === 'production' ? 'border-blue-500 shadow-blue-500/50' : 'border-transparent'">
           <img src="../assets/logo.png" alt="Production" class="w-20 md:w-24 object-contain">
         </div>
-        <span
-          class="mt-4 font-bold font-poppins text-sm md:text-lg text-white uppercase tracking-wider">Production & Exhibition</span>
+        <span class="mt-4 font-bold font-poppins text-sm md:text-lg text-white uppercase tracking-wider">Production &
+          Exhibition</span>
       </div>
 
       <div @click="open = (open === 'eo' ? null : 'eo')"
@@ -386,13 +386,15 @@
             <h3 class="text-2xl font-bold mb-10 text-blue-400 font-poppins px-12 text-center">Production & Exhibition
             </h3>
 
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center max-w-4xl mx-auto">
+
               <a href="booth.html" class="flex flex-col items-center group">
                 <div class="p-5 bg-white rounded-full group-hover:bg-blue-500 transition-all duration-300 shadow-xl">
                   <img src="../assets/booth-ex.png" class="w-10 h-10 group-hover:brightness-0 group-hover:invert"
                     alt="Booth">
                 </div>
-                <span class="mt-4 text-sm font-medium text-gray-200 group-hover:text-blue-400 transition-colors">Booth
+                <span
+                  class="mt-4 text-sm font-medium text-gray-200 group-hover:text-blue-400 transition-colors text-center">Booth
                   Exhibition</span>
               </a>
 
@@ -401,27 +403,21 @@
                   <img src="../assets/icon-custom.png" class="w-10 h-10 group-hover:brightness-0 group-hover:invert"
                     alt="Custom">
                 </div>
-                <span class="mt-4 text-sm font-medium text-gray-200 group-hover:text-blue-400 transition-colors">Custom
+                <span
+                  class="mt-4 text-sm font-medium text-gray-200 group-hover:text-blue-400 transition-colors text-center">Custom
                   Production</span>
               </a>
 
-              <a href="rental.html" class="flex flex-col items-center group">
+              <a href="rental.html" class="flex flex-col items-center group col-span-2 lg:col-span-1">
                 <div class="p-5 bg-white rounded-full group-hover:bg-blue-500 transition-all duration-300 shadow-xl">
                   <img src="../assets/icon-rental.png" class="w-10 h-10 group-hover:brightness-0 group-hover:invert"
                     alt="Rental">
                 </div>
-                <span class="mt-4 text-sm font-medium text-gray-200 group-hover:text-blue-400 transition-colors">Rental
+                <span
+                  class="mt-4 text-sm font-medium text-gray-200 group-hover:text-blue-400 transition-colors text-center">Rental
                   Equipment</span>
               </a>
 
-              <a href="support.html" class="flex flex-col items-center group">
-                <div class="p-5 bg-white rounded-full group-hover:bg-blue-500 transition-all duration-300 shadow-xl">
-                  <img src="../assets/icon-support.png" class="w-10 h-10 group-hover:brightness-0 group-hover:invert"
-                    alt="Support">
-                </div>
-                <span class="mt-4 text-sm font-medium text-gray-200 group-hover:text-blue-400 transition-colors">Support
-                  All Concepts</span>
-              </a>
             </div>
           </div>
         </template>
