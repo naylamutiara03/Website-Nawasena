@@ -261,12 +261,19 @@
   <!-- Navbar -->
   <nav
     class="p-5 bg-black bg-opacity-90 shadow md:flex md:items-center md:justify-between fixed top-0 left-0 w-full z-50">
+
     <div class="flex justify-between items-center">
-      <a href="home.html" class="text-2xl font-[Poppins] cursor-pointer ml-4">
-        <img class="h-12 inline" src="../assets/logo.png" alt="Logo">
+
+      <!-- Logo + Nama Perusahaan -->
+      <a href="home.html" class="flex items-center gap-3 ml-4">
+        <img class="h-12 md:h-16" src="../assets/logo-crop.png" alt="Logo">
+        <span class="text-white font-[Poppins] text-sm md:text-xl font-semibold leading-tight">
+          PT. Nawasena<br class="block md:hidden">
+          Sinergi Gemilang
+        </span>
       </a>
 
-      <!-- Tombol menu hamburger untuk mobile -->
+      <!-- Tombol menu hamburger -->
       <span class="text-3xl cursor-pointer mx-2 md:hidden block">
         <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
       </span>
@@ -275,6 +282,7 @@
     <!-- Navigasi -->
     <ul id="menu-list"
       class="pointer-events-none md:pointer-events-auto md:flex md:items-center z-50 md:z-auto md:static absolute bg-black md:bg-transparent w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500">
+
       <li class="mx-4 my-6 md:my-0">
         <a href="home.html"
           class="text-xl hover:text-blue-500 duration-500 nav-link active block text-center md:text-left">Home</a>
@@ -284,16 +292,14 @@
           class="text-xl hover:text-blue-500 duration-500 block text-center md:text-left">Service</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="about.html"
-          class="text-xl hover:text-blue-500 duration-500 font-poppins block text-center md:text-left">About</a>
+        <a href="about.html" class="text-xl hover:text-blue-500 duration-500 block text-center md:text-left">About</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="events.html"
-          class="text-xl hover:text-blue-500 duration-500 font-poppins block text-center md:text-left">Events</a>
+        <a href="events.html" class="text-xl hover:text-blue-500 duration-500 block text-center md:text-left">Events</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
         <a href="contact.html"
-          class="bg-blue-500 text-white font-[Poppins] duration-500 px-6 py-2 w-[150px] text-center block mx-auto md:mx-4 hover:bg-blue-700 rounded-lg">Contact</a>
+          class="bg-blue-500 text-white duration-500 px-6 py-2 w-[150px] text-center block mx-auto md:mx-4 hover:bg-blue-700 rounded-lg">Contact</a>
       </li>
     </ul>
   </nav>
@@ -346,9 +352,10 @@
         class="cursor-pointer group flex flex-col items-center transition-all duration-300"
         :class="open === 'production' ? 'scale-110' : 'opacity-60 hover:opacity-100'">
         <div
-          class="w-28 h-28 md:w-40 md:h-40 bg-white rounded-2xl flex items-center justify-center shadow-lg border-4 transition-all"
+          class="w-28 h-28 md:w-40 md:h-40 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg border-4 transition-all"
           :class="open === 'production' ? 'border-blue-500 shadow-blue-500/50' : 'border-transparent'">
-          <img src="../assets/logo.png" alt="Production" class="w-20 md:w-24 object-contain">
+
+          <img src="../assets/logo-nawasena.png" alt="Production" class="w-20 md:w-24 object-contain">
         </div>
         <span class="mt-4 font-bold font-poppins text-sm md:text-lg text-white uppercase tracking-wider">Production &
           Exhibition</span>
@@ -357,13 +364,18 @@
       <div @click="open = (open === 'eo' ? null : 'eo')"
         class="cursor-pointer group flex flex-col items-center transition-all duration-300"
         :class="open === 'eo' ? 'scale-110' : 'opacity-60 hover:opacity-100'">
+
         <div
-          class="w-28 h-28 md:w-40 md:h-40 bg-white rounded-2xl flex items-center justify-center shadow-lg border-4 transition-all"
-          :class="open === 'eo' ? 'border-blue-500 shadow-blue-500/50' : 'border-transparent'">
-          <img src="../assets/logo-eo1.png" alt="EO" class="w-20 md:w-24 object-contain">
+          class="w-28 h-28 md:w-40 md:h-40 rounded-2xl flex items-center justify-center shadow-lg border-4 transition-all"
+          style="background: linear-gradient(135deg, #242227 75%, #eecd7a 100%);"
+          :class="open === 'eo' ? 'border-yellow-400 shadow-yellow-500/40' : 'border-transparent'">
+
+          <img src="../assets/logo-eo.png" alt="EO" class="w-20 md:w-24 object-contain bg-white/90 p-2 rounded-lg">
         </div>
-        <span class="mt-4 font-bold font-poppins text-sm md:text-lg text-white uppercase tracking-wider">Event
-          Services</span>
+
+        <span class="mt-4 font-bold font-poppins text-sm md:text-lg text-white uppercase tracking-wider">
+          Event Services
+        </span>
       </div>
     </div>
 
@@ -560,17 +572,6 @@
       </div>
       <div class="product-card">
         <div class="product-image">
-          <img src="../assets/dokumentasi/dokum-wm4.jpg" class="product-thumb" alt="">
-          <span class="hover-location">
-            <i class="fas fa-map-marker-alt"></i> Jakarta
-          </span>
-        </div>
-        <div class="product-info">
-          <h2 class="product-brand">Sehat Bareng Jasindo</h2>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-image">
           <img src="../assets/dokumentasi/dokum-wm5.jpg" class="product-thumb" alt="">
           <span class="hover-location">
             <i class="fas fa-map-marker-alt"></i> Jakarta
@@ -605,252 +606,46 @@
   <div class="logos fade-in mt-6">
     <div class="logos-slide w-[1000%] flex gap-6">
       <!-- Logo Baris 1 -->
-      <img class="client-logo" src="../assets/clients/capsugel.png" />
-      <img class="client-logo" src="../assets/clients/ggf.png" />
       <img class="client-logo" src="../assets/clients/antam.png" />
       <img class="client-logo" src="../assets/clients/yamaha.png" />
       <img class="client-logo" src="../assets/clients/j&t.png" />
-      <img class="client-logo" src="../assets/clients/kadin.png" />
       <img class="client-logo" src="../assets/clients/pertamina.jpeg" />
       <img class="client-logo" src="../assets/clients/plataran.png" />
-      <img class="client-logo" src="../assets/clients/jotun.png" />
-      <img class="client-logo" src="../assets/clients/hyundai.png" />
       <img class="client-logo" src="../assets/clients/astra.png" />
       <img class="client-logo" src="../assets/clients/country-fiesta.png" />
-      <img class="client-logo" src="../assets/clients/kideco.png" />
-      <img class="client-logo" src="../assets/clients/indika.png" />
-      <img class="client-logo" src="../assets/clients/PPATK.png" />
-      <img class="client-logo" src="../assets/clients/kemenko.png" />
-      <img class="client-logo" src="../assets/clients/bpjs.png" />
       <img class="client-logo" src="../assets/clients/sidomuncul.png" />
-      <img class="client-logo" src="../assets/clients/BP2MI.png" />
       <img class="client-logo" src="../assets/clients/bumn.png" />
-      <img class="client-logo" src="../assets/clients/pan.jpeg" />
-      <img class="client-logo" src="../assets/clients/nasdem.jpeg" />
-      <img class="client-logo" src="../assets/clients/samudera.png" />
-      <img class="client-logo" src="../assets/clients/asean.png" />
-      <img class="client-logo" src="../assets/clients/btpn.png" />
-      <img class="client-logo" src="../assets/clients/bareksa.png" />
-      <img class="client-logo" src="../assets/clients/energi.png" />
-      <img class="client-logo" src="../assets/clients/BPK.png" />
-      <img class="client-logo" src="../assets/clients/LPS.png" />
-      <img class="client-logo" src="../assets/clients/BPDPKS.jpeg" />
-      <img class="client-logo" src="../assets/clients/telkomsel.png" />
-      <img class="client-logo" src="../assets/clients/loreal.png" />
-      <img class="client-logo" src="../assets/clients/bni.png" />
-      <img class="client-logo" src="../assets/clients/ferarri.png" />
-      <img class="client-logo" src="../assets/clients/bri.png" />
-
+      <img class="client-logo" src="../assets/clients/ovo.png" />
+      <img class="client-logo" src="../assets/clients/hotel.png" />
+      <img class="client-logo" src="../assets/clients/maipark.png" />
+      <img class="client-logo" src="../assets/clients/nippon.png" />
+      <img class="client-logo" src="../assets/clients/chery.png" />
+      <img class="client-logo" src="../assets/clients/tolak-angin.png" />
+      <img class="client-logo" src="../assets/clients/yestech.png" />
+      <img class="client-logo" src="../assets/clients/pertamina-lubri.png" />
+      <img class="client-logo" src="../assets/clients/rans.jpeg" />
 
       <!-- Ulangi Logo Baris 1 untuk Looping -->
-      <img class="client-logo" src="../assets/clients/capsugel.png" />
-      <img class="client-logo" src="../assets/clients/ggf.png" />
       <img class="client-logo" src="../assets/clients/antam.png" />
       <img class="client-logo" src="../assets/clients/yamaha.png" />
       <img class="client-logo" src="../assets/clients/j&t.png" />
-      <img class="client-logo" src="../assets/clients/kadin.png" />
       <img class="client-logo" src="../assets/clients/pertamina.jpeg" />
       <img class="client-logo" src="../assets/clients/plataran.png" />
-      <img class="client-logo" src="../assets/clients/jotun.png" />
-      <img class="client-logo" src="../assets/clients/hyundai.png" />
       <img class="client-logo" src="../assets/clients/astra.png" />
       <img class="client-logo" src="../assets/clients/country-fiesta.png" />
-      <img class="client-logo" src="../assets/clients/kideco.png" />
-      <img class="client-logo" src="../assets/clients/indika.png" />
-      <img class="client-logo" src="../assets/clients/PPATK.png" />
-      <img class="client-logo" src="../assets/clients/kemenko.png" />
-      <img class="client-logo" src="../assets/clients/bpjs.png" />
       <img class="client-logo" src="../assets/clients/sidomuncul.png" />
-      <img class="client-logo" src="../assets/clients/BP2MI.png" />
       <img class="client-logo" src="../assets/clients/bumn.png" />
-      <img class="client-logo" src="../assets/clients/pan.jpeg" />
-      <img class="client-logo" src="../assets/clients/nasdem.jpeg" />
-      <img class="client-logo" src="../assets/clients/samudera.png" />
-      <img class="client-logo" src="../assets/clients/asean.png" />
-      <img class="client-logo" src="../assets/clients/btpn.png" />
-      <img class="client-logo" src="../assets/clients/bareksa.png" />
-      <img class="client-logo" src="../assets/clients/energi.png" />
-      <img class="client-logo" src="../assets/clients/BPK.png" />
-      <img class="client-logo" src="../assets/clients/LPS.png" />
-      <img class="client-logo" src="../assets/clients/BPDPKS.jpeg" />
-      <img class="client-logo" src="../assets/clients/telkomsel.png" />
-      <img class="client-logo" src="../assets/clients/loreal.png" />
-      <img class="client-logo" src="../assets/clients/bni.png" />
-      <img class="client-logo" src="../assets/clients/ferarri.png" />
-      <img class="client-logo" src="../assets/clients/bri.png" />
-    </div>
-  </div>
-
-  <!-- Baris Kedua -->
-  <div class="logos fade-in mt-6 mb-8">
-    <div class="logos-slide w-[1000%] flex gap-6">
-      <!-- Logo Baris 2 -->
-      <img class="client-logo" src="../assets/clients/jims-honey.png" />
-      <img class="client-logo" src="../assets/clients/dishub.png" />
-      <img class="client-logo" src="../assets/clients/ppa.png" />
-      <img class="client-logo" src="../assets/clients/blibli.png" />
       <img class="client-logo" src="../assets/clients/ovo.png" />
-      <img class="client-logo" src="../assets/clients/mandiri.png" />
-      <img class="client-logo" src="../assets/clients/nyx.png" />
-      <img class="client-logo" src="../assets/clients/sandra-dewi.png" />
-      <img class="client-logo" src="../assets/clients/PLN.png" />
-      <img class="client-logo" src="../assets/clients/zain.png" />
-      <img class="client-logo" src="../assets/clients/cheris.jpeg" />
-      <img class="client-logo" src="../assets/clients/badan-siber.png" />
-      <img class="client-logo" src="../assets/clients/jaya.png" />
-      <img class="client-logo" src="../assets/clients/sinarmas.png" />
-      <img class="client-logo" src="../assets/clients/rockstar-gym.jpeg" />
-      <img class="client-logo" src="../assets/clients/magnet.png" />
       <img class="client-logo" src="../assets/clients/hotel.png" />
-      <img class="client-logo" src="../assets/clients/pp.png" />
-      <img class="client-logo" src="../assets/clients/nitro.jpeg" />
-      <img class="client-logo" src="../assets/clients/royal.png" />
-      <img class="client-logo" src="../assets/clients/singapore-airlines.png" />
-      <img class="client-logo" src="../assets/clients/lego.png" />
-      <img class="client-logo" src="../assets/clients/politeknik.png" />
-      <img class="client-logo" src="../assets/clients/indonesia.png" />
-      <img class="client-logo" src="../assets/clients/btn.png" />
-      <img class="client-logo" src="../assets/clients/cakrawala.png" />
-      <img class="client-logo" src="../assets/clients/puspomad.png" />
-      <img class="client-logo" src="../assets/clients/airfast.png" />
-      <img class="client-logo" src="../assets/clients/pemda.png" />
-      <img class="client-logo" src="../assets/clients/pupr.png" />
-      <img class="client-logo" src="../assets/clients/bank-ina.png" />
       <img class="client-logo" src="../assets/clients/maipark.png" />
       <img class="client-logo" src="../assets/clients/nippon.png" />
-      <img class="client-logo" src="../assets/clients/bintang.png" />
-      <img class="client-logo" src="../assets/clients/polres.png" />
-      <img class="client-logo" src="../assets/clients/pengayoman.png" />
-      <img class="client-logo" src="../assets/clients/imigrasi.png" />
-      <img class="client-logo" src="../assets/clients/honda.jpg" />
-      <img class="client-logo" src="../assets/clients/jasindo.png" />
       <img class="client-logo" src="../assets/clients/chery.png" />
-      <img class="client-logo" src="../assets/clients/pullman.jpg" />
-      <img class="client-logo" src="../assets/clients/kimia-farma.png" />
       <img class="client-logo" src="../assets/clients/tolak-angin.png" />
-      <img class="client-logo" src="../assets/clients/sdg.png" />
-      <img class="client-logo" src="../assets/clients/wxd.png" />
-      <img class="client-logo" src="../assets/clients/cgs.jpg" />
       <img class="client-logo" src="../assets/clients/yestech.png" />
-
-      <!-- Ulangi Logo Baris 2 untuk Looping -->
-      <img class="client-logo" src="../assets/clients/jims-honey.png" />
-      <img class="client-logo" src="../assets/clients/dishub.png" />
-      <img class="client-logo" src="../assets/clients/ppa.png" />
-      <img class="client-logo" src="../assets/clients/blibli.png" />
-      <img class="client-logo" src="../assets/clients/ovo.png" />
-      <img class="client-logo" src="../assets/clients/mandiri.png" />
-      <img class="client-logo" src="../assets/clients/nyx.png" />
-      <img class="client-logo" src="../assets/clients/sandra-dewi.png" />
-      <img class="client-logo" src="../assets/clients/PLN.png" />
-      <img class="client-logo" src="../assets/clients/zain.png" />
-      <img class="client-logo" src="../assets/clients/cheris.jpeg" />
-      <img class="client-logo" src="../assets/clients/badan-siber.png" />
-      <img class="client-logo" src="../assets/clients/jaya.png" />
-      <img class="client-logo" src="../assets/clients/sinarmas.png" />
-      <img class="client-logo" src="../assets/clients/rockstar-gym.jpeg" />
-      <img class="client-logo" src="../assets/clients/magnet.png" />
-      <img class="client-logo" src="../assets/clients/hotel.png" />
-      <img class="client-logo" src="../assets/clients/pp.png" />
-      <img class="client-logo" src="../assets/clients/nitro.jpeg" />
-      <img class="client-logo" src="../assets/clients/royal.png" />
-      <img class="client-logo" src="../assets/clients/singapore-airlines.png" />
-      <img class="client-logo" src="../assets/clients/lego.png" />
-      <img class="client-logo" src="../assets/clients/politeknik.png" />
-      <img class="client-logo" src="../assets/clients/indonesia.png" />
-      <img class="client-logo" src="../assets/clients/btn.png" />
-      <img class="client-logo" src="../assets/clients/cakrawala.png" />
-      <img class="client-logo" src="../assets/clients/puspomad.png" />
-      <img class="client-logo" src="../assets/clients/airfast.png" />
-      <img class="client-logo" src="../assets/clients/pemda.png" />
-      <img class="client-logo" src="../assets/clients/pupr.png" />
-      <img class="client-logo" src="../assets/clients/bank-ina.png" />
-      <img class="client-logo" src="../assets/clients/maipark.png" />
-      <img class="client-logo" src="../assets/clients/nippon.png" />
-      <img class="client-logo" src="../assets/clients/bintang.png" />
-      <img class="client-logo" src="../assets/clients/polres.png" />
-      <img class="client-logo" src="../assets/clients/pengayoman.png" />
-      <img class="client-logo" src="../assets/clients/imigrasi.png" />
-      <img class="client-logo" src="../assets/clients/honda.jpg" />
-      <img class="client-logo" src="../assets/clients/jasindo.png" />
-      <img class="client-logo" src="../assets/clients/chery.png" />
-      <img class="client-logo" src="../assets/clients/pullman.jpg" />
-      <img class="client-logo" src="../assets/clients/kimia-farma.png" />
-      <img class="client-logo" src="../assets/clients/tolak-angin.png" />
-      <img class="client-logo" src="../assets/clients/sdg.png" />
-      <img class="client-logo" src="../assets/clients/wxd.png" />
-      <img class="client-logo" src="../assets/clients/cgs.jpg" />
-      <img class="client-logo" src="../assets/clients/yestech.png" />
+      <img class="client-logo" src="../assets/clients/pertamina-lubri.png" />
+      <img class="client-logo" src="../assets/clients/rans.jpeg" />
     </div>
   </div>
-  <!-- END Client -->
-
-  <!-- Our Partners Section -->
-  <div class="text-center mt-12 animate-fadeIn">
-    <h2 class="text-3xl font-bold">Our Partners</h2>
-  </div>
-
-  <!-- Baris Pertama -->
-  <div class="logos fade-in mt-6">
-    <div class="logos-slide w-[1000%] flex gap-6">
-      <!-- Logo Baris 1 -->
-      <img src="../assets/partner/gasindo" alt="Logo of GASINDO" class="partner-logo-img" />
-      <img src="../assets/partner/wb" alt="Logo of LEXA" class="partner-logo-img" />
-      <img src="../assets/partner/sr-melvi" alt="Logo of Ars" class="partner-logo-img" />
-      <img src="../assets/partner/maxindo" alt="Logo of CENTRAL events" class="partner-logo-img" />
-      <img src="../assets/partner/gasink" alt="Logo of SR Solusi Rental Equipment" class="partner-logo-img" />
-      <img src="../assets/partner/central-event" alt="Logo of Total Rental" class="partner-logo-img" />
-      <img src="../assets/partner/lexa" alt="Logo of SHUTSHOOT OFFICIAL" class="partner-logo-img" />
-      <img src="../assets/partner/digi-oh" alt="Logo of Bintang Jaya" class="partner-logo-img" />
-      <img src="../assets/partner/shutshoot" alt="Logo of MAXINDO LED" class="partner-logo-img" />
-      <img src="../assets/partner/capture-it" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/adifa" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/agung-tent" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/bintang-jaya" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/bocah-aktif" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/fikri-tenda" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/kreasipro" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/mjk" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/papa-bears" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/production" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/raja-alat" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/ranggon" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/rf" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/surya-jaya" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/total-rental" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/wap" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/wja-teknik" alt="Logo of W3" class="partner-logo-img" />
-
-      <!-- Ulangi Logo untuk Looping -->
-      <img src="../assets/partner/gasindo" alt="Logo of GASINDO" class="partner-logo-img" />
-      <img src="../assets/partner/wb" alt="Logo of LEXA" class="partner-logo-img" />
-      <img src="../assets/partner/sr-melvi" alt="Logo of Ars" class="partner-logo-img" />
-      <img src="../assets/partner/maxindo" alt="Logo of CENTRAL events" class="partner-logo-img" />
-      <img src="../assets/partner/gasink" alt="Logo of SR Solusi Rental Equipment" class="partner-logo-img" />
-      <img src="../assets/partner/central-event" alt="Logo of Total Rental" class="partner-logo-img" />
-      <img src="../assets/partner/lexa" alt="Logo of SHUTSHOOT OFFICIAL" class="partner-logo-img" />
-      <img src="../assets/partner/digi-oh" alt="Logo of Bintang Jaya" class="partner-logo-img" />
-      <img src="../assets/partner/shutshoot" alt="Logo of MAXINDO LED" class="partner-logo-img" />
-      <img src="../assets/partner/capture-it" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/adifa" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/agung-tent" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/bintang-jaya" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/bocah-aktif" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/fikri-tenda" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/kreasipro" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/mjk" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/papa-bears" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/production" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/raja-alat" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/ranggon" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/rf" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/surya-jaya" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/total-rental" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/wap" alt="Logo of W3" class="partner-logo-img" />
-      <img src="../assets/partner/wja-teknik" alt="Logo of W3" class="partner-logo-img" />
-    </div>
-  </div>
-  <!-- END Partners -->
 
   <!-- Our Association -->
   <section class="w-full py-8 bg-black text-white animate-fadeIn">
@@ -891,6 +686,51 @@
     </div>
   </section>
   <!-- END Our Association -->
+
+  <!-- Our Community -->
+  <!-- Our Community -->
+  <section class="w-full py-20 bg-black text-white">
+    <div class="container mx-auto px-4">
+
+      <!-- TITLE (di background hitam) -->
+      <h2 class="text-center text-3xl md:text-4xl font-bold mb-14 font-poppins tracking-wide">
+        Our Community
+      </h2>
+
+      <!-- CARD PUTIH (tidak full lebar) -->
+      <div class="bg-white text-black rounded-3xl py-10 px-6 md:px-10 max-w-5xl mx-auto shadow-xl">
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 items-center">
+
+          <!-- Item 1 -->
+          <div class="flex items-center justify-center hover:scale-105 transition">
+            <img src="../assets/community/event-owners.png" class="max-h-20 md:max-h-24 object-contain">
+          </div>
+
+          <!-- Item 2 -->
+          <div class="flex items-center justify-center hover:scale-105 transition">
+            <img src="../assets/community/rmi.png" class="max-h-20 md:max-h-24 object-contain">
+          </div>
+
+          <!-- Item 3 -->
+          <div class="flex items-center justify-center hover:scale-105 transition">
+            <img src="../assets/community/eoc.png" class="max-h-20 md:max-h-24 object-contain">
+          </div>
+
+          <!-- Item 4 (logo gelap) -->
+          <div class="flex items-center justify-center hover:scale-105 transition">
+            <div class="bg-black px-4 py-3 rounded-lg">
+              <img src="../assets/community/pekerja.png" class="max-h-20 md:max-h-24 object-contain">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- END Our Community -->
+  <!-- END Our Community -->
 
   <!-- Our Team -->
   <section class="team py-16 relative mb-10 animate-fadeIn bg-black">
