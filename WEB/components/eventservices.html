@@ -1,154 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Event Services</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Services - Nawasena</title>
+    <link rel="icon" href="../assets/logo-eo.png" type="image/png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Alpine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body class="bg-black text-white font-sans">
 
-<!-- NAVBAR -->
-<nav class="w-full flex justify-between items-center px-6 md:px-16 py-5 bg-black/80 backdrop-blur border-b border-white/10 sticky top-0 z-50">
-  <a href="home.html" class="flex items-center gap-2 text-sm hover:text-yellow-400 transition">
-    ← Back
-  </a>
-  <h1 class="font-bold text-lg tracking-wide">Event Services</h1>
-</nav>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="w-full flex justify-between items-center px-6 md:px-16 py-5 
+            bg-black/80 backdrop-blur border-b border-white/10 
+            sticky top-0 z-50">
 
-<!-- HERO / SERVICES -->
-<section class="text-center py-20 px-6 md:px-20">
-  <h2 class="text-3xl md:text-4xl font-bold mb-4">Event Services</h2>
-  <p class="text-gray-400 max-w-2xl mx-auto mb-16">
-    We deliver end-to-end event solutions designed to create impactful and unforgettable experiences.
-  </p>
+        <a href="home.html" class="flex items-center gap-2 text-sm hover:text-yellow-400 transition">
+            ← Back to Home
+        </a>
 
-  <!-- GRID FIX (NO DOUBLE GRID) -->
-  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-y-12 gap-x-6 max-w-5xl mx-auto">
+        <div class="flex items-center gap-3">
+            <img src="../assets/logo-eo.png" class="w-8 h-8 object-contain">
+            <h1 class="font-bold text-lg tracking-wide">Event Services</h1>
+        </div>
 
-    <!-- ITEM -->
-    <div class="flex flex-col items-center group">
-      <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition duration-300">
-        <img src="../assets/eo/conference/conference.png" class="w-10 h-10">
-      </div>
-      <span class="mt-4 text-sm text-gray-300 text-center">Conferences & MICE</span>
-    </div>
+    </nav>
 
-    <div class="flex flex-col items-center group">
-      <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition">
-        <img src="../assets/eo/grand/grand.png" class="w-10 h-10">
-      </div>
-      <span class="mt-4 text-sm text-gray-300 text-center">Grand Openings & Launches</span>
-    </div>
 
-    <div class="flex flex-col items-center group">
-      <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition">
-        <img src="../assets/eo/gathering/gathering.png" class="w-10 h-10">
-      </div>
-      <span class="mt-4 text-sm text-gray-300 text-center">Corporate Gatherings</span>
-    </div>
+    <!-- ================= HERO + SERVICES ================= -->
+    <section class="text-center py-20 px-6 md:px-20">
 
-    <div class="flex flex-col items-center group">
-      <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition">
-        <img src="../assets/eo/awarding/award.png" class="w-10 h-10">
-      </div>
-      <span class="mt-4 text-sm text-gray-300 text-center">Awarding & Gala Dinner</span>
-    </div>
+        <!-- TITLE -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Event Services
+        </h2>
 
-    <div class="flex flex-col items-center group">
-      <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition">
-        <img src="../assets/eo/training/training.png" class="w-10 h-10">
-      </div>
-      <span class="mt-4 text-sm text-gray-300 text-center">Training Programs</span>
-    </div>
+        <p class="text-gray-400 max-w-2xl mx-auto mb-16">
+            We deliver end-to-end event solutions designed to create impactful and unforgettable experiences.
+        </p>
 
-    <div class="flex flex-col items-center group">
-      <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition">
-        <img src="../assets/eo/team/team-building.png" class="w-10 h-10">
-      </div>
-      <span class="mt-4 text-sm text-gray-300 text-center">Team Building</span>
-    </div>
+        <!-- GRID -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-12 gap-x-6 max-w-5xl mx-auto">
 
-    <div class="flex flex-col items-center group">
-      <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition">
-        <img src="../assets/eo/keynote/keynote.png" class="w-10 h-10">
-      </div>
-      <span class="mt-4 text-sm text-gray-300 text-center">Keynote Management</span>
-    </div>
+            <!-- ITEM -->
+            <div class="flex flex-col items-center group">
+                <div class="p-6 bg-white rounded-full shadow-xl 
+                  group-hover:scale-110 transition duration-300 
+                  hover:-translate-y-1">
+                    <img src="../assets/eo/conference/conference.png" class="w-10 h-10">
+                </div>
+                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
+                    Conferences & MICE
+                </span>
+            </div>
 
-    <div class="flex flex-col items-center group">
-      <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition">
-        <img src="../assets/eo/creative/creative.png" class="w-10 h-10">
-      </div>
-      <span class="mt-4 text-sm text-gray-300 text-center">Creative Concept</span>
-    </div>
+            <div class="flex flex-col items-center group">
+                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
+                    <img src="../assets/eo/grand/grand.png" class="w-10 h-10">
+                </div>
+                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
+                    Grand Openings & Launches
+                </span>
+            </div>
 
-    <div class="flex flex-col items-center group">
-      <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition">
-        <img src="../assets/eo/digital/digital.png" class="w-10 h-10">
-      </div>
-      <span class="mt-4 text-sm text-gray-300 text-center">Digital Experience</span>
-    </div>
+            <div class="flex flex-col items-center group">
+                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
+                    <img src="../assets/eo/gathering/gathering.png" class="w-10 h-10">
+                </div>
+                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
+                    Corporate Gatherings
+                </span>
+            </div>
 
-  </div>
-</section>
+            <div class="flex flex-col items-center group">
+                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
+                    <img src="../assets/eo/awarding/award.png" class="w-10 h-10">
+                </div>
+                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
+                    Awarding & Gala Dinner
+                </span>
+            </div>
 
-<!-- GALLERY -->
-<section class="py-20 px-6 md:px-20 bg-gray-950">
-  <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Our Events</h2>
-  <p class="text-center text-gray-400 mb-12">A glimpse of our recent works</p>
+            <div class="flex flex-col items-center group">
+                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
+                    <img src="../assets/eo/training/training.png" class="w-10 h-10">
+                </div>
+                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
+                    Training Programs
+                </span>
+            </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="flex flex-col items-center group">
+                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
+                    <img src="../assets/eo/team/team-building.png" class="w-10 h-10">
+                </div>
+                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
+                    Team Building
+                </span>
+            </div>
 
-    <!-- IMAGE ITEM -->
-    <div class="overflow-hidden rounded-xl group">
-      <img src="../assets/gallery/event1.jpg"
-        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-    </div>
+            <div class="flex flex-col items-center group">
+                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
+                    <img src="../assets/eo/keynote/keynote.png" class="w-10 h-10">
+                </div>
+                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
+                    Keynote Management
+                </span>
+            </div>
 
-    <div class="overflow-hidden rounded-xl group">
-      <img src="../assets/gallery/event2.jpg"
-        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-    </div>
+            <div class="flex flex-col items-center group">
+                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
+                    <img src="../assets/eo/creative/creative.png" class="w-10 h-10">
+                </div>
+                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
+                    Creative Concept
+                </span>
+            </div>
 
-    <div class="overflow-hidden rounded-xl group">
-      <img src="../assets/gallery/event3.jpg"
-        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-    </div>
+            <div class="flex flex-col items-center group">
+                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
+                    <img src="../assets/eo/digital/digital.png" class="w-10 h-10">
+                </div>
+                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
+                    Digital Experience
+                </span>
+            </div>
 
-    <div class="overflow-hidden rounded-xl group">
-      <img src="../assets/gallery/event4.jpg"
-        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-    </div>
+        </div>
 
-    <div class="overflow-hidden rounded-xl group">
-      <img src="../assets/gallery/event5.jpg"
-        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-    </div>
+    </section>
 
-    <div class="overflow-hidden rounded-xl group">
-      <img src="../assets/gallery/event6.jpg"
-        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-    </div>
+    <!-- ================= CAROUSEL ================= -->
+    <section class="py-20 px-6 md:px-20 bg-gray-950" x-data="{
+      current: 0,
+      total: 2,
+      startX: 0,
+      init() {
+        setInterval(() => {
+          this.current = (this.current + 1) % this.total
+        }, 4000)
+      }
+    }">
 
-  </div>
-</section>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+            Our Events
+        </h2>
+        <p class="text-center text-gray-400 mb-12">
+            A glimpse of our recent works
+        </p>
 
-<!-- CTA CONTACT -->
-<section class="py-24 px-6 md:px-20 text-center">
-  <h2 class="text-3xl md:text-4xl font-bold mb-4">
-    Let’s Create Something Amazing
-  </h2>
-  <p class="text-gray-400 mb-10">
-    Ready to bring your event ideas to life? Let’s collaborate with us.
-  </p>
+        <div class="relative max-w-6xl mx-auto overflow-hidden" @touchstart="startX = $event.touches[0].clientX"
+            @touchend="
+        let endX = $event.changedTouches[0].clientX;
+        if(startX - endX > 50) current = (current + 1) % total;
+        if(endX - startX > 50) current = (current - 1 + total) % total;
+      ">
 
-  <a href="https://wa.me/628xxxx"
-    class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-xl font-semibold hover:bg-yellow-500 transition">
-    Contact Us
-  </a>
-</section>
+            <!-- SLIDER -->
+            <div class="flex transition-transform duration-500" :style="`transform: translateX(-${current * 100}%)`">
+
+                <!-- SLIDE 1 (1–6) -->
+                <div class="min-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <template x-for="i in 6">
+                        <div class="group">
+                            <div class="overflow-hidden rounded-xl">
+                                <img :src="`../assets/eo/foto${i}.png`"
+                                    class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                            </div>
+                            <p class="mt-3 text-sm text-gray-300 text-center">
+                                Conferences & MICE
+                            </p>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- SLIDE 2 (7–12) -->
+                <div class="min-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <template x-for="i in 6">
+                        <div class="group">
+                            <div class="overflow-hidden rounded-xl">
+                                <img :src="`../assets/eo/foto${i+6}.png`"
+                                    class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                            </div>
+                            <p class="mt-3 text-sm text-gray-300 text-center">
+                                Event Documentation
+                            </p>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- SLIDE 3 (13–18) -->
+                <div class="min-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <template x-for="i in 6">
+                        <div class="group">
+                            <div class="overflow-hidden rounded-xl">
+                                <img :src="`../assets/eo/foto${i+12}.png`"
+                                    class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                            </div>
+                            <p class="mt-3 text-sm text-gray-300 text-center">
+                                Event Documentation
+                            </p>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- SLIDE 4 (19–24) -->
+                <div class="min-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <template x-for="i in 6">
+                        <div class="group">
+                            <div class="overflow-hidden rounded-xl">
+                                <img :src="`../assets/eo/foto${i+18}.png`"
+                                    class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                            </div>
+                            <p class="mt-3 text-sm text-gray-300 text-center">
+                                Event Documentation
+                            </p>
+                        </div>
+                    </template>
+                </div>
+
+            </div>
+
+            <!-- BUTTON LEFT -->
+            <button @click="current = (current - 1 + total) % total" class="absolute left-2 top-1/2 -translate-y-1/2 
+         bg-white/10 hover:bg-white/20 backdrop-blur-md 
+         p-3 rounded-full text-white text-xl">
+                ‹
+            </button>
+
+            <!-- BUTTON RIGHT -->
+            <button @click="current = (current + 1) % total" class="absolute right-2 top-1/2 -translate-y-1/2 
+         bg-white/10 hover:bg-white/20 backdrop-blur-md 
+         p-3 rounded-full text-white text-xl">
+                ›
+            </button>
+
+        </div>
+
+        <!-- DOT -->
+        <div class="flex justify-center gap-3 mt-8">
+            <template x-for="i in 4">
+                <div @click="current = i-1" :class="current === i-1 ? 'bg-yellow-400 w-6' : 'bg-gray-500 w-3'"
+                    class="h-3 rounded-full transition-all cursor-pointer">
+                </div>
+            </template>
+        </div>
+
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="py-24 px-6 md:px-20 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Let’s Create Something Amazing
+        </h2>
+        <p class="text-gray-400 mb-10">
+            Ready to bring your event ideas to life? Let’s collaborate with us.
+        </p>
+
+        <a href="https://wa.me/628xxxx"
+            class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-xl font-semibold hover:bg-yellow-500 transition">
+            Contact Us
+        </a>
+    </section>
 
 </body>
+
 </html>
