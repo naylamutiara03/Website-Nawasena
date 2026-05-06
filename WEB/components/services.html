@@ -305,10 +305,10 @@
             <!-- PRODUCTION -->
             <div @click="open = (open === 'production' ? null : 'production')"
                 class="cursor-pointer group flex flex-col items-center transition-all duration-300"
-                :class="open === 'production' ? 'scale-110' : 'opacity-70 hover:opacity-100 hover:scale-105'">
+                :class="open === 'production' ? 'scale-105' : ''">
 
-                <div class="w-28 h-28 md:w-40 md:h-40 bg-blue-600 rounded-2xl flex items-center justify-center shadow-2xl border-4 transition-all"
-                    :class="open === 'production' ? 'border-blue-400 shadow-blue-500/50' : 'border-transparent'">
+                <div class="w-28 h-28 md:w-40 md:h-40 bg-blue-600 rounded-2xl flex items-center justify-center shadow-2xl border-4 transition-all
+        border-transparent group-hover:border-blue-400 group-hover:shadow-blue-500/40">
 
                     <img src="../assets/logo-nawasena.png" class="w-16 md:w-20 object-contain">
                 </div>
@@ -321,10 +321,10 @@
 
             <!-- EVENT SERVICES -->
             <a href="eventservices.html"
-                class="cursor-pointer group flex flex-col items-center transition-all duration-300 opacity-70 hover:opacity-100 hover:scale-105">
+                class="cursor-pointer group flex flex-col items-center transition-all duration-300">
 
                 <div class="w-28 h-28 md:w-40 md:h-40 rounded-2xl flex items-center justify-center shadow-2xl border-4 border-transparent transition-all duration-300
-  group-hover:border-yellow-400 group-hover:shadow-yellow-500/40"
+        group-hover:border-yellow-400 group-hover:shadow-yellow-500/40"
                     style="background: linear-gradient(135deg, #242227 70%, #eecd7a 100%);">
 
                     <img src="../assets/logo-eo.png" class="w-16 md:w-20 object-contain bg-white/90 p-2 rounded-lg">
@@ -464,26 +464,6 @@
                     Rental equipment refers to the leasing of essential items for events, such as acrylic podiums,
                     sofas, chairs, tables, air conditioners, air coolers, and air purifiers. Nawasena provides a
                     complete range of event equipment to support all your event needs.
-                </p>
-            </div>
-        </div>
-
-        <!-- Support All Product -->
-        <div class="mb-12 grid grid-cols-1 md:grid-cols-2 gap-x-8 items-center text-center md:text-right fade-in">
-            <div class="relative flex justify-center md:order-2">
-                <div class="hidden md:block h-full absolute right-0"></div>
-                <!-- Right border -->
-                <img alt="Support all product & concepts"
-                    class="all-production w-full md:w-[400px] lg:w-[450px] rounded-lg" src="../assets/support-wm.jpg" />
-            </div>
-            <div class="max-w-md md:max-w-lg lg:max-w-xl">
-                <h2 class="text-2xl font-bold mb-2 mt-2 text-blue-400 font-poppins">
-                    SUPPORT ALL PRODUCT & CONCEPTS
-                </h2>
-                <p class="text-gray-300 font-opensans">
-                    Nawasena is here to support all your event needs by providing essential equipment such as tables,
-                    chairs, barstools, air conditioners, generators, sound systems, and LED videotrons. From concept and
-                    creative ideas to production and equipment, we ensure everything is covered for a successful event.
                 </p>
             </div>
         </div>
