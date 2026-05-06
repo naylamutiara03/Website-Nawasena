@@ -8,8 +8,6 @@
     <link rel="icon" href="../assets/logo-eo.png" type="image/png">
 
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Alpine JS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
@@ -17,8 +15,8 @@
 
     <!-- ================= NAVBAR ================= -->
     <nav class="w-full flex justify-between items-center px-6 md:px-16 py-5 
-            bg-black/80 backdrop-blur border-b border-white/10 
-            sticky top-0 z-50">
+        bg-black/80 backdrop-blur border-b border-white/10 
+        sticky top-0 z-50">
 
         <a href="home.html" class="flex items-center gap-2 text-sm hover:text-yellow-400 transition">
             ← Back to Home
@@ -31,12 +29,42 @@
 
     </nav>
 
-
     <!-- ================= HERO + SERVICES ================= -->
-    <section class="text-center py-20 px-6 md:px-20">
+    <section class="relative text-center py-20 px-6 md:px-20 overflow-hidden" x-data="{
+        services: [
+            {img:'/conference/conference.png', text:'Conferences & MICE'},
+            {img:'/grand/grand.png', text:'Grand Openings & Launches'},
+            {img:'/gathering/gathering.png', text:'Corporate Gatherings'},
+            {img:'/awarding/award.png', text:'Awarding & Gala Dinner'},
+            {img:'/training/training.png', text:'Training Programs'},
+            {img:'/team/team-building.png', text:'Team Building'},
+            {img:'/keynote/keynote.png', text:'Keynote Management'},
+            {img:'/creative/creative.png', text:'Creative Concept'},
+            {img:'/digital/digital.png', text:'Digital Experience'}
+        ]
+    }">
+
+        <!-- ================= BACKGROUND ================= -->
+        <div class="absolute inset-0 -z-10">
+
+            <!-- IMAGE BG -->
+            <div class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('../assets/asset-bg-eo.png');">
+            </div>
+
+            <!-- DARK OVERLAY (BIAR TEXT KEBACA) -->
+            <div class="absolute inset-0 bg-black/60"></div>
+
+            <!-- OPTIONAL GOLD GLOW (BIAR HIDUP DIKIT) -->
+            <div class="absolute w-[400px] h-[400px] bg-[#eecd7a]/10 rounded-full blur-3xl 
+        top-[-100px] left-[-100px]"></div>
+
+        </div>
+
+        <!-- ================= CONTENT ================= -->
 
         <!-- TITLE -->
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
             Event Services
         </h2>
 
@@ -47,196 +75,76 @@
         <!-- GRID -->
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-12 gap-x-6 max-w-5xl mx-auto">
 
-            <!-- ITEM -->
-            <div class="flex flex-col items-center group">
-                <div class="p-6 bg-white rounded-full shadow-xl 
-                  group-hover:scale-110 transition duration-300 
-                  hover:-translate-y-1">
-                    <img src="../assets/eo/conference/conference.png" class="w-10 h-10">
-                </div>
-                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
-                    Conferences & MICE
-                </span>
-            </div>
+            <!-- LOOP 9 ITEM -->
+            <template x-for="(item, index) in services" :key="index">
 
-            <div class="flex flex-col items-center group">
-                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
-                    <img src="../assets/eo/grand/grand.png" class="w-10 h-10">
-                </div>
-                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
-                    Grand Openings & Launches
-                </span>
-            </div>
+                <div class="flex flex-col items-center group cursor-pointer">
 
-            <div class="flex flex-col items-center group">
-                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
-                    <img src="../assets/eo/gathering/gathering.png" class="w-10 h-10">
-                </div>
-                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
-                    Corporate Gatherings
-                </span>
-            </div>
+                    <!-- CIRCLE -->
+                    <div class="p-6 bg-white rounded-full shadow-xl 
+                    transition-all duration-300
+                    group-hover:scale-105">
 
-            <div class="flex flex-col items-center group">
-                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
-                    <img src="../assets/eo/awarding/award.png" class="w-10 h-10">
-                </div>
-                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
-                    Awarding & Gala Dinner
-                </span>
-            </div>
+                        <img :src="'../assets/eo/' + item.img" class="w-10 h-10 object-contain">
+                    </div>
 
-            <div class="flex flex-col items-center group">
-                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
-                    <img src="../assets/eo/training/training.png" class="w-10 h-10">
-                </div>
-                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
-                    Training Programs
-                </span>
-            </div>
+                    <!-- TEXT -->
+                    <span class="mt-4 text-sm md:text-base text-gray-300 text-center 
+                    transition-colors duration-300 group-hover:text-white" x-text="item.text">
+                    </span>
 
-            <div class="flex flex-col items-center group">
-                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
-                    <img src="../assets/eo/team/team-building.png" class="w-10 h-10">
                 </div>
-                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
-                    Team Building
-                </span>
-            </div>
 
-            <div class="flex flex-col items-center group">
-                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
-                    <img src="../assets/eo/keynote/keynote.png" class="w-10 h-10">
-                </div>
-                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
-                    Keynote Management
-                </span>
-            </div>
-
-            <div class="flex flex-col items-center group">
-                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
-                    <img src="../assets/eo/creative/creative.png" class="w-10 h-10">
-                </div>
-                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
-                    Creative Concept
-                </span>
-            </div>
-
-            <div class="flex flex-col items-center group">
-                <div class="p-6 bg-white rounded-full shadow-xl group-hover:scale-110 transition hover:-translate-y-1">
-                    <img src="../assets/eo/digital/digital.png" class="w-10 h-10">
-                </div>
-                <span class="mt-4 text-sm md:text-base text-gray-300 text-center">
-                    Digital Experience
-                </span>
-            </div>
+            </template>
 
         </div>
 
     </section>
 
     <!-- ================= CAROUSEL ================= -->
-    <section class="py-20 px-6 md:px-20 bg-gray-950" x-data="{
-      current: 0,
-      total: 2,
-      startX: 0,
-      init() {
-        setInterval(() => {
-          this.current = (this.current + 1) % this.total
-        }, 4000)
-      }
-    }">
+    <section class="py-20 px-6 md:px-20" x-data="carousel()" x-init="init()" @mouseenter="pause()"
+        @mouseleave="start()">
 
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
-            Our Events
+            Our Gallery
         </h2>
+
         <p class="text-center text-gray-400 mb-12">
             A glimpse of our recent works
         </p>
 
         <div class="relative max-w-6xl mx-auto overflow-hidden" @touchstart="startX = $event.touches[0].clientX"
-            @touchend="
-        let endX = $event.changedTouches[0].clientX;
-        if(startX - endX > 50) current = (current + 1) % total;
-        if(endX - startX > 50) current = (current - 1 + total) % total;
-      ">
+            @touchend="handleSwipe($event)">
 
             <!-- SLIDER -->
             <div class="flex transition-transform duration-500" :style="`transform: translateX(-${current * 100}%)`">
 
-                <!-- SLIDE 1 (1–6) -->
-                <div class="min-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <template x-for="i in 6">
-                        <div class="group">
-                            <div class="overflow-hidden rounded-xl">
-                                <img :src="`../assets/eo/foto${i}.png`"
-                                    class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                            </div>
-                            <p class="mt-3 text-sm text-gray-300 text-center">
-                                Conferences & MICE
-                            </p>
-                        </div>
-                    </template>
-                </div>
+                <template x-for="(slide, index) in slides" :key="index">
+                    <div class="min-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-                <!-- SLIDE 2 (7–12) -->
-                <div class="min-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <template x-for="i in 6">
-                        <div class="group">
-                            <div class="overflow-hidden rounded-xl">
-                                <img :src="`../assets/eo/foto${i+6}.png`"
-                                    class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                        <template x-for="(item, i) in slide" :key="i">
+                            <div class="group">
+                                <div class="overflow-hidden rounded-xl">
+                                    <img :src="item.img"
+                                        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                                </div>
+                                <p class="mt-3 text-sm text-gray-300 text-center" x-text="item.text"></p>
                             </div>
-                            <p class="mt-3 text-sm text-gray-300 text-center">
-                                Event Documentation
-                            </p>
-                        </div>
-                    </template>
-                </div>
+                        </template>
 
-                <!-- SLIDE 3 (13–18) -->
-                <div class="min-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <template x-for="i in 6">
-                        <div class="group">
-                            <div class="overflow-hidden rounded-xl">
-                                <img :src="`../assets/eo/foto${i+12}.png`"
-                                    class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                            </div>
-                            <p class="mt-3 text-sm text-gray-300 text-center">
-                                Event Documentation
-                            </p>
-                        </div>
-                    </template>
-                </div>
-
-                <!-- SLIDE 4 (19–24) -->
-                <div class="min-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <template x-for="i in 6">
-                        <div class="group">
-                            <div class="overflow-hidden rounded-xl">
-                                <img :src="`../assets/eo/foto${i+18}.png`"
-                                    class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                            </div>
-                            <p class="mt-3 text-sm text-gray-300 text-center">
-                                Event Documentation
-                            </p>
-                        </div>
-                    </template>
-                </div>
+                    </div>
+                </template>
 
             </div>
 
-            <!-- BUTTON LEFT -->
-            <button @click="current = (current - 1 + total) % total" class="absolute left-2 top-1/2 -translate-y-1/2 
-         bg-white/10 hover:bg-white/20 backdrop-blur-md 
-         p-3 rounded-full text-white text-xl">
+            <!-- BUTTON -->
+            <button @click="prev()" class="absolute left-2 top-1/2 -translate-y-1/2 
+                bg-white/10 hover:bg-white/20 p-3 rounded-full">
                 ‹
             </button>
 
-            <!-- BUTTON RIGHT -->
-            <button @click="current = (current + 1) % total" class="absolute right-2 top-1/2 -translate-y-1/2 
-         bg-white/10 hover:bg-white/20 backdrop-blur-md 
-         p-3 rounded-full text-white text-xl">
+            <button @click="next()" class="absolute right-2 top-1/2 -translate-y-1/2 
+                bg-white/10 hover:bg-white/20 p-3 rounded-full">
                 ›
             </button>
 
@@ -244,8 +152,8 @@
 
         <!-- DOT -->
         <div class="flex justify-center gap-3 mt-8">
-            <template x-for="i in 4">
-                <div @click="current = i-1" :class="current === i-1 ? 'bg-yellow-400 w-6' : 'bg-gray-500 w-3'"
+            <template x-for="(s, i) in slides">
+                <div @click="current = i" :class="current === i ? 'bg-yellow-400 w-6' : 'bg-gray-500 w-3'"
                     class="h-3 rounded-full transition-all cursor-pointer">
                 </div>
             </template>
@@ -253,20 +161,197 @@
 
     </section>
 
-    <!-- ================= CTA ================= -->
-    <section class="py-24 px-6 md:px-20 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Let’s Create Something Amazing
-        </h2>
-        <p class="text-gray-400 mb-10">
-            Ready to bring your event ideas to life? Let’s collaborate with us.
-        </p>
+    <!-- ================= CTA + FORM (CLEAN EO STYLE) ================= -->
+    <section class="py-28 px-6 md:px-20">
 
-        <a href="https://wa.me/628xxxx"
-            class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-xl font-semibold hover:bg-yellow-500 transition">
-            Contact Us
-        </a>
+        <div class="max-w-6xl mx-auto 
+        grid md:grid-cols-2 gap-10 
+        bg-[#1f1f1f] 
+        border border-white/10 
+        rounded-[2rem] 
+        p-8 md:p-14 shadow-2xl relative overflow-hidden">
+
+            <!-- SUBTLE GLOW -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#eecd7a]/10 via-transparent to-transparent"></div>
+
+            <!-- LEFT TEXT -->
+            <div class="relative flex flex-col justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
+                    Let’s Build Your <span class="text-[#eecd7a]">Next Event</span>
+                </h2>
+
+                <p class="text-gray-300 mb-8 text-sm md:text-base">
+                    Tell us about your event and we’ll help you plan, design, and execute it perfectly.
+                </p>
+
+                <!-- QUICK CTA -->
+                <a href="https://wa.me/6281181202026" class="inline-block px-6 py-3 rounded-lg font-semibold 
+                bg-[#eecd7a] text-black
+                hover:bg-[#d4b86a] transition 
+                shadow-lg hover:shadow-[#eecd7a]/30 w-fit">
+
+                    Chat via WhatsApp
+                </a>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <form class="relative space-y-4" onsubmit="sendToWA(event)">
+
+                <!-- NAME -->
+                <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg 
+                bg-black/40 border border-white/10 
+                focus:outline-none focus:border-[#eecd7a] 
+                text-white placeholder-gray-400">
+
+                <!-- EMAIL -->
+                <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg 
+                bg-black/40 border border-white/10 
+                focus:outline-none focus:border-[#eecd7a] 
+                text-white placeholder-gray-400">
+
+                <!-- EVENT TYPE -->
+                <input type="text" name="event" placeholder="Event Type (e.g. Gathering, Launching)" class="w-full px-4 py-3 rounded-lg 
+                bg-black/40 border border-white/10 
+                focus:outline-none focus:border-[#eecd7a] 
+                text-white placeholder-gray-400">
+
+                <!-- MESSAGE -->
+                <textarea name="message" rows="4" placeholder="Tell us about your event..." class="w-full px-4 py-3 rounded-lg 
+                bg-black/40 border border-white/10 
+                focus:outline-none focus:border-[#eecd7a] 
+                text-white placeholder-gray-400"></textarea>
+
+                <!-- SUBMIT -->
+                <button type="submit" class="w-full py-3 rounded-lg font-semibold 
+                bg-[#eecd7a] text-black
+                hover:bg-[#d4b86a] transition 
+                shadow-md hover:shadow-[#eecd7a]/30">
+
+                    Send Inquiry
+                </button>
+
+            </form>
+
+        </div>
+
     </section>
+
+    <!-- ================= FOOTER ================= -->
+    <div id="footer"></div>
+
+    <!-- ================= SCRIPT ================= -->
+    <script>
+        function carousel() {
+            return {
+                current: 0,
+                startX: 0,
+                interval: null,
+
+                slides: [
+                    [
+                        { img: '../assets/eo/foto1.png', text: 'Conferences & MICE' },
+                        { img: '../assets/eo/foto2.png', text: 'Grand Openings & Product Launches' },
+                        { img: '../assets/eo/foto3.png', text: 'Corporate Gatherings & Outings' },
+                        { img: '../assets/eo/foto4.png', text: 'Awarding Nights & Gala Dinners' },
+                        { img: '../assets/eo/foto5.png', text: 'Customized Training Programs' },
+                        { img: '../assets/eo/foto6.png', text: 'Team Building & Culture Transformation' }
+                    ],
+                    [
+                        { img: '../assets/eo/foto7.png', text: 'Keynote Speaker & Facilitator Management' },
+                        { img: '../assets/eo/foto8.png', text: 'Creative Concept & Storyboarding' },
+                        { img: '../assets/eo/foto9.png', text: 'Maipark 2028 and Beyond - PT Reasuransi MAIPARK' },
+                        { img: '../assets/eo/foto10.png', text: 'Maipark Award 2024 - PT Reasuransi MAIPARK' },
+                        { img: '../assets/eo/foto11.png', text: 'Maipark Award 2025 - PT Reasuransi MAIPARK' },
+                        { img: '../assets/eo/foto12.png', text: 'Sustainability Dialogue 2025 - Indonesia RE' }
+                    ],
+                    [
+                        { img: '../assets/eo/foto13.png', text: 'Geo Ekskursi - Konsorsium Asuransi Barang Milik Negara' },
+                        { img: '../assets/eo/foto14.png', text: 'Penutupan Proyek Indonesia Disaster Risk Finance & Insurance Badan Pengelola Dana Lingkungan Hidup' },
+                        { img: '../assets/eo/foto15.png', text: 'ID SURVEY - Class of fire Team building' },
+                        { img: '../assets/eo/foto16.png', text: 'FINALIS ABANG NONE JAKARTA - Vibrant Facilitation' },
+                        { img: '../assets/eo/foto17.png', text: 'MANDIRI UTAMA FINANCE - Leadership Survival' },
+                        { img: '../assets/eo/foto18.png', text: 'BAPENDA LITBANG KAB. BOGOR - Peningkatan Kapasitas ASN Perencana' }
+                    ],
+                    [
+                        { img: '../assets/eo/foto19.png', text: 'KEMENTRIAN AGAMA KANWIL DKI JAKARTA - Strong Team with Value' },
+                        { img: '../assets/eo/foto20.png', text: 'SHELLINDONESIA - LUBRICANT (Team Building Challenge)' },
+                        { img: '../assets/eo/foto21.png', text: 'SHELL LUBRICANT INDONESIA - Colours of Diversity, Synergy in Value Diversity' },
+                        { img: '../assets/eo/foto22.png', text: 'FINALIS ABNON PROVINSI DKI - Ready for Next Step' },
+                        { img: '../assets/eo/foto23.png', text: 'OTORITAS JASA KEUANGAN ( OJK ) - Bounding & Engagement Program' },
+                        { img: '../assets/eo/foto24.png', text: 'PT. PLN ( PERSERO ) GROUP (BOD -2 LDP2 Touch the Heart)' }
+                    ]
+                ],
+
+                init() {
+                    this.start()
+                },
+
+                start() {
+                    this.interval = setInterval(() => {
+                        this.next()
+                    }, 10000)
+                },
+
+                pause() {
+                    clearInterval(this.interval)
+                },
+
+                next() {
+                    this.pause()
+                    this.current = (this.current + 1) % this.slides.length
+                    this.start()
+                },
+
+                prev() {
+                    this.pause()
+                    this.current = (this.current - 1 + this.slides.length) % this.slides.length
+                    this.start()
+                },
+
+                handleSwipe(e) {
+                    let endX = e.changedTouches[0].clientX
+                    if (this.startX - endX > 50) this.next()
+                    if (endX - this.startX > 50) this.prev()
+                }
+            }
+        }
+
+        fetch('footer-eo.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+        function sendToWA(e) {
+            e.preventDefault();
+
+            const name = e.target.name.value;
+            const email = e.target.email.value;
+            const eventType = e.target.event.value;
+            const message = e.target.message.value;
+
+            // VALIDASI SEDERHANA
+            if (!name || !email || !eventType || !message) {
+                alert("Please fill all fields!");
+                return;
+            }
+
+            const phone = "6281181202026";
+
+            const text = `Hello Nawasena Event Services, I am interested in your event services. Here are my details:
+
+Name: ${name}
+Email: ${email}
+Event: ${eventType}
+
+Message:
+${message}`;
+
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+            window.open(url, '_blank');
+        }
+    </script>
 
 </body>
 
