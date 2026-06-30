@@ -9,6 +9,82 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        .slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slider .list {
+            display: flex;
+            transition: transform .6s ease;
+        }
+
+        .slider .item {
+            min-width: 100%;
+        }
+
+        .slider .item img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            padding: 0 20px;
+        }
+
+        .buttons button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, .45);
+            color: #eecd7a;
+            font-size: 22px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .buttons button:hover {
+            background: #eecd7a;
+            color: #000;
+        }
+
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .dots li {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #eecd7a;
+            opacity: .4;
+            list-style: none;
+            transition: .3s;
+        }
+
+        .dots li.active {
+            width: 35px;
+            border-radius: 20px;
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body class="bg-black text-white font-sans">
@@ -28,6 +104,59 @@
         </div>
 
     </nav>
+
+    <!-- ================= HERO CAROUSEL ================= -->
+    <section class="relative py-8 overflow-hidden">
+
+        <div class="slider mx-auto max-w-7xl">
+
+            <div class="list">
+                <div class="item">
+                    <img src="../assets/eo/carousel1.png" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="../assets/eo/carousel2.png" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="../assets/eo/carousel3.jpg" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="../assets/eo/carousel4.png" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="../assets/eo/carousel5.png" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="../assets/eo/carousel6.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="../assets/eo/carousel7.png" alt="">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </div>
+
+    </section>
 
     <!-- ================= HERO + SERVICES ================= -->
     <section class="relative text-center py-20 px-6 md:px-20 overflow-hidden" x-data="{
@@ -78,7 +207,8 @@
             <!-- LOOP 9 ITEM -->
             <template x-for="(item, index) in services" :key="index">
 
-                <div class="flex flex-col items-center group cursor-pointer">
+                <div class="flex flex-col items-center group cursor-pointer"
+                    :class="index === services.length - 1 ? 'col-span-2 sm:col-span-1' : ''">
 
                     <!-- CIRCLE -->
                     <div class="p-6 bg-white rounded-full shadow-xl 
@@ -160,6 +290,55 @@
         </div>
 
     </section>
+
+    <!-- Our Client -->
+    <section class="w-full py-20 bg-black text-white">
+        <div class="container mx-auto px-4">
+
+            <!-- TITLE -->
+            <h2 class="text-center text-3xl md:text-4xl font-bold mb-14 font-poppins tracking-wide">
+                Our Client
+            </h2>
+
+            <!-- CARD -->
+            <div class="bg-white text-black rounded-3xl py-10 px-6 md:px-10 max-w-6xl mx-auto shadow-xl">
+
+                <div class="flex flex-wrap justify-center gap-y-10 gap-x-6
+            lg:grid lg:grid-cols-5 lg:place-items-center">
+
+                    <!-- Logo 1 -->
+                    <div class="w-1/3 lg:w-full flex justify-center items-center hover:scale-105 transition">
+                        <img src="../assets/eo/our-community/nagara.png" class="h-20 md:h-24 lg:h-20 object-contain">
+                    </div>
+
+                    <!-- Logo 2 -->
+                    <div class="w-1/3 lg:w-full flex justify-center items-center hover:scale-105 transition">
+                        <img src="../assets/eo/our-community/kabmn.png" class="h-20 md:h-24 lg:h-20 object-contain">
+                    </div>
+
+                    <!-- Logo 3 -->
+                    <div class="w-1/3 lg:w-full flex justify-center items-center hover:scale-105 transition">
+                        <img src="../assets/eo/our-community/bpdlh.png" class="h-20 md:h-24 lg:h-20 object-contain">
+                    </div>
+
+                    <!-- Logo 4 -->
+                    <div class="w-1/3 lg:w-full flex justify-center items-center hover:scale-105 transition">
+                        <img src="../assets/eo/our-community/maipark.png" class="h-20 md:h-24 lg:h-20 object-contain">
+                    </div>
+
+                    <!-- Logo 5 -->
+                    <div class="w-1/3 lg:w-full flex justify-center items-center hover:scale-105 transition">
+                        <img src="../assets/eo/our-community/indonesia-re.png"
+                            class="h-20 md:h-24 lg:h-20 object-contain">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- END Our Client -->
 
     <!-- ================= CTA + FORM (CLEAN EO STYLE) ================= -->
     <section class="py-28 px-6 md:px-20">
@@ -351,6 +530,48 @@ ${message}`;
 
             window.open(url, '_blank');
         }
+
+        const slider = document.querySelector('.slider .list');
+        const items = document.querySelectorAll('.slider .item');
+        const next = document.getElementById('next');
+        const prev = document.getElementById('prev');
+        const dots = document.querySelectorAll('.dots li');
+
+        let active = 0;
+        const length = items.length;
+
+        function reloadSlider() {
+            slider.style.transform = `translateX(-${active * 100}%)`;
+
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[active].classList.add('active');
+        }
+
+        next.onclick = function () {
+            active++;
+            if (active >= length) active = 0;
+            reloadSlider();
+        }
+
+        prev.onclick = function () {
+            active--;
+            if (active < 0) active = length - 1;
+            reloadSlider();
+        }
+
+        dots.forEach((dot, index) => {
+            dot.onclick = () => {
+                active = index;
+                reloadSlider();
+            };
+        });
+
+        // Auto Slide
+        setInterval(() => {
+            active++;
+            if (active >= length) active = 0;
+            reloadSlider();
+        }, 4000);
     </script>
 
 </body>
